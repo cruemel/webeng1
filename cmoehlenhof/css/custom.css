@@ -1,0 +1,159 @@
+/* tags */
+
+body{	
+	width: 100%;
+ 	height: 100%;
+ 	margin: 0;
+ 	padding: 0;
+ 	font-family: Verdana, Helvetica, sans-serif;
+ 	font-size: 1em;
+	color: #000000;
+	background-color: #3399CC;
+}
+
+h1 {
+	color: #ffffff;
+	padding: 0;
+	margin: 0 0 0.5em 0;
+}
+
+li {
+	padding: 0;
+	margin: 0;
+}
+
+li.active {
+	color: #cccccc;
+}
+
+li a{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+/* divs */
+
+#fenster {
+	width: 100%;
+ 	height: 100%;
+ 	margin: 0;
+ 	padding: 0;
+ 	display: table;
+}
+
+#rahmen{ 
+	width: 100%; 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+    display: table-cell;
+}
+
+/* seite */
+    
+#header {
+   	width: 90%;
+	height: auto;
+	margin: 1em;
+	padding: 0;
+}
+
+#main{
+	width: 90%;
+	height: auto;
+	margin: 1em auto 1em auto;	
+	padding: 0;
+}
+
+#footer{
+	width: 90%;
+	height: auto;
+	margin: 1em;
+	padding: 0;
+}
+
+/* main */
+
+#content em{
+	display: none;
+}
+
+.clear {
+	display: block; 
+	clear: both; 
+	width: 0; 
+	height: 0; 
+	font-size: 0; 
+	line-height: 0;
+}
+
+/* responsive */
+@media screen and (max-width: 35em) {
+
+	#body {
+		background-color: #ffffff;
+	}
+
+	#content{
+		max-width: 520px;
+		height: auto;
+		margin: 1em auto 1em auto;
+		padding: 1em;
+	}
+	
+}
+
+@media screen and (min-width: 35em) {
+
+	#content{
+		position: absolute;
+		bottom: 15%;
+		left: 10%;
+		max-width: 920px;
+		height: auto;
+		margin: 1em auto 1em auto;
+		padding: 15em 2em 2em 2em;
+	}
+	
+	#content:hover em {
+		position: fixed;
+		display: block;
+		top: 10%;
+		right: 10%;
+		width: auto;
+		height: auto;
+		padding: 1em;
+		margin: 0;
+		color: #ffffff;
+		background-color: #cccccc;
+		border: 1px solid #ffffff;
+		/*
+		border-radius: 0.5em;
+    	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    	*/
+	}
+	
+	#content ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#content li {
+		float: left;
+		margin: 0 0.4em 0 0;
+	}
+	
+	#content li:before {
+    	content: " | ";
+    	color: #000000;
+	}
+	
+	#content li:first-child:before {
+    	content: "";
+	}
+   
+}
