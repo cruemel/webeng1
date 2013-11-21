@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link href="./css/vendor/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<title>tag cloud</title>
+		<script type="text/javascript">
+s=new Array();
+s[0]='Starter Kit';
+s[1]='Tools';
+s[2]='Webserver';
+s[3]='Firefox Add-ons';
+s[4]='Cloud Computing';
+s[5]='Learning by Doing';
+s[6]='Terminal';
+
+s[7]='Eclipse';
+s[8]='Firefox';
+s[9]='BitTorrent';
+s[10]='Apache';
+s[11]='IDE';
+s[12]='Unix';
+s[13]='Kommandozeile';
+
+s[14]='Betriebssystem';
+s[15]='Web-Engineering';
+s[16]='Virtuelle Maschine';
+
+s[17]='VirtualBox';
+s[18]='Cloud';
+s[19]='localhost';
+
+s[20]='Versionmanagement';
+s[21]='VM';
+
+s[22]='GNU';
+s[23]='Linux';
+s[24]='Debian';
+s[25]='HTTP-Server';
+s[26]='Tag Cloud';
+s[27]='MOOC';
+
+s[28]='Bootstrap';
+s[29]='Git';
+
+s[30]='Konsole';
+s[31]='Shell';
+
+s[32]='Couch DB';
+s[33]='Twitter';
+s[34]='Firebug';
+s[35]='Web Developer';
+s[36]='Top-Level-Domain';
+s[37]='Mozilla';
+s[38]='Internet';
+s[39]='Provider';
+s[40]='Entwicklungsumgebung';
+s[41]='Homepage';
+
+var ca='black';
+
+function R(u){
+	return Math.round(u * Math.random());
+} 
+
+function c(ca) {
+	if (R(1) == 0){
+		ca = 'white';
+	}
+	return ca;
+}
+
+document.write ('<style type="text/css">');
+document.write ('body {background-color: #000000;}');
+for (var x=0;x<51;x++){
+	document.write('.d' + x + '{position: absolute;top: ' + R(20+15) + 'em;left:'+ R(35)+ 'em;} .t' + x +'{font-size:' + R(10) + 'em; text-decoration: none; color: ' + c(ca) + '}'); 
+}
+document.write ('</style>');
+
+</script>	
+</head>
+<body>
+	<script type="text/javascript">
+		for(x=1;x<18;x++){
+			document.write('<div class="d' + R(50) + '"><nobr><a class="t' + R(50) + '" href="./index.html">' + s[R(40)] + '</a></nobr></div>');
+		}
+	</script>
+</body>
+</html>
