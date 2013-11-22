@@ -1,0 +1,92 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* typo */
+html {
+	font-size: 100%;
+}
+
+body{ 
+	color: #000000;
+	font-family: Univers, Helvetica, sans-serif;
+  	font-size: 1em;
+  	line-height: 1.5em;
+}
+
+h1 {
+	color: #990000;
+	font-size: 1.5em;
+	margin: 1em 0;
+}
+
+.tag {
+	font-family: Courier, monospace;
+}
+
+/* layout */
+
+html {
+ 	height: 100%;
+}
+
+body{	
+	width: 100%;
+ 	height: 100%;
+	background-color: #fffcf5;
+}
+
+#fenster {
+	width: 100%;
+ 	height: 100%;
+ 	display: table;
+}
+
+#rahmen{
+	width: 100%;
+ 	height: 100%;
+    display: table-cell;
+}
+
+#innen{
+	max-width: 768px;
+	height: auto;
+	margin: 1em auto;
+}
+
+#header{
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+th {
+	background-color: #336600;
+	color: #ffffff;
+	padding: 0 0.5em;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+tr.dark {
+	background-color: #cccccc;
+}
+
+td {
+	padding: 0.1em 0.5em;
+	vertical-align: top;
+}
+
+td.tag {
+	background-color: #99cc66;
+	text-align: right;
+}
+
+#footer {
+	padding: 0.5em;
+	text-align: right;
+}
+
+
+
