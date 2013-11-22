@@ -4,28 +4,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, addr
   border: 0;
 }
 
-/* typo */
-html {
-	font-size: 100%;
-}
-
-body{ 
-	color: #000000;
-	font-family: Univers, Helvetica, sans-serif;
-  	font-size: 1em;
-  	line-height: 1.5em;
-}
-
-h1 {
-	color: #990000;
-	font-size: 1.5em;
-	margin: 1em 0;
-}
-
-.tag {
-	font-family: Courier, monospace;
-}
-
 /* layout */
 
 html {
@@ -35,7 +13,6 @@ html {
 body{	
 	width: 100%;
  	height: 100%;
-	background-color: #fffcf5;
 }
 
 #fenster {
@@ -57,28 +34,34 @@ body{
 }
 
 #header{
-	margin: 0.5em 0;
+	margin: 0.5em 0 0.5em 0;
 	text-align: center;
 }
 
+h1 {
+	margin: 1em 0 0.5em 0;
+}
+
 th {
-	background-color: #336600;
 	color: #ffffff;
-	padding: 0 0.5em;
+	background-color: #336600;
+	padding: 0.3em 0.5em 0.1em 0.5em;
 	text-align: left;
 	vertical-align: bottom;
 }
 
 tr.dark {
+	color: #000000;
 	background-color: #cccccc;
 }
 
 td {
-	padding: 0.1em 0.5em;
+	padding: 0.2em 0.5em 0 0.5em;
 	vertical-align: top;
 }
 
 td.tag {
+	color: #000000;
 	background-color: #99cc66;
 	text-align: right;
 }
@@ -86,6 +69,34 @@ td.tag {
 #footer {
 	padding: 0.5em;
 	text-align: right;
+}
+
+/* typo */
+html {
+	font-size: 100%;
+}
+
+body{ 
+	color: #000000;
+	font-family: Univers, Helvetica, sans-serif;
+  	font-size: 1em;
+  	line-height: 1.5em;
+  	background-color: #fffcf5;
+}
+
+h1 {
+	color: #990000;
+	background-color: #fffcf5;
+	font-size: 1.4em;
+}
+
+th {
+	line-height: 1.2em;
+}
+
+
+.tag {
+	font-family: Courier, monospace;
 }
 
 
