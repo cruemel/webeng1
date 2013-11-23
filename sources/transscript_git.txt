@@ -1,0 +1,42 @@
+
+1. Konfiguration:
+    git config --global user.name "Vorname Nachname"
+    git config --global user.email "vorname.nachname@mailprovider.de"
+    git config --global color.ui auto
+
+    
+2. Verzeichnisoperationen
+
+    Abfrage des Git-Status
+    git status
+
+    Initiierung des Verzichnisses für Git
+    git init
+
+    Erstellen einer Textdatei im Testordner
+
+    Dateien zur Überwachung in das Git-Repository hinzufügen
+    git add Textdatei
+
+    Bestätigung der Änderungen
+    git commit -m "Benutzerdefinierte Nachricht"
+
+    Hinzufügen mehrerer Dateien in das Git-Repository
+    git add *
+
+    Herausnehmen einer Datei aus dem Git-Repository
+    git reset HEAD Textdatei
+
+    Zurücknehmen von Änderungen
+    git checkout -- Textdatei
+    
+3. Publizieren
+
+	1. Auf der Webseite ein neues repository anlegen
+	2. Die git clone-url von der website kopieren
+	3. In der Konsole git remote add origin DEINE_URL
+	4. git pull origin master um Daten von Github zu holen und evtl. merge
+	5. git add * um Dateien hinzuzufügen.
+	6. git commit -m "eigene Nachricht" lokal Änderungen übermitteln
+	7. git push origin master Änderungen an Github schicken
+	8. Jetzt kann man auf Github die Änderungen sehen.

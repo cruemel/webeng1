@@ -1,0 +1,18 @@
+301 Dauerhaft geaenderte Adresse
+
+Der angefragten Resource wurde dauerhaft eine neue Adresse zugewiesen und jeder weitere Verweis auf diese Resource sollte als Rückgabewerte eine? der neuen Adressen beinhalten. Clients der Möglichkeit, Links zu editieren, sollten wenn möglich, diese Änderung selbsttätig durchführen. Die Antwort (des Servers) kann zwischengespeichert werden, solange nicht anders angegeben.
+
+Die neue Adresse sollte in dem Adressefeld der Antwort stehen. Sofern es keine Anfrage von Typ HEAD war, sollte die Antwort eine kurze Notiz mit der neuen Adresse beinhalten.
+
+Sollte dieser Status-Code die Antwort auf eine andere Anfrage, als die vom Typ GET oder HEAD, sein, so muss die Software die Anfrage nicht automatisch auf die neue Adresse umleiten, ausser es besteht fuer den Benutzer die Moeglichkeit, diese Option zu bestaetigen, da sich inzwischen die Bedingungen geaendert haben koennen, unter denen er die Anfrage gestellt hat. 
+
+302 Gefunden
+
+Die angefragte Resource befindet sich zeitweise an einer anderen Adresse.
+Da sich das Umleitungsziel noch aendern kann, sollte der Client die ursprünglich angefragte Adresse für zukünfige Anfragen beibehalten. Die Antwort des Servers sollte nur zwischengespeichert werden, sofern durch Speicher- oder Verfallstempel im Kopf der Nachricht angezeigt.
+
+Das temporaere Ziel sollte im Adressfeld der Antwort angegeben sein. Sofern dies keine Anfrage vom Typ HEAD ist, sollte die ganze Antwort auch eine kurze Notiz mit einem Link auf die neue Adresse enthalten.
+
+Sollte der Status-Code 302, die Antwort auf eine andere Anfrage, als die vom Typ GET oder HEAD sein, so muss die Software die Anfrage nicht automatisch auf die neue Adresse umleiten, ausser es besteht fuer den Benutzer die Moeglichkeit, diese Option zu bestaetigen, da diese die Bedingungen aendern koennte, unter denen die Anfrage gestellt wurde. 
+
+Notiz: RFC 1945 und RFC 2068 spezifizieren, dass es dem Client nicht erlaubt ist, die Anfragemethode bei einer Umleitung zu aendern. Trotzdem behandeln die meisten existierenden Broswer eine Statusmedldung 302, so wie eine Antwort mit der Nummer 303 und führen eine GET-Anfrage mit dem neuen Ziel im Adressfeld der Statusmeldung aus. Die Statusmeldung 303 und 307 wurden hinzugefuegt, um den Servern die Moeglichkeit zu geben ummissverstaendlich klar zu machen, welche Reaktion sie von den Clients erwarten.
