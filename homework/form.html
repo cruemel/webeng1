@@ -16,13 +16,11 @@
         			<div id="main">
 
 <h1>Barrierefreies Suchformular - Kapitel 7</h1> 			
-<p>Artikel- oder Volltextsuche auf Wikipedia</p>
 <form action="http://de.wikipedia.org/wiki/Spezial:Suche">
 	<fieldset>
-		<legend>Suchen:</legend>
-		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" placeholder="Suchbegriff" title="Bitte geben Sie hier den Suchbegriff ein" autofocus required>
-	</fieldset>
-	<fieldset>
+		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
+		<label for="Suchbegriff">Suche:</label><br>
+		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" placeholder="Suchbegriff" title="Bitte geben Sie hier den Suchbegriff ein" autofocus required><br>
 		<input type="submit" id="Artikel" name="go" value="Artikelsuche">
       	<input type="submit" id="Volltext" name="fulltext" value="Volltextsuche">
     </fieldset>
