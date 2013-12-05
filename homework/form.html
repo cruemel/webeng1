@@ -10,17 +10,34 @@
 		<div id="fenster">
 			<div id="rahmen">
 				<div id="innen">
-				
-<h1>Barrierefreies Suchformular - Kapitel 7</h1>
+					<div id="header">
+    				</div>
+	    			<!--end header -->       
+        			<div id="main">
 
+<h1>Barrierefreies Suchformular - Kapitel 7</h1> 			
+<p>Artikel- oder Volltextsuche auf Wikipedia</p>
 <form action="http://de.wikipedia.org/wiki/Spezial:Suche">
-   <fieldset>
-      <legend>Suchen</legend>
-      <input type="text"   name="search" value="" />
-      <input type="submit" name="go" value="Artikel suchen"/>
-   </fieldset>
+	<fieldset>
+		<legend>Suchen:</legend>
+		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" placeholder="Suchbegriff" title="Bitte geben Sie hier den Suchbegriff ein" autofocus required>
+	</fieldset>
+	<fieldset>
+		<input type="submit" id="Artikel" name="go" value="Artikelsuche">
+      	<input type="submit" id="Volltext" name="fulltext" value="Volltextsuche">
+    </fieldset>
 </form>
 
+					</div>
+					<!--end main --> 
+        			<div id="footer">
+					<a href="http://www.w3.org/WAI/WCAG2AAA-Conformance"
+      title="Explanation of WCAG 2.0 Level Triple-A Conformance">
+  <img height="32" width="88" 
+          src="http://www.w3.org/WAI/wcag2AAA"
+          alt="Level Triple-A conformance, 
+          W3C WAI Web Content Accessibility Guidelines 2.0"></a>
+          			</div>
 				</div>
     		</div>
 		</div>
