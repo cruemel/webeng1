@@ -63,16 +63,16 @@ body{
 }
 
 #header{
-	width: 100%;
+	width: 90%;
 	text-align: center;
 }
 
 #main {
-	width: 100%;
+	width: 90%;
 }
 
 #footer {
-	width: 100%;
+	width: 90%;
 	text-align: right;
 }
 
@@ -88,7 +88,6 @@ h1 {
 }
 
 form {
-	width: 100%;
 	margin: 0;
 	padding: 0.5em;
 	background-color: #ffffff;
