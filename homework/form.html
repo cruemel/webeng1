@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.9">
-		<link href="../css/custom/index.css" rel="stylesheet">
-		<title>Barrierefreies Suchformular </title>
+		<link href="../css/custom/form.css" rel="stylesheet">
+		<title>Barrierefreies Suchformular - Web-Engineering I, Kapitel 6</title>
 	</head>
 	<body>
 		<div id="fenster">
@@ -15,14 +15,14 @@
 	    			<!--end header -->       
         			<div id="main">
 
-<h1>Barrierefreies Suchformular - Kapitel 7</h1> 			
-<form action="http://de.wikipedia.org/wiki/Spezial:Suche">
+<h1>Barrierefreies Suchformular</h1> 			
+<form action="http://de.wikipedia.org/wiki/Spezial:Suche" accept-charset="utf-8" id="wiki_search">
 	<fieldset>
 		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
-		<label for="Suchbegriff">Suche:</label><br>
-		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" placeholder="Suchbegriff" title="Bitte geben Sie hier den Suchbegriff ein" autofocus required><br>
-		<input type="submit" id="Artikel" name="go" value="Artikelsuche">
-      	<input type="submit" id="Volltext" name="fulltext" value="Volltextsuche">
+		<label for="Suchbegriff">Suche:</label>
+		<input type="search" id="Suchbegriff" class="text" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie hier den Suchbegriff ein" autofocus required>
+		<input type="submit" id="Artikelsuche" class="button" name="go" value="Artikelsuche">
+      	<input type="submit" id="Volltextsuche" class="button" name="fulltext" value="Volltextsuche">
     </fieldset>
 </form>
 
