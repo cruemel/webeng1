@@ -4,6 +4,30 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, addr
   border: 0;
 }
 
+/* typo */
+html {
+	font-size: 100%;
+}
+
+body{ 
+	color: #000000;
+	font-family: Univers, Helvetica, sans-serif;
+  	font-size: 1em;
+  	line-height: 1.5em;
+  	background-color: #fffcf5;
+}
+
+h1 {
+	color: #990000;
+	background-color: #fffcf5;
+	font-size: 1.4em;
+}
+
+button {
+	background-color: #fedd99;
+	font-size: 1em;
+}
+
 /* layout */
 
 html {
@@ -69,29 +93,10 @@ input.text {
 	margin: 0.5em;
 }
 
-input.button {
+button {
 	margin: 0.5em;
-	padding: 0 0.5em;
+	padding: 0.5em;
+	border: 0;
 }
-
-/* typo */
-html {
-	font-size: 100%;
-}
-
-body{ 
-	color: #000000;
-	font-family: Univers, Helvetica, sans-serif;
-  	font-size: 1em;
-  	line-height: 1.5em;
-  	background-color: #fffcf5;
-}
-
-h1 {
-	color: #990000;
-	background-color: #fffcf5;
-	font-size: 1.4em;
-}
-
 
 
