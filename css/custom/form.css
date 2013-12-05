@@ -23,6 +23,10 @@ h1 {
 	font-size: 1.4em;
 }
 
+input {
+	font-size: 1em;
+}
+
 button {
 	background-color: #fedd99;
 	font-size: 1em;
@@ -81,21 +85,23 @@ form {
 }
 
 legend {
-	padding: 0.2em 0.5em;
+	padding: 0.3em 0.5em;
 }
 
 label {
 	display: none;
 }
 
-input.text {
+input {
 	display: block;
-	margin: 0.5em;
+	margin: 0.4em;
+	padding: 0.3em 0.5em;
+	border: 2px solid #cccccc;
 }
 
 button {
-	margin: 0.5em;
-	padding: 0.5em;
+	margin: 0.4em;
+	padding: 0.3em 0.5em;
 	border: 0;
 }
 
