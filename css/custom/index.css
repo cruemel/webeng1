@@ -34,8 +34,22 @@ body{
 }
 
 #header{
-	margin: 0.5em 0 0.5em 0;
+	width: 90%;
 	text-align: center;
+}
+
+#main {
+	width: 90%;
+}
+
+#footer {
+	width: 90%;
+	text-align: right;
+}
+
+.container {
+	margin: 0.5em 1em;
+	padding: 0;
 }
 
 h1 {
