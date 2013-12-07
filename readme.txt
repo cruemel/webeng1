@@ -1,8 +1,7 @@
 Docroot - Web-Engineering, Teil I.
 
 Unterordner:
-docs - materialien
-exercices - uebungen
+sources - materialien
 homework - hausaufgaben
-tagclouds - wortwolken
+tagclouds - themen
 
