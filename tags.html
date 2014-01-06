@@ -2,52 +2,137 @@
 <html lang="de">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.9">
-		<link href="./css/custom/index.css" rel="stylesheet">
-		<title>Themen</title>
-	</head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./assets/ico/favicon.png">
+		<link href="./dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="./css/custom/index.css" rel="stylesheet">
+    	<title>Web-Engineering I: Grundlagen</title>
+    	<meta name="description" content="">
+  	</head>
 	<body>
-		<div id="fenster">
-			<div id="rahmen">
-				<div id="innen">
-				
-					<div id="main" class="container">
-
-<h1>Themen</h1>
-<ul>
-  <li>Bootstrap
-  	<ol>
-  		<li>link</li>
-  	</ol>
-  </li>
-  <li>Internet
-  	<ol>
-  		<li>link</li>
-  	</ol>
-  </li>
-  <li>MOOC
-  	<ol>
-  		<li>link</li>
-  	</ol>
-  </li>
-  <li>Usabilty
-  	<ol>
-  		<li>material</li>
-  		<li>hausarbeit</li>
-  	</ol>
-  </li>
-  <li>Web Engineering
-  	<ol>
-  		<li>link</li>
-  	</ol>
-  </li>
-</ul>
-
+		
+		<div id="header">
+						<div class="container">
+      						<div class="navbar-default">
+        						<div class="navbar-header">
+          							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          								<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+          							</button>
+        						</div>
+							</div>
+						</div>
+					</div>
+		
+		<div id="bar">
+			<div class="container">
+				<div id="company">
+					<div class="name">cmoehlenhof</div>
+					<div class="subtitle">WEB ENGINEERING I:<br>
+					GRUNDLAGEN DER WEBENTWICKLUNG</div>
 				</div>
-					<!-- end main -->
-					
+				<div id="images">
+					<img src="./img/custom/people.jpg" alt=""><img src="./img/custom/apple.jpg" alt="">
 				</div>
-    		</div>
+				<div style="clear: both"></div>
+			</div>
 		</div>
-	</body>
+		
+		<div id="main"> 
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="./index.html"><span><img src="./img/vendor/glyphicons/glyphicons_020_home.png" alt="Blog" title="Blog"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="./homework/index.html"><span><img src="./img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt="Hausarbeiten" title="Hausarbeiten"></span><strong>Hausarbeiten</strong></a>
+            			</li>
+            			<li>
+            				<a href="./chapter.html"><span><img src="./img/vendor/glyphicons/glyphicons_057_history.png" alt="Kapitel" title="Kapitel"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="./tags.html"><span><img src="./img/vendor/glyphicons/glyphicons_066_tags.png" alt="Themen" title="Themen"></span><strong>Themen</strong></a>
+            			</li>
+            			<li>
+            				<a href="./contact.html"><span><img src="./img/vendor/glyphicons/glyphicons_010_envelope.png" alt="Kontakt" title="Kontakt"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="tags"><h1>Themen</h1></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+  					<section id="cloud">
+  						<h2>Cloud</h2>
+  						<ol>
+  							<li><a href="./sources/cctrl_cheatsheet.pdf">cctrl-cheatsheet</a> (pdf)</li>
+  						</ol>
+  					</section>
+  					<section id="git">
+  						<h2>Git</h2>
+  						<ol>
+  							<li><a href="./sources/transscript_git.txt">Transscript Git</a> (txt)</li>
+  						</ol>
+  					</section>
+  					<section id="html">
+  						<h2>HTML</h2>
+  						<ol>
+  							<li><a href="./homework/elements.html">XHTML 1.0</a> (hausarbeit)</li>
+  						</ol>
+					</section>
+					<section id="http">
+  						<h2>Http</h2>
+  						<ol>
+  							<li><a href="./sources/status-codes.txt">Response Codes</a> (txt)</li>
+  						</ol>
+  					</section>
+					<section id="internet">
+  						<h2>Internet</h2>
+  						<ol>
+  							<li><a href="http://www.youtube.com/watch?v=9hIQjrMHTv4">The History of the Internet</a> (video)</li>
+  						</ol>
+					</section>
+					<section id="usability">
+  						<h2>Usability</h2>
+  						<ol>
+  							<li><a href="./homework/form.html">Barrierefreies Suchformular</a> (hausarbeit)</li>
+  							<li><a href="./sources/bachelor-thesis.pdf">Bachelorarbeit</a> (pdf)</li>
+  						</ol>
+					</section>
+      			</div> 
+      		</div>
+      	</div>
+      
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            			<a href="./homework/index.html">Hausarbeiten</a>
+            		</td>
+            				<td>
+            			<a href="./chapter.html">Kapitel</a>
+            		</td>
+            				<td>
+            			<a href="./tags.html">Themen</a>
+            		</td>
+            				<td>
+            			<a href="./contact.html">Kontakt</a>
+            		</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/">bootstrap</a>.
+          		</div>
+          	</div>
+    	</div>
+    	
+   		 <!-- scripts-->
+    	<script src="./assets/js/jquery.js"></script>
+    	<script src="./dist/js/bootstrap.min.js"></script>
+	
+ 	 </body>
 </html>

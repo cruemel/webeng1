@@ -4,81 +4,266 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./assets/ico/favicon.png">
+		<link href="./dist/css/bootstrap.css" rel="stylesheet">
     	<link href="./css/custom/index.css" rel="stylesheet">
-    	<title>Kapitel&uuml;bersicht - Web-Engineering I: Grundlagen</title>
-    </head>
+    	<title>Web-Engineering I: Grundlagen</title>
+    	<meta name="description" content="">
+  	</head>
     <body>
-		<div id="fenster">
-			<div id="rahmen">
-				<div id="innen">
-    				<div id="header">
-    				</div>
-	    			<!--end header -->
-	    			     
-        			<div id="main" class="container">
-        				<section id="chapter_01" class="wrapper">
-        					<h1>Kapitel 1</h1>
-        					<span>Einf&uuml;hrung in den MOOC &quot;Web-Engineering&quot;</span>
-        				</section>
-        				<section id="chapter_02" class="wrapper">
-        					<h1>Kapitel 2</h1>
-        					<span>Starter Kit: Tools f&uuml;r die Cloud</span>
-        					<!--
-        					<ul>
-        						<li>Willkommen!</li>
-        						<li>Das Studienobjekt</li>
-        						<li>Die Herausforderung</li>
-        						<li>Die L&ouml;sung</li>
-        						<li>Die Inventarliste</li>
-        						<li>Aufgaben und Ziel des Kapitels</li>
-        						<li>Leitfaden zum Starter Kit</li>
-        						<li>Installation VirtualBox</li>
-        						<li>File-Sharing mit Bit-Torrent</li>
-        						<li>Installation der VM</li>
-        						<li>Bootstrap & Eclipse</li>
-        						<li>Versionsverwaltung mit Git</li>
-        						<li>Homepage up to the Cloud</li>
-        						<li><a href="./index.html">Hausaufgabe</a></li>
-        						<li>Tag Cloud &amp; Feedback</li>
-        					</ul>
-        					-->
-        				</section>
-        				<section id="chapter_03" class="wrapper">
-        					<h1>Kapitel 3</h1>
-        					<span>Chronik des Internets</span>
-        				</section>
-        				<section id="chapter_04" class="wrapper">
-        					<h1>Kapitel 4</h1>
-        					<span>Grundlagen des Web: HTTP</span>
-        				</section>
-        				<section id="chapter_05" class="wrapper">
-        					<h1>Kapitel 5</h1>
-        					<span>Interaktives Praktikum: HTML/CSS</span>
-        				</section>
-        				<section id="chapter_06" class="wrapper">
-        					<h1>Kapitel 6</h1>
-        					<span>Sematisches Html, Unicode &amp; UTF-8, (X)HTML-Standards</span>
-        				</section>
-        				<section id="chapter_07" class="wrapper">
-        					<h1>Kapitel 7</h1>
-        					<span>Digitale Barrierefreiheit</span>
-        				</section>
-        				<section id="chapter_08" class="wrapper">
-        					<h1>Kapitel 8</h1>
-        					<span>Webdesign | Web-Usability</span>
-        				</section>
-        				<em>more coming soon ...</em>
-        			</div>
-        			<!--end main --> 
-        			
-        			<div id="footer">
-    				</div>
-    			</div>
-    		</div>
+    
+    	<div id="header">
+						<div class="container">
+      						<div class="navbar-default">
+        						<div class="navbar-header">
+          							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          								<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+          							</button>
+        						</div>
+							</div>
+						</div>
+					</div>
+		
+		<div id="bar">
+			<div class="container">
+				<div id="company">
+					<div class="name">cmoehlenhof</div>
+					<div class="subtitle">WEB ENGINEERING I:<br>
+					GRUNDLAGEN DER WEBENTWICKLUNG</div>
+				</div>
+				<div id="images">
+					<img src="./img/custom/people.jpg" alt=""><img src="./img/custom/apple.jpg" alt="">
+				</div>
+				<div style="clear: both"></div>
+			</div>
 		</div>
 		
-		<!-- <script src="http://code.jquery.com/jquery.js"></script> -->
-		<!-- <script src="./js/vendor/bootstrap.min.js"></script> -->
+		<div id="main"> 
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="./index.html"><span><img src="./img/vendor/glyphicons/glyphicons_020_home.png" alt="Blog" title="Blog"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="./homework/index.html"><span><img src="./img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt="Hausarbeiten" title="Hausarbeiten"></span><strong>Hausarbeiten</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="./chapter.html"><span><img src="./img/vendor/glyphicons/glyphicons_057_history.png" alt="Kapitel" title="Kapitel"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="./tags.html"><span><img src="./img/vendor/glyphicons/glyphicons_066_tags.png" alt="Themen" title="Themen"></span><strong>Themen</strong></a>
+            			</li>
+            			<li>
+            				<a href="./contact.html"><span><img src="./img/vendor/glyphicons/glyphicons_010_envelope.png" alt="Kontakt" title="Kontakt"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="chapter"><h1>Kapitel</h1></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+        			<section id="chapter_01" class="chapter">
+        				<h2>Kapitel 1</h2>
+        				<span>Einf&uuml;hrung in den MOOC &quot;Web-Engineering&quot;</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Willkommen!</li>
+        					<li>Überblick zur Einführung in den MOOC</li>
+        					<li>Ihr Kursteam</li>
+							<li>The Making of the MOOC</li>
+							<li>Unser Studienobjekt: die WebApp ARSnova</li>
+							<li>Zweiteiler-Kurskonzept und die Lerninhalte</li>
+							<li>Wie erhalte ich ein Zertifikat?</li>
+							<li>Zur Didaktik des MOOCs: Learning by Doing</li>
+							<li>Rundgang auf der iversity-Plattform</li>
+							<li>An die Studierenden der THM</li>
+							<li>FAQ</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_02" class="chapter">
+        				<h2>Kapitel 2</h2>
+        				<span>Starter Kit: Tools f&uuml;r die Cloud</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        						<li>Die erste Herausforderung</li>
+								<li>Die Lösung</li>
+								<li>Was alle auf ihrem Rechner haben müssen...</li>
+								<li>Aufgaben und Ziel dieses Kapitels</li>
+								<li>Leitfaden zum Starter Kit</li>
+								<li>Installation der Virtualisierungssoftware</li>
+								<li>Tutorial: Filesharing mit BitTorrent</li>
+								<li>Installation der Kurs-VM</li>
+								<li>Erstellen eines Bootstrap-Projekts mit Eclipse</li>
+								<li>Tutorial: Versionsverwaltung mit <a href="./sources/transscript_git.txt">Git</a></li>
+								<li>Homepage up to the Cloud</li>
+								<li>Hausaufgabe: &quot;Homepage in der Cloud&quot;</li>
+								<li>Tag Cloud und Feedback zum Kapitel 1</li>
+							</ol>
+        			</section>
+        			<section id="chapter_03" class="chapter">
+        				<h2>Kapitel 3</h2>
+        				<span>Chronik des Internets</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Einführung in das Kapitel</li>
+							<li>Entwicklung des Internets</li>
+							<li>Unterwegs im Internet</li>
+							<li>Was verknüpft das Internet?</li>
+							<li>Netze des Internets</li>
+							<li>Protokolle &amp; Anwendungen des Internets</li>
+							<li>Organisationen des Internets</li>
+							<li>Hausaufgabe: W3C-Validit&auml;t Ihrer Website</li>
+							<li>Tag Cloud und Feedback zum Kapitel 2</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_04" class="chapter">
+        				<h2>Kapitel 4</h2>
+        				<span>Grundlagen des Web: HTTP</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Der Meister zuerst ...</li>
+							<li>Einführung in das Kapitel: Lernziele &amp; Überblick</li>
+							<li>HTTP: Protokoll-Stack</li>
+							<li>HTTP-Analyse mit GNU Wget, Firebug und RESTClient</li>
+							<li>HTTP-Server: statische vs. dynamische Webseiten</li>
+							<li>HTTP: Request / Response</li>
+							<li>HTTP: Request Methods und <a href="./sources/status-codes.txt">Status Codes</a></li>
+							<li>HTTP: GET vs. POST</li>
+							<li>Web 2.0: Interaktive MOOC-Map</li>
+							<li>Hausaufgabe zum HTTP-Protokoll</li>
+							<li>Tag Cloud und Feedback zum Kapitel 3</li>
+						</ol>
+        			</section>
+        			<section id="chapter_05" class="chapter">
+        				<h2>Kapitel 5</h2>
+        				<span>Interaktives Praktikum: HTML/CSS</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Einführung in das Praktikum</li>
+							<li>Die Macher von Codecademy</li>
+							<li><a href="http://www.codecademy.com/de/c.tag/">Das Praktikum &quot;Web Fundamentals&quot;</a></li>
+							<li>Das Ziel: Badges, Badges ...</li>
+							<li>Nachweis des Praktikums &quot;Web Fundamentals&quot;</li>
+							<li>ARSnova: Evaluation von Codecademy</li>
+							<li>Zu guter Letzt: &quot;Web Developer Nightmare&quot;</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_06" class="chapter">
+        				<h2>Kapitel 6</h2>
+        				<span class="subtitle">Sematisches Html, Unicode &amp; UTF-8, (X)HTML-Standards</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Einführung in das Kapitel</li>
+							<li>Semantisches HTML</li>
+							<li>Lynx und ELinks, die Konsolen-Browser</li>
+							<li>Exkurs : WYSIWYM mit MediaWiki, Markdown, LyX</li>
+							<li>Zeichenkodierung: Unicode &amp; UTF-8</li>
+							<li>Internet Media Type</li>
+							<li>(X)HTML-Standards</li>
+							<li>Hausaufgabe: <a href="./homework/elements.html">Mit CSS formatierte Tabelle aller &quot;XHTML 1.0 strict&quot;-Elemente</a></li>
+							<li>Tag Cloud und Feedback zum Kapitel 6</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_07" class="chapter">
+        				<h2>Kapitel 7</h2>
+        				<span>Digitale Barrierefreiheit</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Zur Einstimmung in das Thema &quot;Web Accessibility&quot;</li>
+							<li>Lernziel und Aufgabe</li>
+							<li>Artikelserie: &quot;Reine Formsache&quot;</li>
+							<li>Konzeption: Toleranz und Rücksicht einplanen</li>
+							<li>Formulardesign</li>
+							<li>Technik: HTML &amp; CSS für Formulare</li>
+							<li>Dynamik in Formularen</li>
+							<li>Testen von Formularen und Web-basierten Anwendungen</li>
+							<li>MOOC &quot;Web Accessibility&quot; von Google</li>
+							<li>Hausaufgabe: <a href="./homework/form.html">Barrierefreies Suchformular</a></li>
+							<li>Tag Cloud und Feedback zum Kapitel 7</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_08" class="chapter">
+        				<h2>Kapitel 8</h2>
+        				<span>Webdesign | Web-Usability</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Einführung in das Kapitel: Lernziele &amp; Hausaufgabe</li>
+							<li>Zur Einstimmung in das Thema &quot;Usability&quot;</li>
+							<li>Web-Usability-Fallbeispiele</li>
+							<li>Designprinzip: &quot;Mobile first&quot;</li>
+							<li>Designprinzip: &quot;Responsive Web Design&quot;</li>
+							<li>Bootstrap 3 = &quot;Mobile first&quot; &amp; &quot;Responsive Design&quot;</li>
+							<li>Usability-Test</li>
+							<li>Usability-Fragebogen am Beispiel von ARSnova</li>
+							<li>Tag Cloud zum Kapitel 8</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_09" class="chapter">
+        				<h2>Kapitel 9</h2>
+        				<span>Website-Analyse | Website-Optimierung</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>Einführung in das Kapitel</li>
+							<li>Website-Analyse mit Piwik</li>
+							<li>Monitoring und manuelle Performance-Tests</li>
+							<li>Automatisierte Performance-Tests mit Apache JMeter</li>
+							<li>WPO: Web Performance Optimization (Steve Souders)</li>
+							<li>YSlow-Analyse für die Website-Optimierung</li>
+							<li>PageSpeed-Analyse für die Website-Optimierung</li>
+							<li>Tag Cloud zum Kapitel 9</li>
+        				</ol>
+        			</section>
+        			<section id="chapter_10" class="chapter">
+        				<h2>Kapitel 10</h2>
+        				<span>Sicherheit</span>
+        				<em class="plus"></em>
+        				<ol class="expand">
+        					<li>OWASP</li>
+							<li>XSS: Cross Site Scripting</li>
+							<li>SQL-Injection</li>
+							<li>XSRF: Cross Site Request Forgery</li>
+							<li>How not to store passwords</li>
+							<li>Tag Cloud zum Kapitel 10</li>
+        				</ol>
+        			</section>
+        			<section>
+        				<p id="chapter_11"><em>sowie die Kapitel 11 (Kursreader) &amp; Kapitel 12 (Kompetenzziele)</em></p>
+        			</section>
+        		</div>
+        		<!--end main --> 
+    		</div>
+    	</div>
+    	
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            			<a href="./homework/index.html">Hausarbeiten</a>
+            		</td>
+            				<td>
+            			<a href="./chapter.html">Kapitel</a>
+            		</td>
+            				<td>
+            			<a href="./tags.html">Themen</a>
+            		</td>
+            				<td>
+            			<a href="./contact.html">Kontakt</a>
+            		</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/">bootstrap</a>.
+          		</div>
+          	</div>
+    	</div>
 		
- 	</body>
+		 <!-- scripts-->
+    	<script src="./assets/js/jquery.js"></script>
+    	<script src="./dist/js/bootstrap.min.js"></script>
+		<script src="./js/custom/chapter.js"></script>
+ 	 </body>
 </html>

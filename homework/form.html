@@ -2,20 +2,68 @@
 <html lang="de">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.9">
-		<link href="../css/custom/form.css" rel="stylesheet">
-		<title>Barrierefreies Suchformular - Web-Engineering I, Kapitel 6</title>
-	</head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./assets/ico/favicon.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Web-Engineering I: Grundlagen</title>
+    	<meta name="description" content="">
+  	</head>
 	<body>
-		<div id="fenster">
-			<div id="rahmen">
-				<div id="innen">
-					<div id="header" class="container">
-    				</div>
-	    			<!--end header -->       
-        			<div id="main" class="container">
-
-<h1>Barrierefreies Suchformular</h1> 			
+		
+		<div id="header">
+						<div class="container">
+      						<div class="navbar-default">
+        						<div class="navbar-header">
+          							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          								<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+          							</button>
+        						</div>
+							</div>
+						</div>
+					</div>
+		
+		<div id="bar">
+			<div class="container">
+				<div id="company">
+					<div class="name">cmoehlenhof</div>
+					<div class="subtitle">WEB ENGINEERING I:<br>
+					GRUNDLAGEN DER WEBENTWICKLUNG</div>
+				</div>
+				<div id="images">
+					<img src="../img/custom/people.jpg" alt=""><img src="../img/custom/apple.jpg" alt="">
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</div>
+		
+		<div id="main"> 
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_020_home.png" alt="Blog" title="Blog"></span><strong>Startseite</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt="Hausarbeiten" title="Hausarbeiten"></span><strong>Hausarbeiten</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span><img src="../img/vendor/glyphicons/glyphicons_057_history.png" alt="Kapitel" title="Kapitel"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span><img src="../img/vendor/glyphicons/glyphicons_066_tags.png" alt="Themen" title="Themen"></span><strong>Themen</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span><img src="../img/vendor/glyphicons/glyphicons_010_envelope.png" alt="Kontakt" title="Kontakt"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="homework"><h1>Hausarbeiten</h1></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<section>
 <form action="http://de.wikipedia.org/wiki/Spezial:Suche" accept-charset="utf-8" id="wiki_search">
 	<fieldset>
 		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
@@ -25,15 +73,41 @@
       	<button type="submit" id="Volltextsuche" name="fulltext">Volltextsuche</button>
     </fieldset>
 </form>
-
-					</div>
-					<!--end main --> 
-        			<div id="footer" class="container">
-					<a href="http://wave.webaim.org/report#/http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2Fhomework%2Fform.html" title="check with wave - the web accesibility evaluation tool">
-  <img height="32" width="88" src="http://www.w3.org/WAI/wcag2AAA" alt="Level Triple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0"></a>
-          			</div>
+					</section>
 				</div>
-    		</div>
+			</div>
 		</div>
+        
+        <div id="footer">
+        	<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            			<a href="./homework/index.html">Hausarbeiten</a>
+            		</td>
+            				<td>
+            			<a href="./chapter.html">Kapitel</a>
+            		</td>
+            				<td>
+            			<a href="./tags.html">Themen</a>
+            		</td>
+            				<td>
+            			<a href="./contact.html">Kontakt</a>
+            		</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+        			<a href="http://wave.webaim.org/report#/http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2Fhomework%2Fform.html" title="check with wave - the web accesibility evaluation tool">
+  <img height="32" width="88" src="../img/vendor/wcag2AAA.gif" alt="Level Triple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0"></a>
+				</div>	
+          	</div>
+    	</div>
+    	
+    	 <!-- scripts-->
+    	<script src="../assets/js/jquery.js"></script>
+    	<script src="../dist/js/bootstrap.min.js"></script>
+	
 	</body>
 </html>

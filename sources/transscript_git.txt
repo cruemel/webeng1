@@ -1,10 +1,11 @@
+# Die wichtigsten Kommandos zu Git
 
-1. Konfiguration:
+1. Konfiguration
+    
     git config --global user.name "Vorname Nachname"
     git config --global user.email "vorname.nachname@mailprovider.de"
     git config --global color.ui auto
-
-    
+   
 2. Verzeichnisoperationen
 
     Abfrage des Git-Status

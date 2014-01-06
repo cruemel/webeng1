@@ -4,6 +4,37 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, addr
   border: 0;
 }
 
+/* typo */
+html {
+	font-size: 100%;
+}
+
+body{ 
+	color: #000000;
+	font-family: Helvetica, sans-serif;
+  	font-size: 1em;
+  	line-height: 1.5em;
+  	background-color: #fffcf5;
+}
+
+a:link {
+	#83ACC3;
+}
+
+h1 {
+	color: #B24D2E;
+	font-family: Maxima, sans-serif;
+	font-size: 1.4em;
+}
+
+th {
+	line-height: 1.2em;
+}
+
+.tag {
+	font-family: Courier, monospace;
+}
+
 /* layout */
 
 html {
@@ -34,16 +65,12 @@ body{
 }
 
 #header{
-	width: 90%;
-	text-align: center;
 }
 
 #main {
-	width: 90%;
 }
 
 #footer {
-	width: 90%;
 	text-align: right;
 }
 
@@ -58,15 +85,20 @@ h1 {
 
 th {
 	color: #ffffff;
-	background-color: #336600;
+	background-color: #526023;
 	padding: 0.3em 0.5em 0.1em 0.5em;
 	text-align: left;
 	vertical-align: bottom;
 }
 
+tr.light {
+	color: #000000;
+	background-color: #ffffff;
+}
+
 tr.dark {
 	color: #000000;
-	background-color: #cccccc;
+	background-color: #F7F6EE;
 }
 
 td {
@@ -76,7 +108,7 @@ td {
 
 td.tag {
 	color: #000000;
-	background-color: #99cc66;
+	background-color: #ADBD6C;
 	text-align: right;
 }
 
@@ -84,34 +116,5 @@ td.tag {
 	padding: 0.5em;
 	text-align: right;
 }
-
-/* typo */
-html {
-	font-size: 100%;
-}
-
-body{ 
-	color: #000000;
-	font-family: Univers, Helvetica, sans-serif;
-  	font-size: 1em;
-  	line-height: 1.5em;
-  	background-color: #fffcf5;
-}
-
-h1 {
-	color: #990000;
-	background-color: #fffcf5;
-	font-size: 1.4em;
-}
-
-th {
-	line-height: 1.2em;
-}
-
-
-.tag {
-	font-family: Courier, monospace;
-}
-
 
 
