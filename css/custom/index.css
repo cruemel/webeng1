@@ -29,11 +29,7 @@ th {
 	line-height: 1.2em;
 }
 
-sup {
-	font-size: 0.8em;
-}
-
-.keywords {
+sup, .keywords, #remark {
 	font-size: 0.8em;
 }
 
@@ -87,7 +83,7 @@ body{
 }
 
 .navbar-default {
-	background-color: #ffffff;
+	background-color: #F7F6EE;
 }
 
 .navbar-collapse {
@@ -147,8 +143,16 @@ body{
 	padding: 0.5em 0;
 }
 
+#menu strong {
+	margin: 0 0 0 0.5em;
+}
+
 #submenu {
 	display: none;
+}
+
+#submenu.blog {
+	background-color: #CC9933;
 }
 
 #submenu.chapter {
@@ -160,7 +164,7 @@ body{
 }
 
 #submenu.homework {
-	background-color: #339999;
+	background-color: #336699;
 }
 
 #submenu.tags {
@@ -288,7 +292,7 @@ body{
 /* footer */
 
 #subbar {
-	background-color: #dddddd;
+	background-color: #d0d0d0;
 }
 
 #remark {
@@ -299,7 +303,7 @@ body{
 	display: table;
 	width: 100%; 
 	height: auto;
-	margin: 0;
+	margin: 0 0 0.5em 0;
 	padding: 0; 
 }
 
@@ -308,7 +312,7 @@ body{
 	width: auto;
 	height: auto;
 	margin: 0;
-	padding: 0 0.3em; 
+	padding: 0.3em; 
 	text-align: center;
 	border-left: 1px solid #ffffff;
 	border-right: 1px solid #ffffff;
@@ -436,7 +440,6 @@ button {
 		margin: 0 18px 0 124px;
 		padding: 4px 14px 2px 14px;
 		color: #d0d0d0;
-		background-color: rgb(204, 153, 51);
 	}
 	
 	#remark {
