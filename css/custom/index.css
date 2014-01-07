@@ -52,11 +52,6 @@ h2, h2 a {
 	color: #B24D2E;
 }
 
-input {
-	color: #cccccc;
-}
-
-
 #bar {
 	background-color: #ADBD6C;
 }
@@ -375,7 +370,7 @@ label {
 
 input {
 	display: block;
-	margin: 0.4em 0;
+	margin: 0.5em 0;
 	padding: 0.3em 0.5em;
 	border: 2px solid #d0d0d0;
 }
