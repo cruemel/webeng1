@@ -48,13 +48,14 @@ a {
 	color: #336699;
 }
 
-input {
-	color: #336699;
-}
-
 h2, h2 a {
 	color: #B24D2E;
 }
+
+input {
+	color: #cccccc;
+}
+
 
 #bar {
 	background-color: #ADBD6C;
@@ -74,6 +75,13 @@ h2, h2 a {
 
 #content section {
 	background-color: #ffffff;
+}
+
+.btn {
+	color: #336699;
+	background-color: #ffffff;
+	border: 2px solid #d0d0d0;
+	font-size: 1em;
 }
 
 .navbar-default {
@@ -358,6 +366,7 @@ form {
 
 legend {
 	padding: 0.3em 0;
+	margin: 0.2em 0;
 }
 
 label {
@@ -368,7 +377,7 @@ input {
 	display: block;
 	margin: 0.4em 0;
 	padding: 0.3em 0.5em;
-	border: 2px solid #cccccc;
+	border: 2px solid #d0d0d0;
 }
 
 button {
