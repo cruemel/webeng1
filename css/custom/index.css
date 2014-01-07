@@ -25,11 +25,24 @@ h2 {
 	font-size: 1.4em;
 }
 
+sup {
+	font-size: 0.8em;
+}
+
 th {
 	line-height: 1.2em;
 }
 
-sup, .keywords, #remark {
+#remark {
+	font-size: 0.8em;
+}
+
+.btn {
+	font-size: 1em;
+}
+
+
+.keywords {
 	font-size: 0.8em;
 }
 
@@ -76,7 +89,6 @@ h2, h2 a {
 	color: #336699;
 	background-color: #ffffff;
 	border: 2px solid #d0d0d0;
-	font-size: 1em;
 }
 
 .navbar-default {
@@ -215,7 +227,7 @@ body{
 }
 
 #content section {
-	padding: 1em;
+	padding: 0.8em;
 	margin: 1em 0;
 }
 
@@ -380,7 +392,7 @@ button {
 	padding: 0.3em 0.5em;
 }
 
-@media (min-width: 554px) { 
+@media (min-width: 510px) { 
 
 	#images img:first-child {
 		display: inline;
@@ -388,6 +400,11 @@ button {
 		padding: 0;
 		border-left: 2px solid #ffffff;
 		border-right: 2px solid #ffffff;
+	}
+	
+	#menu {
+  		margin: 0;
+  		padding: 0.4em 0.8em;
 	} 
 }
 
@@ -402,13 +419,13 @@ button {
 
 	#menu {
   		margin: 0;
-  		padding: 0 0.8em;
+  		padding: 0 0.3em;
 	}
 
 	#menu ul li {
 		float: left;
-		margin: 0 1em 0 0;
-		padding: 0.5em 0;
+		margin: 0 0.8em 0 0;
+		padding: 0.4em 0;
 	}
 	
 	#menu ul li span {
@@ -464,7 +481,8 @@ button {
 		width: 42px;
 		height: 36px;
 		margin: 0 28px;
-		padding: 4px;		
+		padding: 4px;
+		border-radius: 4px;		
 	}
 	
 	#menu ul li.active span{
