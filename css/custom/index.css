@@ -196,7 +196,7 @@ body{
 #menu {
 	display: relative;
   	margin: 0;
-  	padding: 0;
+  	padding: 0.4em 0.8em;
 }	
 
 #menu ul {
@@ -392,7 +392,7 @@ button {
 	padding: 0.3em 0.5em;
 }
 
-@media (min-width: 510px) { 
+@media (min-width: 512px) { 
 
 	#images img:first-child {
 		display: inline;
@@ -401,11 +401,6 @@ button {
 		border-left: 2px solid #ffffff;
 		border-right: 2px solid #ffffff;
 	}
-	
-	#menu {
-  		margin: 0;
-  		padding: 0.4em 0.8em;
-	} 
 }
 
 @media (min-width: 768px) { 
