@@ -3,8 +3,10 @@ $(document).ready(function() {
 	var arrow = $('.chapter em');
 	
 	arrow.click(function () {
-		var classname = $(this).attr('class');
-		if (classname != "minus") {
+		var name = $(this).attr('class');
+		var regex = /minus/g;
+		var match = regex.exec(name);
+		if (!match) {
 			$(this).removeClass('plus');
 			$(this).addClass('minus');
 		}

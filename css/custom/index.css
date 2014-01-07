@@ -106,6 +106,10 @@ body{
 	text-align: right;
 }
 
+#company .subtitle {
+	margin: 0.3em 0;
+}
+
 #images {
 	 float: left; 
 	 margin: 0 0.2em 0 0; 
@@ -118,10 +122,6 @@ body{
 	height: 108px;
 	padding: 0;
 	margin: 0;
-}
-
-#company .subtitle {
-	margin: 0.3em 0;
 }
 
 #menu {
@@ -148,7 +148,13 @@ body{
 }
 
 #submenu {
-	display: none;
+	margin: 0 18px 0 124px;
+	padding: 4px 14px 2px 14px;
+	color: #d0d0d0;
+}
+
+#submenu a {
+	color: #dddddd;
 }
 
 #submenu.blog {
@@ -169,10 +175,6 @@ body{
 
 #submenu.tags {
 	background-color: #996600;
-}
-
-#submenu a {
-	color: #dddddd;
 }
 
 /* Inhalt */
@@ -292,11 +294,7 @@ body{
 /* footer */
 
 #subbar {
-	background-color: #d0d0d0;
-}
-
-#remark {
-	text-align: right;
+	background-color: #D9D2C0;
 }
 
 #subbar table {
@@ -321,6 +319,13 @@ body{
 #subbar td a {
 	color: #333333;
 }
+
+#remark {
+	text-align: right;
+	margin: 0.5em 0;
+	padding: 0;
+}
+
 
 /* form */
 
@@ -386,10 +391,13 @@ button {
 		display: none;	
 	}
 	
+	#footer {
+		color: #d0d0d0;
+	}
+	
 	#subbar {
 		display: none;
-	}
-
+	}	
 }
 
 @media (min-width: 992px) {
@@ -413,38 +421,44 @@ button {
   
   	#menu {
 		width: 124px;
-  		padding: 32px 0;
+  		padding: 24px 0;
   		margin: 0;
 	}
 	
 	#menu ul li {
+		margin: 12px 0 0 12px;
+		padding: 0;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		font-size: 0.8em;
 		clear: both;
-		margin: 16px 0 0 40px;
-		padding: 8px;
 	}
 	
-	#menu ul li span {
-		display: block;	
+	#menu ul li a span {
+		display: block;
+		width: 42px;
+		height: 36px;
+		margin: 0 28px;
+		padding: 4px;		
 	}
 	
-	#menu ul li strong {
+	#menu ul li.active span{
+		background-color: #D9D2C0;	
+	}
+	
+	#menu ul li a strong {
 		display: none;	
 	}
 	
-	#menu ul li.active {
-		background-color: #d0d0d0;	
-	}
-
-	#submenu {
+	#menu ul li a:hover strong {
 		display: block;
-		margin: 0 18px 0 124px;
-		padding: 4px 14px 2px 14px;
-		color: #d0d0d0;
+		margin: 0;
 	}
 	
 	#remark {
-		margin: 0 18px 0 124px;
-		padding: 4px 14px 2px 14px;
+		margin: 8px 18px 8px 124px;
+		padding: 0;
 	}
 	
 }

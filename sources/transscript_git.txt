@@ -11,33 +11,30 @@
     Abfrage des Git-Status
     git status
 
-    Initiierung des Verzichnisses für Git
+    Initiierung des Verzichnisses fuer Git
     git init
 
-    Erstellen einer Textdatei im Testordner
-
-    Dateien zur Überwachung in das Git-Repository hinzufügen
-    git add Textdatei
-
-    Bestätigung der Änderungen
-    git commit -m "Benutzerdefinierte Nachricht"
-
-    Hinzufügen mehrerer Dateien in das Git-Repository
+    Datei zur Ueberwachung hinzufuegen
+    git add [DATEI]
+    
+    Mehrere Dateien hinzufuegen
     git add *
+    
+    Herausnehmen einer Datei aus dem Repository
+    git reset HEAD [DATEI]
 
-    Herausnehmen einer Datei aus dem Git-Repository
-    git reset HEAD Textdatei
+    Zuruecknehmen von Aenderungen
+    git checkout -- [DATEI]
+    
+    Datei loeschen
+    git rm [DATEI]
 
-    Zurücknehmen von Änderungen
-    git checkout -- Textdatei
+    Bestaetigung der Aenderungen
+    git commit -m "[NACHRICHT]"
     
 3. Publizieren
 
-	1. Auf der Webseite ein neues repository anlegen
-	2. Die git clone-url von der website kopieren
-	3. In der Konsole git remote add origin DEINE_URL
-	4. git pull origin master um Daten von Github zu holen und evtl. merge
-	5. git add * um Dateien hinzuzufügen.
-	6. git commit -m "eigene Nachricht" lokal Änderungen übermitteln
-	7. git push origin master Änderungen an Github schicken
-	8. Jetzt kann man auf Github die Änderungen sehen.
+	1. git status - welche Dateien haben sich geaendert?
+	2. git add [DATEI] - Datei(en) hinzuzufuegen.
+	3. git commit -m "[NACHRICHT]" - Aenderungen kommentieren
+	4. git push origin master - Aenderungen an Github senden
