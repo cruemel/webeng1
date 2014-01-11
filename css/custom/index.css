@@ -153,7 +153,7 @@ body{
 #bar {
 	width: 100%; 
 	height: auto; 
-	margin: 0; 
+	margin: 0.5em 0; 
 	padding: 0;  
 }
 
@@ -194,9 +194,8 @@ body{
 }
 
 #menu {
-	display: relative;
   	margin: 0;
-  	padding: 0.4em 0.8em;
+  	padding: 0 0.8em;
 }	
 
 #menu ul {
@@ -210,13 +209,9 @@ body{
 	padding: 0.5em 0;
 }
 
-#menu strong {
-	margin: 0 0 0 0.5em;
-}
-
-#submenu {
-	margin: 0 18px 0 124px;
-	padding: 4px 14px 2px 14px;
+#menu ul li strong {
+	margin: 0;
+	padding: 0 0 0 0.5em;
 }
 
 /* Inhalt */
@@ -229,6 +224,16 @@ body{
 #content section {
 	padding: 0.8em;
 	margin: 1em 0;
+}
+
+#content dl {
+	margin: 0; 
+	padding: 1em 0;
+}
+
+#content dd {
+	margin: 0 0 0.5em 0; 
+	padding: 0;
 }
 
 #content h1 {
@@ -246,16 +251,35 @@ body{
 	height: auto;
 }
 
-#content td {
-	padding: 0.3em;
-	vertical-align: top;
-}
-
 #content p {
 	margin: 0.5em 0;
 	padding: 0;
 }
 
+#content ol {
+	margin: 0; 
+	padding: 0.5em 2em;
+}
+
+#content ol.expand {
+	display: none;
+}
+
+#content ul {
+	text-indent: 1em;
+	list-style: inside;
+}
+
+#content li {
+	padding: 0.4em 0;
+}
+
+#content td {
+	padding: 0.3em;
+	vertical-align: top;
+}
+
+/*
 #content th {
 	color: #ffffff;
 	background-color: #336600;
@@ -279,53 +303,26 @@ body{
 	background-color: #99cc66;
 	text-align: right;
 }
+*/
 
-#content dl {
-	margin: 0; 
-	padding: 1em 0;
-}
-
-#content ol {
-	margin: 0; 
-	padding: 0.5em 2em;
-}
-
-#content ol.expand {
-	display: none;
-}
-
-#content ul {
-	text-indent: 1em;
-	list-style: inside;
-}
-
-#content dd {
-	margin: 0 0 0.5em 0; 
-	padding: 0;
-}
-
-#content li {
-	padding: 0.4em 0;
-}
-
-#content section.chapter .subtitle {
+#content .chapter .subtitle {
 	margin: 0.5em 0;
 	padding: 0;
 }
 
-#content section.chapter em {
+#content .chapter em {
 	float: right;
 	margin: 0;
 	padding: 1em;
 }
 
-#content section.chapter .plus {
+#content .chapter .plus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_219_circle_arrow_down.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#content section.chapter .minus {
+#content .chapter .minus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_218_circle_arrow_top.png); 
 	background-repeat: no-repeat;
 	background-position: top;
@@ -337,7 +334,7 @@ body{
 	display: table;
 	width: 100%; 
 	height: auto;
-	margin: 0 0 0.5em 0;
+	margin: 0.5em 0;
 	padding: 0; 
 }
 
@@ -346,8 +343,9 @@ body{
 	width: auto;
 	height: auto;
 	margin: 0;
-	padding: 0.3em; 
+	padding: 0.4em 0.3em; 
 	text-align: center;
+	font-weight: bold;
 	border-left: 1px solid #ffffff;
 	border-right: 1px solid #ffffff;
 }
@@ -403,8 +401,12 @@ button {
 	}
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
 
+	#bar {
+		margin: 0;  
+	}
+ 
 	#images img:nth-child(2) {
 		display: inline;
 		margin: 0;
@@ -413,14 +415,14 @@ button {
 	} 
 
 	#menu {
-  		margin: 0;
-  		padding: 0 0.3em;
+  		margin: 0.5em 0;
+  		padding: 0.4em;
 	}
 
 	#menu ul li {
 		float: left;
-		margin: 0 0.8em 0 0;
-		padding: 0.4em 0;
+		margin: 0 0.5em 0 0;
+		padding: 0;
 	}
 	
 	#menu ul li span {
@@ -433,7 +435,8 @@ button {
 	
 	#subbar {
 		display: none;
-	}	
+	}
+		
 }
 
 @media (min-width: 992px) {
@@ -491,6 +494,12 @@ button {
 	#menu ul li a:hover strong {
 		display: block;
 		margin: 0;
+	}
+	
+	#submenu {
+		display: block;
+		margin: 0 18px 0 124px;
+		padding: 4px 14px 2px 14px;
 	}
 	
 	#remark {
