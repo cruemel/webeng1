@@ -214,6 +214,10 @@ body{
 	padding: 0 0 0 0.5em;
 }
 
+#menu ul li.active a {
+	color: #333333;
+}
+
 /* Inhalt */
 
 #content {
@@ -352,6 +356,10 @@ body{
 
 #subbar td a {
 	color: #333333;
+}
+
+#subbar td.active a {
+	color: #ffffff;
 }
 
 #remark {
@@ -498,7 +506,7 @@ button {
 	
 	#submenu {
 		display: block;
-		margin: 0 18px 0 124px;
+		margin: 0 24px 0 124px;
 		padding: 4px 14px 2px 14px;
 	}
 	
