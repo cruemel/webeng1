@@ -1,0 +1,12 @@
+# Kompetenzziele
+
+2. Entwicklungs- und Analysewerkzeuge
+
+    Unix/Linux-Tools: ping, traceroute, wget, lynx
+    HTTP-Server Apache
+    integrierte Entwicklungsumgebung Eclipse
+    Versionsmanagement mit Git
+    Firefox-Add-ons: Firebug, Webdeveloper, RESTclient, YSlow
+    PaaS-Client von cloudControl
+    
+3.
