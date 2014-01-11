@@ -358,8 +358,13 @@ body{
 	color: #333333;
 }
 
+#subbar td.active {
+	background-color: #ffffff;
+	border: 1px solid #D9D2C0;
+}
+
 #subbar td.active a {
-	color: #ffffff;
+	color: #333333;
 }
 
 #remark {
