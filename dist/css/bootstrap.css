@@ -185,16 +185,12 @@ table {
   img {
     max-width: 100% !important;
   }
-  @page  {
-    margin: 2cm .5cm;
-  }
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-  
   select {
     background: #fff !important;
   }
@@ -223,7 +219,6 @@ table {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1545,9 +1540,7 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-top: 1px \9;
-  /* IE8-9 */
-
+  margin-top: 1px;
   line-height: normal;
 }
 input[type="file"] {
@@ -2952,9 +2945,6 @@ input[type="button"].btn-block {
 }
 .affix {
   position: fixed;
-}
-@-ms-viewport {
-  width: device-width;
 }
 .visible-xs,
 tr.visible-xs,
