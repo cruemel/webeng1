@@ -7,7 +7,7 @@
     	<link rel="shortcut icon" href="./assets/ico/favicon.png">
 		<link href="../dist/css/bootstrap.css" rel="stylesheet">
     	<link href="../css/custom/index.css" rel="stylesheet">
-    	<title>Wikipediasuche - Web-Engineering I: Grundlagen</title>
+    	<title>Status Codes - Web-Engineering I: Grundlagen</title>
   	</head>
 	<body>
 		
@@ -58,20 +58,61 @@
             			</li>
           			</ul>
           		</div>
-          		<div id="submenu" class="homework visible-md visible-lg"><h1><a href="./index.html">Hausarbeiten</a>: Formular</h1></div>
+          		<div id="submenu" class="blog visible-md visible-lg"><h1><a href="../index.html">Blog</a>: Transcript Git</h1></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
-          			<section>
-<form action="http://de.wikipedia.org/wiki/Spezial:Suche" accept-charset="utf-8" id="wiki_search">
-	<fieldset>
-		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
-		<label for="Suchbegriff">Ihre Suche:</label>
-		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie Ihren Suchbegriff an." autofocus required aria-required="true"><br>
-		<button type="submit" id="Artikelsuche" class="btn btn-md btn-primary" name="go">Artikelsuche</button>
-      	<button type="submit" id="Volltextsuche" class="btn btn-md btn-primary" name="fulltext">Volltextsuche</button>
-    </fieldset>
-</form>
-					</section>
-				</div>
+
+<section>
+<h2>Konfiguration</h2>
+    
+   <ul>
+		<li>git config --global user.name "Vorname Nachname"</li>
+		<li>git config --global user.email "vorname.nachname@mailprovider.de"</li>
+		<li>git config --global color.ui auto</li>
+	</ul>
+</section>
+
+<section>  
+<h2>Verzeichnisoperationen</h2>
+
+    <dl>
+		<dt>Abfrage des Git-Status</dt>
+		<dd>git status</dd>
+
+		<dt>Initiierung des Verzichnisses f&uuml;r Git</dt>
+		<dd>git init</dd>
+
+		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
+		<dd>git add [DATEI]</dd>
+    
+		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
+		<dd>git add *</dd>
+    
+		<dt>Herausnehmen einer Datei aus dem Repository</dt>
+		<dd>git reset HEAD [DATEI]</dd>
+
+		<dt>Zur&uuml;cknehmen von &Auml;nderungen</dt>
+		<dd>git checkout -- [DATEI]</dd>
+    
+		<dt>Datei l&ouml;schen</dt>
+		<dd>git rm [DATEI]</dd>
+
+		<dt>Best&auml;tigung der &Auml;nderungen</dt>
+		<dd>git commit -m "[NACHRICHT]"</dd>
+</dl>
+</section>
+
+<section>    
+<h2>Publizieren</h2>
+
+	<ol>
+		<li>git status - welche Dateien haben sich ge&auml;ndert?</li>
+		<li>git add [DATEI] - Datei(en) hinzuzuf&uuml;gen.</li>
+		<li>git commit -m "[NACHRICHT]" - &Auml;nderungen kommentieren</li>
+		<li>git push origin master - &Auml;nderungen an Github senden</li>
+	</ol>
+</section>
+
+</div>
 			</div>
 		</div>
         
@@ -111,20 +152,6 @@
     	 <!-- scripts-->
     	<script src="../assets/js/jquery.js"></script>
     	<script src="../dist/js/bootstrap.min.js"></script>
-    	<script src="../js/vendor/jquery.validate.js"></script>
-    	<script>
-			$(document).ready(function(){
-   				$("#wiki_search").validate();
-        			/*
-        			{ errorPlacement: function(error, element) {
-                		error.appendTo("label[for="+$(element).attr('id')+"]");
-        			},
-        			errorElement: "em"
-        			}
-        			*/
-   					// $('form').removeAttr('novalidate');
-			});
-		</script>
-	
+    	
 	</body>
 </html>
