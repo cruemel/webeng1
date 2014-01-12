@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Status Codes</title>
+</head>
+<body>
+<h1>Die wichtigsten Kommandos zu Git</h1>
+
+<h2>1. Konfiguration</h2>
+    
+   <ul>
+		<li>git config --global user.name "Vorname Nachname"</li>
+		<li>git config --global user.email "vorname.nachname@mailprovider.de"</li>
+		<li>git config --global color.ui auto</li>
+	</ul>
+  
+<h2>2. Verzeichnisoperationen</h2>
+
+    <dl>
+		<dt>Abfrage des Git-Status</dt>
+		<dd>git status</dd>
+
+		<dt>Initiierung des Verzichnisses f&uuml;r Git</dt>
+		<dd>git init</dd>
+
+		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
+		<dd>git add [DATEI]</dd>
+    
+		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
+		<dd>git add *</dd>
+    
+		<dt>Herausnehmen einer Datei aus dem Repository</dt>
+		<dd>git reset HEAD [DATEI]</dd>
+
+		<dt>Zur&uuml;cknehmen von &Auml;nderungen</dt>
+		<dd>git checkout -- [DATEI]</dd>
+    
+		<dt>Datei l&ouml;schen</dt>
+		<dd>git rm [DATEI]</dd>
+
+		<dt>Best&auml;tigung der &Auml;nderungen</dt>
+		<dd>git commit -m "[NACHRICHT]"</dd>
+</dl>
+
+    
+<h2>3. Publizieren</h2>
+
+	<ol>
+		<li>git status - welche Dateien haben sich ge&auml;ndert?</li>
+		<li>git add [DATEI] - Datei(en) hinzuzuf&uuml;gen.</li>
+		<li>git commit -m "[NACHRICHT]" - &Auml;nderungen kommentieren</li>
+		<li>git push origin master - &Auml;nderungen an Github senden</li>
+	</ol>
+
+</body>
+</html>
