@@ -215,7 +215,8 @@ body{
 
 #menu ul li strong {
 	margin: 0;
-	padding: 0 0 0 0.5em;
+	padding: 0 0 0 0.8em;
+	text-transform: uppercase;
 }
 
 #menu ul li.active a {
@@ -361,6 +362,7 @@ body{
 	margin: 0;
 	padding: 0.4em 0.3em; 
 	text-align: center;
+	text-transform: uppercase;
 	font-weight: bold;
 	border-left: 1px solid #ffffff;
 	border-right: 1px solid #ffffff;
@@ -523,6 +525,7 @@ button {
 	#menu ul li a:hover strong {
 		display: block;
 		margin: 0;
+		padding: 0;
 	}
 	
 	#submenu {
