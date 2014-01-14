@@ -259,6 +259,14 @@ body{
 	height: auto;
 }
 
+#content img.more {
+	float: right;
+	position: relative;
+	top: 0.3em;
+	right: 0.3em;
+	padding: 0.3em;
+}
+
 #content p {
 	margin: 0.5em 0;
 	padding: 0;
