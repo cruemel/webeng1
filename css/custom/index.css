@@ -144,7 +144,7 @@ html {
 body{	
 	width: 100%;
  	height: 100%;
-	padding: 1em 0;
+	padding: 16px 0;
 }
 
 #header{
@@ -153,11 +153,12 @@ body{
 #bar {
 	width: 100%; 
 	height: auto; 
-	margin: 0.5em 0; 
+	margin: 8px 0; 
 	padding: 0;  
 }
 
-#main {	
+#main {
+	position: relative;	
 }
 
 .container {
@@ -490,6 +491,8 @@ button {
 	}
   
   	#menu {
+  		position: fixed;
+  		top: 148px;
 		width: 124px;
   		padding: 24px 0;
   		margin: 0;
@@ -532,6 +535,10 @@ button {
 		display: block;
 		margin: 0 24px 0 124px;
 		padding: 4px 14px 2px 14px;
+	}
+	
+	#content {
+		margin: 0 0 0 124px;
 	}
 	
 	#remark {
