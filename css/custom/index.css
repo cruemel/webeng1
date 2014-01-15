@@ -17,7 +17,6 @@ body{
 
 h1 {
 	font-size: 1.2em;
-	margin: 0 0 0.2em 0;
 }
 
 h2 {
@@ -61,16 +60,22 @@ a {
 	color: #336699;
 }
 
+h1 {
+	color: #D9D2C0;
+}
+
 h2, h2 a {
 	color: #B24D2E;
 }
 
 #bar {
-	background-color: #ADBD6C;
+	background-color: #B0B0B0;
+	/* background-color: #ADBD6C; */
 }
 
 #company {
-	color: #1e1e1e;
+	color: #ffffff;
+	/*color: #1e1e1e; */
 }
 
 #menu {
@@ -115,7 +120,7 @@ h2, h2 a {
 	background-color: #CC9933;
 }
 
-#submenu.chapter {
+#submenu.tags{
 	background-color: #CC6633;
 }
 
@@ -127,12 +132,13 @@ h2, h2 a {
 	background-color: #336699;
 }
 
-#submenu.tags {
-	background-color: #996600;
+#submenu.chapter {
+	background-color: #ADBD6C;
+	/* background-color: #996600; */
 }
 
 #subbar {
-	background-color: #D9D2C0;
+	background-color: #F7F6EE;
 }
 
 /* layout */
@@ -247,7 +253,7 @@ body{
 }
 
 #content h1 {
-	margin: 0;
+	margin: 0.8em;
 	padding: 0;
 }
 
@@ -289,7 +295,11 @@ body{
 }
 
 #content li {
-	padding: 0.4em 0;
+	padding: 0.5em 0;
+}
+
+#content ul li span {
+	margin: 0.5em 1em;
 }
 
 #content td {
@@ -335,13 +345,13 @@ body{
 }
 
 #content .chapter .plus {
-	background-image: url(../../img/vendor/glyphicons/glyphicons_219_circle_arrow_down.png); 
+	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
 #content .chapter .minus {
-	background-image: url(../../img/vendor/glyphicons/glyphicons_218_circle_arrow_top.png); 
+	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
@@ -369,13 +379,9 @@ body{
 	border-right: 1px solid #ffffff;
 }
 
-#subbar td a {
-	color: #333333;
-}
-
 #subbar td.active {
 	background-color: #ffffff;
-	border: 1px solid #D9D2C0;
+	border: 1px solid #F7F6EE;
 }
 
 #subbar td.active a {
@@ -509,33 +515,46 @@ button {
 		clear: both;
 	}
 	
+	#menu ul li a:link {
+		color: #ccccccc;
+	}
+	
 	#menu ul li a span {
 		display: block;
 		width: 36px;
 		height: 28px;
-		margin: 0 42px;
+		margin: 0 40px;
 		padding: 8px 4px;	
 		border-radius: 4px;	
-	}
-	
-	#menu ul li.active span {
-		background-color: #D9D2C0;	
 	}
 	
 	#menu ul li a strong {
 		display: none;	
 	}
 	
-	#menu ul li a:hover strong {
+	#menu ul li.active strong {
+		display: block;
+		margin: 0;
+		padding: 0;
+		color: #B0B0B0;	
+	}
+	
+	#menu ul li a:hover span {
+		background-color: rgba(65, 65, 65, 0.1);	
+	}
+	
+	/*
+	#menu ul li.dropdown:hover strong {
 		display: block;
 		margin: 0;
 		padding: 0;
 	}
+	*/
 	
 	#submenu {
 		display: block;
 		margin: 0 24px 0 124px;
-		padding: 4px 14px 2px 14px;
+		padding: 6px;
 	}
 	
 	#content {

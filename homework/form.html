@@ -41,31 +41,31 @@
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
           			<ul>
-            			<li>
-            				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_020_home.png" alt=""></span><strong>Blog</strong></a>
+            			<li class="dropdown">
+            				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_330_blog.png" alt=""></span><strong>Blog</strong></a>
             			</li>
-            			<li>
-            				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt=""></span><strong>Hausarbeiten</strong></a>
-            			</li>
-            			<li>
+            			<li class="dropdown">
             				<a href="../chapter.html"><span><img src="../img/vendor/glyphicons/glyphicons_057_history.png" alt=""></span><strong>Kapitel</strong></a>
             			</li>
-            			<li>
+            			<li class="dropdown">
             				<a href="../tags.html"><span><img src="../img/vendor/glyphicons/glyphicons_066_tags.png" alt=""></span><strong>Themen</strong></a>
             			</li>
-            			<li>
+            			<li class="active dropdown">
+            				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt=""></span><strong>Hausarbeiten</strong></a>
+            			</li>
+            			<li class="dropdown">
             				<a href="../contact.html"><span><img src="../img/vendor/glyphicons/glyphicons_010_envelope.png" alt=""></span><strong>Kontakt</strong></a>
             			</li>
           			</ul>
           		</div>
-          		<div id="submenu" class="homework visible-md visible-lg"><h1><a href="./index.html">Hausarbeiten</a>: Formular</h1></div>
+          		<div id="submenu" class="homework visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
           			<section>
 <form action="http://de.wikipedia.org/wiki/Spezial:Suche" accept-charset="utf-8" id="wiki_search">
 	<fieldset>
 		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
 		<label for="Suchbegriff">Ihre Suche:</label>
-		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie Ihren Suchbegriff an." autofocus required aria-required="true"><br>
+		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie einen Suchbegriff an." autofocus required aria-required="true"><br>
 		<button type="submit" id="Artikelsuche" class="btn btn-md btn-primary" name="go">Artikelsuche</button>
       	<button type="submit" id="Volltextsuche" class="btn btn-md btn-primary" name="fulltext">Volltextsuche</button>
     </fieldset>
@@ -84,13 +84,13 @@
             					<a href="../index.html">Blog</a>
             				</td>
             				<td>
-            					<a href="../homework/index.html">Hausarbeiten</a>
-            				</td>
-            				<td>
             					<a href="../chapter.html">Kapitel</a>
             				</td>
             				<td>
             					<a href="../tags.html">Themen</a>
+            				</td>
+            				<td class="active">
+            					<a href="../homework/index.html">Hausarbeiten</a>
             				</td>
           				</tr>
           			</table>
