@@ -494,15 +494,16 @@ button {
   		position: fixed;
   		top: 148px;
 		width: 124px;
-  		padding: 24px 0;
+  		padding: 32px 0 0 0;
   		margin: 0;
+  		border: 0;
 	}
 	
 	#menu ul li {
-		margin: 12px 0 0 12px;
+		width: 124px;
+		height: 64px;
+		margin: 0;
 		padding: 0;
-		width: 100px;
-		height: 50px;
 		text-align: center;
 		font-size: 0.8em;
 		clear: both;
@@ -510,14 +511,14 @@ button {
 	
 	#menu ul li a span {
 		display: block;
-		width: 42px;
-		height: 36px;
-		margin: 0 28px;
-		padding: 4px;
-		border-radius: 4px;		
+		width: 36px;
+		height: 28px;
+		margin: 0 42px;
+		padding: 8px 4px;	
+		border-radius: 4px;	
 	}
 	
-	#menu ul li.active span{
+	#menu ul li.active span {
 		background-color: #D9D2C0;	
 	}
 	
