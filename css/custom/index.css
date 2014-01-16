@@ -32,6 +32,11 @@ th {
 	line-height: 1.2em;
 }
 
+#company {
+	/* font-family: Rockwell, serif; */
+	font-weight: bold;
+}
+
 #remark {
 	font-size: 0.8em;
 }
@@ -61,7 +66,7 @@ a {
 }
 
 h1 {
-	color: #D9D2C0;
+	color: #a1a1a1;
 }
 
 h2, h2 a {
@@ -69,13 +74,13 @@ h2, h2 a {
 }
 
 #bar {
-	background-color: #B0B0B0;
+	background-color: #a1a1a1;
 	/* background-color: #ADBD6C; */
 }
 
 #company {
 	color: #ffffff;
-	/*color: #1e1e1e; */
+	/* color: #1e1e1e; */
 }
 
 #menu {
@@ -536,7 +541,7 @@ button {
 		display: block;
 		margin: 0;
 		padding: 0;
-		color: #B0B0B0;	
+		color: #a1a1a1;	
 	}
 	
 	#menu ul li a:hover span {
