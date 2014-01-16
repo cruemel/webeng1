@@ -41,30 +41,30 @@
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
           			<ul>
-            			<li class="active dropdown">
+            			<li class="active">
             				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_330_blog.png" alt=""></span><strong>Blog</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../chapter.html"><span><img src="../img/vendor/glyphicons/glyphicons_057_history.png" alt=""></span><strong>Kapitel</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../tags.html"><span><img src="../img/vendor/glyphicons/glyphicons_066_tags.png" alt=""></span><strong>Themen</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt=""></span><strong>Hausarbeiten</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../contact.html"><span><img src="../img/vendor/glyphicons/glyphicons_010_envelope.png" alt=""></span><strong>Kontakt</strong></a>
             			</li>
           			</ul>
           		</div>
-          		<div id="submenu" class="blog visible-md visible-lg"><h1>Transcript Git</h1></div>
+          		<div id="submenu" class="blog visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<h1>Transcript Git</h1>
 
 <section>
-<h2>Konfiguration</h2>
-    
-   <ul>
+	<h2>Konfiguration</h2>
+    <ul>
 		<li>git config --global user.name "Vorname Nachname"</li>
 		<li>git config --global user.email "vorname.nachname@mailprovider.de"</li>
 		<li>git config --global color.ui auto</li>
@@ -72,38 +72,65 @@
 </section>
 
 <section>  
-<h2>Verzeichnisoperationen</h2>
-
-    <dl>
+	<h2>Lokale Operationen</h2>
+	<dl>
+    	<dt>Initiierung des Verzichnisses f&uuml;r Git</dt>
+		<dd>git init</dd>
+		
 		<dt>Abfrage des Git-Status</dt>
 		<dd>git status</dd>
-
-		<dt>Initiierung des Verzichnisses f&uuml;r Git</dt>
-		<dd>git init</dd>
 
 		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
 		<dd>git add [DATEI]</dd>
     
 		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
 		<dd>git add *</dd>
-    
-		<dt>Herausnehmen einer Datei aus dem Repository</dt>
-		<dd>git reset HEAD [DATEI]</dd>
-
-		<dt>Zur&uuml;cknehmen von &Auml;nderungen</dt>
-		<dd>git checkout -- [DATEI]</dd>
-    
-		<dt>Datei l&ouml;schen</dt>
-		<dd>git rm [DATEI]</dd>
 
 		<dt>Best&auml;tigung der &Auml;nderungen</dt>
 		<dd>git commit -m "[NACHRICHT]"</dd>
-</dl>
+		
+		<dt>Datei l&ouml;schen</dt>
+		<dd>git rm [DATEI]</dd>
+	</dl>
+</section>
+
+<section>  
+	<h2>Entfernte Operationen</h2>
+	<dl>
+		<dt>Repository kopieren</dt>
+		<dd>git clone [URL]</dd>
+		
+		<dt>Repository aktualisieren</dt>
+		<dd>git pull</dd>
+		
+		<dt>Dateien an Github senden</dt>
+		<dd>git push [REMOTE_NAME] [BRANCH_NAME]</dd>	
+		
+	</dl>
+</section>
+
+<section>  
+	<h2>&Auml;nderungenn</h2>
+	<dl>
+		<dt>Datei(en) vergleichen</dt>
+		<dd>git diff (HEAD) [DATEI]</dd>
+		
+		<dt>&Auml;nderungen herunterladen</dt>
+		<dd>git fetch [DATEI]</dd>
+		
+		<dt>&Auml;nderungen zusammenf&uuml;hren</dt>
+		<dd>git merge [BRANCH_NAME]</dd>
+		
+		<dt>&Auml;nderungen an einer Datei zur&uuml;cknehmen</dt>
+		<dd>git checkout -- [DATEI]</dd>
+		
+		<dt>Herausnehmen einer Datei aus dem Repository</dt>
+		<dd>git reset HEAD [DATEI]</dd>
+	</dl>
 </section>
 
 <section>    
-<h2>Publizieren</h2>
-
+	<h2>Publizieren</h2>
 	<ol>
 		<li>git status - welche Dateien haben sich ge&auml;ndert?</li>
 		<li>git add [DATEI] - Datei(en) hinzuzuf&uuml;gen.</li>
