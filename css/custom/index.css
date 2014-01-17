@@ -33,8 +33,8 @@ th {
 }
 
 #company {
-	/* font-family: Rockwell, serif; */
 	font-weight: bold;
+	text-align: right;
 }
 
 #remark {
@@ -75,12 +75,10 @@ h2, h2 a {
 
 #bar {
 	background-color: #a1a1a1;
-	/* background-color: #ADBD6C; */
 }
 
 #company {
 	color: #ffffff;
-	/* color: #1e1e1e; */
 }
 
 #menu {
@@ -187,8 +185,7 @@ body{
 #company {
 	float: right; 
 	margin: 0 0 0 0.2em; 
-	padding: 1em; 
-	text-align: right;
+	padding: 1em;
 }
 
 #company .subtitle {
@@ -265,6 +262,11 @@ body{
 #content h2 {
 	margin: 0 0 0.5em 0;
 	padding: 0;
+}
+
+#content h2 img {
+	margin: 0 0.2em;
+	padding: 0 0 0.2em 0;
 }
 
 #content img.map {
