@@ -41,24 +41,21 @@
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
           			<ul>
-            			<li class="dropdown">
+            			<li>
             				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_330_blog.png" alt=""></span><strong data-toggle="dropdown">Blog</strong></a>
             			</li>
-            			<li class="active dropdown">
-            				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt=""></span><strong data-toggle="dropdown">Hausarbeiten</strong></a>
-            			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../chapter.html"><span><img src="../img/vendor/glyphicons/glyphicons_057_history.png" alt=""></span><strong data-toggle="dropdown">Kapitel</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../tags.html"><span><img src="../img/vendor/glyphicons/glyphicons_066_tags.png" alt=""></span><strong data-toggle="dropdown">Themen</strong></a>
             			</li>
-            			<li class="dropdown">
+            			<li>
             				<a href="../contact.html"><span><img src="../img/vendor/glyphicons/glyphicons_010_envelope.png" alt=""></span><strong data-toggle="dropdown">Kontakt</strong></a>
             			</li>
           			</ul>
           		</div>
-          		<div id="submenu" class="homework visible-md visible-lg"><h1>Tabelle</h1></div>
+          		<div id="submenu" class="homework visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
 					<section>
 
@@ -592,6 +589,7 @@
 			$(document).ready(function() {
 				$('#elements').dataTable({
 					"bInfo": null
+					"iDisplayLength": 77,
 				});
 			});
 			/*
