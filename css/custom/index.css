@@ -12,7 +12,7 @@ html {
 body{ 
 	font-family: Helvetica, sans-serif;
   	font-size: 1em;
-  	line-height: 1.2em;
+  	line-height: 1.3em;
 }
 
 h1 {
@@ -89,7 +89,7 @@ h2, h2 a {
 	background-color: #F7F6EE;
 }
 
-#content section {
+#content article, section {
 	background-color: #ffffff;
 }
 
@@ -157,12 +157,19 @@ body{
 }
 
 #header{
+	margin: 0;
+	padding: 0;
+}
+
+#supbar {
+	margin: 0;
+	padding: 0;
 }
 
 #bar {
 	width: 100%; 
 	height: auto; 
-	margin: 8px 0; 
+	margin: 8px 0;
 	padding: 0;  
 }
 
@@ -239,7 +246,7 @@ body{
 	margin: 0;
 }
 
-#content section {
+#content article, section {
 	padding: 0.8em;
 	margin: 1em 0;
 }
@@ -486,17 +493,17 @@ button {
 
 @media (min-width: 992px) {
 
+	#header{
+		margin: 16px 0 0 0;
+		padding: 0;
+	}
+
 	#images img:nth-child(3) {
 		display: inline;
 		margin: 0;
 		padding: 0;
 		border-right: 2px solid #ffffff;
 	} 
-
-	#header {
-		margin: 12px 0;
-		padding: 0;
-	}
 
 	#images {
 		margin: 0 10px 0 122px;
@@ -505,7 +512,7 @@ button {
   
   	#menu {
   		position: fixed;
-  		top: 148px;
+  		top: 140px;
 		width: 124px;
   		padding: 32px 0 0 0;
   		margin: 0;
