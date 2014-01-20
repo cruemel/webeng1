@@ -3,8 +3,8 @@ $(document).ready(function() {
 	var arrow = $('.chapter em');
 	
 	$("#courses div").hide();
-	$("#select li:last").attr("id","current");
-	$("#courses div:last").fadeIn();
+	$("#select li:first").attr("id","current");
+	$("#courses div:first").fadeIn();
 	
 	arrow.click(function () {
 		var name = $(this).attr('class');
