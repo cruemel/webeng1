@@ -1,12 +1,42 @@
 $(document).ready(function() {
 
-	var arrow = $('.chapter em');
+	var courses = $("#courses div");
+	var tabs = $('#select li');
+	var chapter = $('.chapter em');
 	
-	$("#courses div").hide();
-	$("#select li:first").attr("id","current");
-	$("#courses div:first").fadeIn();
+	courses.hide();
+	tabs.attr("class","");
 	
-	arrow.click(function () {
+	var target = $(location).attr('hash');
+	
+	if (!target) {
+		var course = courses.filter('.current');
+		var id = course.attr('id');
+		var now = $('#select li a').filter(function(i) {
+			return i === 1 || $(this).attr( "title" ) === id;
+		});
+		now.parent().attr("class","current");
+		course.fadeIn();
+	}
+	else {
+		var part = target.substring(1,4);
+		var selected = courses.filter('#' + part);
+		var tab = $('#select li a').filter(function(i) {
+			return i === 0 || $(this).attr( "title" ) === part;
+		});
+		tab.parent().attr("class","current");
+		selected.fadeIn();
+	}
+    
+    $('#select li a').click(function(e) {
+        e.preventDefault();        
+       	courses.hide();
+       	tabs.attr("class","");
+        $(this).parent().attr("class","current");
+        $('#' + $(this).attr('title')).fadeIn();
+    });
+    
+    chapter.click(function () {
 		var name = $(this).attr('class');
 		var regex = /minus/g;
 		var match = regex.exec(name);
@@ -20,13 +50,5 @@ $(document).ready(function() {
 		}
 		$(this).next("ol.expand").toggle();
 	});
-    
-    $('#select ul li a').click(function(e) {
-        e.preventDefault();        
-        $("#courses div").hide(); //Hide all content
-        $("#select li").attr("id",""); //Reset id's
-        $(this).parent().attr("id","current"); // Activate this
-        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
-    });
 });
 

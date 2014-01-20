@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=0.9">
-    	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+    	<link rel="shortcut icon" href="./assets/ico/favicon.png">
 		<link href="../dist/css/bootstrap.css" rel="stylesheet">
     	<link href="../css/custom/index.css" rel="stylesheet">
-    	<title>Hausarbeiten - Web-Engineering I+II</title>
+    	<title>Inventarliste - Web-Engineering I+II</title>
   	</head>
 	<body>
 		<div id="header">
@@ -41,7 +41,7 @@
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
           			<ul>
-            			<li>
+            			<li class="active">
             				<a href="../index.html"><span><img src="../img/vendor/glyphicons/glyphicons_330_blog.png" alt=""></span><strong>Blog</strong></a>
             			</li>
             			<li>
@@ -50,7 +50,7 @@
             			<li>
             				<a href="../tags.html"><span><img src="../img/vendor/glyphicons/glyphicons_066_tags.png" alt=""></span><strong>Themen</strong></a>
             			</li>
-            			<li class="active">
+            			<li>
             				<a href="../homework/index.html"><span><img src="../img/vendor/glyphicons/glyphicons_374_claw_hammer.png" alt=""></span><strong>Hausarbeiten</strong></a>
             			</li>
             			<li>
@@ -58,30 +58,44 @@
             			</li>
           			</ul>
           		</div>
-          		<div id="submenu" class="homework visible-md visible-lg"></div>
+          		<div id="submenu" class="blog visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
-        			<section id="part01">
-        				<h2>I: Grundlagen</h2>
-						<ul>
-							<li>Homepage up to the Cloud (Kapitel 2)</li>
-  							<li><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2F">Validit&auml;t der Website</a> (<a href="../chapter.html#p01_c03">Kapitel 3</a>)</li>
-  							<li>Fragen zum HTTP-Protokoll  (<a href="../chapter.html#p01_c04">Kapitel 4</a>)</li>
-  							<li><a href="http://www.codecademy.com/de/c.tag/">Praktikum &quot;Web Fundamentals&quot;</a> (<a href="../chapter.html#p01_c05">Kapitel 5</a>)</li>
-  							<li><a href="../homework/elements.html">Mit CSS formatierte Tabelle aller &quot;XHTML 1.0 strict&quot;-Elemente</a> (<a href="../chapter.html#p01_c06">Kapitel 6</a>)</li>
-  							<li><a href="../homework/form.html">Barrierefreies Suchformular</a> (<a href="../chapter.html#p01_c07">Kapitel 7</a>)</li>
-  							<li>Fragen zu den bisherigen Lerninhalten mit der App ARSnova (<a href="../chapter.html#p01_c08">Kapitel 8</a>)</li>
-  						</ul>
-					</section>
-				</div> 
-      		</div>
-      	</div>
-      
-    	<div id="footer">
-    		<div class="container">
+          			<h1>Inventarliste</h1>
+
+<section>
+	<h2>I: Grundlagen</h2>
+    <ul>
+		<li><a href="https://www.virtualbox.org/">Virtualisierungssoftware VirtualBox</a></li>
+    	<li><a href="http://httpd.apache.org/">Apache Http-Server</a></li>
+    	<li><a href="http://www.mozilla.org/de/firefox/new/">Webbrowser Mozilla Firefox</a> (mit den Add-ons: Firebug, YSlow, RESTClient, Web Developer)</li>
+    	<li><a href="http://www.eclipse.org/">Entwicklungsumgebung Eclipse</a></li>
+    	<li><a href="http://getbootstrap.com/">Website-Template Bootstrap</a></li>
+    	<li><a href="http://git-scm.com/">Versionsverwaltungssoftware Git</a></li>
+    	<li><a href="https://www.cloudcontrol.com/">Kommandozeileninterpreter cctrl von cloudControl</a></li>
+	</ul>
+	<p>sowie:</p> 
+	<ul>
+		<li><a href="http://lynx.isc.org/">Textbrowser Lynx</a></li>
+	</ul>
+</section>
+<section>
+	<h2>II: Mobile Apps</h2>
+    <ul>
+    	<li><a href="http://html5boilerplate.com/">Website-Template Boilerplate</a></li>
+    	<!--<li><a href="http://couchdb.apache.org/">Dokumentenorientierte Datenbank Apache CouchDB</a></li> -->
+	</ul>
+</section>
+
+				</div>
+			</div>
+		</div>
+        
+        <div id="footer">
+        	<div class="container">
     			<div id="subbar">
     				<table>
             			<tr>
-            				<td>
+            				<td class="active">
             					<a href="../index.html">Blog</a>
             				</td>
             				<td>
@@ -95,13 +109,13 @@
           		</div>
           		<div id="remark">
           			made with <a href="http://www.getbootstrap.com/">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
-          		</div>
+				</div>	
           	</div>
     	</div>
     	
-   		 <!-- scripts-->
+    	 <!-- scripts-->
     	<script src="../assets/js/jquery.js"></script>
     	<script src="../dist/js/bootstrap.min.js"></script>
-	
- 	 </body>
+    	
+	</body>
 </html>

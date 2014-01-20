@@ -372,13 +372,13 @@ body{
 
 #select ul li a {
     height: 2em;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
     text-decoration: none;
     background-color: #ffffff;
     color: #a0a0a0;
 }
 
-#select #current a {
+#select .current a {
     color: #ffffff;
     background-color: #ADBD6C;
 }
