@@ -4,37 +4,38 @@ $(document).ready(function() {
 	var tabs = $('#select li');
 	var chapter = $('.chapter em');
 	
+	var target = $(location).attr('hash');
+	
 	courses.hide();
 	tabs.attr("class","");
 	
-	var target = $(location).attr('hash');
-	
 	if (!target) {
-		var course = courses.filter('.current');
-		var id = course.attr('id');
-		var now = $('#select li a').filter(function(i) {
+		var current = courses.filter('.current');
+		var id = current.attr('id');
+		var now = tabs.children().filter(function(i) {
 			return i === 1 || $(this).attr( "title" ) === id;
 		});
+		
 		now.parent().attr("class","current");
-		course.fadeIn();
+		current.fadeIn();
 	}
 	else {
-		var part = target.substring(1,4);
-		var selected = courses.filter('#' + part);
-		var tab = $('#select li a').filter(function(i) {
-			return i === 0 || $(this).attr( "title" ) === part;
+		var selected = courses.filter(target.substring(0,4));
+		var tab = tabs.children().filter(function(i) {
+			return i === 0 || $(this).attr('title') === target.substring(1,4);
 		});
 		tab.parent().attr("class","current");
 		selected.fadeIn();
 	}
     
-    $('#select li a').click(function(e) {
+    tabs.children().click(function(e) {
         e.preventDefault();        
        	courses.hide();
        	tabs.attr("class","");
         $(this).parent().attr("class","current");
         $('#' + $(this).attr('title')).fadeIn();
     });
+   
     
     chapter.click(function () {
 		var name = $(this).attr('class');
