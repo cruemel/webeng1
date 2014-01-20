@@ -299,14 +299,6 @@ body{
 	padding: 0.5em 2em;
 }
 
-#content ol.expand {
-	display: none;
-}
-
-#content ol.expand.current {
-	display: block;
-}
-
 #content section ul {
 	text-indent: 1em;
 	list-style: inside;
@@ -388,28 +380,37 @@ body{
     background-color: rgba(65, 65, 65, 0.1);
 }
 
-#content .chapter .subtitle {
+#courses .chapter span {
 	margin: 0.5em 0;
 	padding: 0;
 }
 
-#content .chapter em {
+#courses .chapter em {
 	float: right;
 	margin: 0;
 	padding: 1em;
 }
 
-#content .chapter .plus {
+#courses .chapter .plus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#content .chapter .minus {
+#courses .chapter .minus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
+
+#courses ol.expand {
+	display: none;
+}
+
+#courses ol.expand.current {
+	display: block;
+}
+
 
 /* footer */
 
