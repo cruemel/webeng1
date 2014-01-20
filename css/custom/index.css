@@ -12,11 +12,11 @@ html {
 body{ 
 	font-family: Helvetica, sans-serif;
   	font-size: 1em;
-  	line-height: 1.3em;
+  	line-height: 1.5em;
 }
 
 h1 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 h2 {
@@ -33,7 +33,7 @@ th {
 }
 
 #company {
-	font-weight: bold;
+	font-family: Rockwell, serif;
 	text-align: right;
 }
 
@@ -66,7 +66,7 @@ a {
 }
 
 h1 {
-	color: #a1a1a1;
+	color: #a1a1a1;	
 }
 
 h2, h2 a {
@@ -74,11 +74,11 @@ h2, h2 a {
 }
 
 #bar {
-	background-color: #a1a1a1;
+	background-color: #c0c0c0;
 }
 
 #company {
-	color: #ffffff;
+	color: #333333;
 }
 
 #menu {
@@ -290,7 +290,7 @@ body{
 }
 
 #content p {
-	margin: 0.5em 0;
+	margin: 0.8em 0;
 	padding: 0;
 }
 
@@ -303,16 +303,20 @@ body{
 	display: none;
 }
 
-#content ul {
+#content ol.expand.current {
+	display: block;
+}
+
+#content section ul {
 	text-indent: 1em;
 	list-style: inside;
 }
 
-#content li {
+#content section ul li {
 	padding: 0.5em 0;
 }
 
-#content ul li span {
+#content section ul li span {
 	margin: 0.5em 1em;
 }
 
@@ -346,6 +350,43 @@ body{
 	text-align: right;
 }
 */
+
+#select {
+  	width: 100%;
+  	height: auto;
+  	margin: 0;
+  	padding: 0;
+}
+
+#select ul {
+	list-style: none;
+	margin: 1em 0;
+  	padding: 0;
+}
+
+#select ul li {
+	float: left;
+    margin: 0 0.5em;
+    padding: 0;  
+}
+
+#select ul li a {
+    height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #a0a0a0;
+}
+
+#select #current a {
+    color: #ffffff;
+    background-color: #ADBD6C;
+}
+
+#select li:hover a {
+    color: #ffffff;
+    background-color: rgba(65, 65, 65, 0.1);
+}
 
 #content .chapter .subtitle {
 	margin: 0.5em 0;
@@ -442,7 +483,7 @@ button {
 	padding: 0.3em 0.5em;
 }
 
-@media (min-width: 512px) { 
+@media (min-width: 542px) { 
 
 	#images img:first-child {
 		display: inline;
