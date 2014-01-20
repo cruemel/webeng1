@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var courses = $("#courses div");
 	var tabs = $('#select li');
-	var chapter = $('.chapter em');
+	var button = $('.chapter em');
 	
 	var target = $(location).attr('hash');
 	
@@ -13,20 +13,24 @@ $(document).ready(function() {
 	tabs.attr("class","");
 	
 	if (!target) {
-		current = courses.filter('.current');
+		course = courses.filter('.current');
 		tab = tabs.children().filter(function(i) {
-			return i === 1 || $(this).attr( "title" ) === current.attr('id');
+			return i === 1 || $(this).attr( "title" ) === course.attr('id');
 		});
 	}
 	else {
-		current = courses.filter(target.substring(0,4));
+		course = courses.filter(target.substring(0,4));
 		tab = tabs.children().filter(function(i) {
 			return i === 0 || $(this).attr('title') === target.substring(1,4);
 		});
+		var list = $(target.substring(0,8) + " ol.expand");
+		list.addClass('current');
+		list.prev("em").removeClass('plus');
+		list.prev("em").addClass('minus');
 	}
 	
 	tab.parent().attr("class","current");
-	current.fadeIn();
+	course.fadeIn();
     
     tabs.children().click(function(e) {
         e.preventDefault();        
@@ -37,7 +41,7 @@ $(document).ready(function() {
     });
    
     
-    chapter.click(function () {
+    button.click(function () {
 		var name = $(this).attr('class');
 		var regex = /minus/g;
 		var match = regex.exec(name);
