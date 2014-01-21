@@ -247,7 +247,7 @@ body{
 }
 
 #content article, section {
-	padding: 0.8em;
+	padding: 1em;
 	margin: 1em 0;
 }
 
@@ -284,7 +284,7 @@ body{
 #content img.more {
 	float: right;
 	position: relative;
-	top: 0.3em;
+	top: 0;
 	right: 0.3em;
 	padding: 0.3em;
 }
@@ -294,18 +294,19 @@ body{
 	padding: 0;
 }
 
-#content ol {
+#content section ol {
 	margin: 0; 
-	padding: 0.5em 2em;
+	padding: 0.3em 1.8em;
 }
 
 #content section ul {
-	text-indent: 1em;
-	list-style: inside;
+	margin: 0; 
+	padding: 0.3em 1.5em;
+	text-indent: 0.5em;
 }
 
-#content section ul li {
-	padding: 0.5em 0;
+#content section li {
+	margin: 0.5em 0;
 }
 
 #content section ul li span {
@@ -387,6 +388,7 @@ body{
 
 #courses .chapter em {
 	float: right;
+	position: relative;
 	margin: 0;
 	padding: 1em;
 }
