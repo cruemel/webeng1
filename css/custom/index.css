@@ -558,7 +558,7 @@ button {
   		position: fixed;
   		top: 140px;
 		width: 124px;
-  		padding: 32px 0 0 0;
+  		padding: 24px 0 0 0;
   		margin: 0;
   		border: 0;
 	}
@@ -580,9 +580,9 @@ button {
 	#menu ul li a span {
 		display: block;
 		width: 36px;
-		height: 28px;
-		margin: 0 40px;
-		padding: 8px 4px;	
+		height: 36px;
+		margin: 0 42px;
+		padding: 4px;	
 		border-radius: 4px;	
 	}
 	
