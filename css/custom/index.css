@@ -37,6 +37,10 @@ th {
 	text-align: right;
 }
 
+#menu {
+	letter-spacing: 0.3em;
+}
+
 #remark {
 	font-size: 0.8em;
 }
@@ -231,7 +235,7 @@ body{
 }
 
 #menu ul li span {
-		display: none;	
+	display: none;	
 }
 
 #menu ul li strong {
@@ -371,18 +375,23 @@ body{
     height: 2em;
     padding: 0.5em 1em;
     text-decoration: none;
-    background-color: #ffffff;
+    letter-spacing: 0.1em;
     color: #a0a0a0;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
 }
 
 #select .current a {
-    color: #ffffff;
-    background-color: #ADBD6C;
+	font-weight: bold;
+	color: #ADBD6C;
+    background-color: #ffffff;
+    border: 1px solid #ADBD6C;
 }
 
 #select li:hover a {
-    color: #ffffff;
-    background-color: rgba(65, 65, 65, 0.1);
+	color: #ffffff;
+    background-color: #ADBD6C;
+    border: 2px solid #ADBD6C;
 }
 
 #courses .chapter span {
@@ -435,8 +444,8 @@ body{
 	margin: 0;
 	padding: 0.4em 0.3em; 
 	text-align: center;
-	text-transform: uppercase;
 	font-weight: bold;
+	letter-spacing: 0.3em;
 	border-left: 1px solid #ffffff;
 	border-right: 1px solid #ffffff;
 }
@@ -527,6 +536,11 @@ button {
 	
 	#menu ul li strong {
 		text-transform: uppercase;
+		letter-spacing: 0.2em;
+	}
+	
+	#menu ul li.active a {
+		border-bottom: 0.2em solid #666666;	
 	}
 	
 	#footer {
@@ -576,6 +590,10 @@ button {
 		text-align: center;
 		font-size: 0.8em;
 		clear: both;
+	}
+	
+	#menu ul li strong {
+		letter-spacing: 0.1em;
 	}
 	
 	#menu ul li a:link {
