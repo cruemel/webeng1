@@ -230,10 +230,13 @@ body{
 	padding: 0.5em 0;
 }
 
+#menu ul li span {
+		display: none;	
+}
+
 #menu ul li strong {
 	margin: 0;
 	padding: 0 0 0 0.8em;
-	text-transform: uppercase;
 }
 
 #menu ul li.active a {
@@ -522,8 +525,8 @@ button {
 		padding: 0;
 	}
 	
-	#menu ul li span {
-		display: none;	
+	#menu ul li strong {
+		text-transform: uppercase;
 	}
 	
 	#footer {
