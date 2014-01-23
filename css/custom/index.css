@@ -634,9 +634,11 @@ button {
 		background-color: rgba(65, 65, 65, 0.1);	
 	}
 	
+	/*
 	#menu ul li a:hover strong {
 		display: block;
 	}
+	*/
 	
 	#submenu {
 		display: block;
