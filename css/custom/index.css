@@ -582,42 +582,47 @@ button {
   		background-color: #F7F6EE;
 	}
 	
+	#menu ul {
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
 	#menu ul li {
 		width: 124px;
 		height: 64px;
 		margin: 0;
 		padding: 0;
-		text-align: center;
-		font-size: 0.8em;
 		clear: both;
 	}
 	
-	#menu ul li strong {
-		letter-spacing: 0.1em;
-	}
-	
-	#menu ul li a:link {
-		color: #cccccc;
-	}
-	
-	#menu ul li a span {
+	#menu ul li span {
 		display: block;
 		width: 36px;
-		height: 36px;
+		height: 38px;
 		margin: 0 42px;
-		padding: 4px;	
+		padding: 6px;	
 		border-radius: 4px;	
 	}
 	
-	#menu ul li a strong {
-		display: none;	
+	#menu ul li span.glyphicon {
+		font-size: 24px;
+		color: #000000;
+	}
+	
+	#menu ul li strong {
+		display: none;
+		letter-spacing: 0.1em;
+		margin: 0;
+		padding: 0;	
 	}
 	
 	#menu ul li.active strong {
 		display: block;
-		margin: 0;
-		padding: 0;
 		color: #a1a1a1;	
+	}
+	
+	#menu ul li a:link {
+		color: #cccccc;
 	}
 	
 	#menu ul li a:hover {
@@ -631,8 +636,6 @@ button {
 	
 	#menu ul li a:hover strong {
 		display: block;
-		margin: 0;
-		padding: 0;
 	}
 	
 	#submenu {
