@@ -76,43 +76,30 @@
 </section>
 
 <section>  
-	<h2>Lokale Operationen</h2>
+	<h2>Initiialisierung</h2>
 	<dl>
-    	<dt>Initiierung eines Verzichnisses f&uuml;r Git</dt>
+    	<dt>Neues Verzichnisses f&uuml;r Git anlegen</dt>
 		<dd>git init</dd>
 		
-		<dt>Der aktuelle  Stand</dt>
-		<dd>git status</dd>
+		<dt>Ein lokales Repository kopieren</dt>
+		<dd>git clone [PATH]</dd>
+		
+		<dt>Ein entferntes Repository kopieren</dt>
+		<dd>git clone [USER]@[URL]</dd>
+	</dl>
+</section>
 
+<section>  
+	<h2>Dateien hinzuf&uuml;gen (oder l&ouml;schen)</h2>
+	<dl>		
 		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
 		<dd>git add [DATEI]</dd>
     
 		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
 		<dd>git add *</dd>
-
-		<dt>Best&auml;tigung (und Kommentierung) der &Auml;nderungen</dt>
-		<dd>git commit -m "[NACHRICHT]"</dd>
 		
 		<dt>Datei l&ouml;schen</dt>
 		<dd>git rm [DATEI]</dd>
-	</dl>
-</section>
-
-<section>  
-	<h2>Entfernte Operationen</h2>
-	<dl>
-		<dt>Repository kopieren</dt>
-		<dd>git clone [URL]</dd>
-		
-		<dt>Repository aktualisieren</dt>
-		<dd>git pull</dd>
-		
-		<dt>Ein Repository mit Github verbinden</dt>
-		<dd>git remote add origin https://github.com/[BENUTZER]/[REPRO]</dd>	
-		
-		<dt>Dateien an Github senden</dt>
-		<dd>git push [REMOTE] [BRANCH]</dd>	
-		
 	</dl>
 </section>
 
@@ -122,17 +109,49 @@
 		<dt>Datei(en) vergleichen</dt>
 		<dd>git diff (HEAD) [DATEI]</dd>
 		
+		<!--
 		<dt>&Auml;nderungen herunterladen</dt>
 		<dd>git fetch [DATEI]</dd>
-		
-		<dt>&Auml;nderungen zusammenf&uuml;hren</dt>
-		<dd>git merge [BRANCH]</dd>
+		-->
 		
 		<dt>&Auml;nderungen an einer Datei zur&uuml;cknehmen</dt>
 		<dd>git checkout -- [DATEI]</dd>
 		
 		<dt>Herausnehmen einer Datei aus dem Repository</dt>
-		<dd>git reset HEAD [DATEI]</dd>
+		<dd>git reset HEAD [DATEI]</dd>	
+	</dl>
+</section>
+
+<section>  
+	<h2>Best&auml;tigen und synchronisieren</h2>
+	<dl>
+		<dt>Best&auml;tigung (und Kommentierung) der &Auml;nderungen</dt>
+		<dd>git commit -m "[NACHRICHT]"</dd>
+		
+		<dt>Änderungen an das entfernte Repository senden</dt>
+		<dd>git push origin master</dd>	
+		
+		<dt>Ein lokales Repository mit einem entfernten verbinden</dt>
+		<dd>git remote add origin [SERVER]/[BENUTZER]/[REPRO]</dd>	
+		
+		<dt>Ein lokales Repository aktualisieren</dt>
+		<dd>git pull</dd>
+	</dl>
+</section>
+
+<section>  
+	<h2>Zweige</h2>
+	<dl>
+		<dt>Einen neuen Zweig anlegen</dt>
+		<dd>git checkout -b [BRANCH]</dd>
+	</dl>
+</section>
+
+<section>  
+	<h2>Zusamenf&uuml;gen</h2>
+	<dl>
+		<dt>&Auml;nderungen zusammenf&uuml;hren</dt>
+		<dd>git merge [BRANCH]</dd>
 	</dl>
 </section>
 
