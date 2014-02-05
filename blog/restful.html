@@ -7,7 +7,7 @@
     	<link rel="shortcut icon" href="../favicon.ico">
 		<link href="../dist/css/bootstrap.css" rel="stylesheet">
     	<link href="../css/custom/index.css" rel="stylesheet">
-    	<title>Git Cheat Sheet - Web-Engineering I+II</title>
+    	<title>REST - Web-Engineering I+II</title>
     	<!--[if lt IE 9]>
       		<script src="./assets/js/html5shiv.js"></script>
       		<script src="./assets/js/respond.min.js"></script>
@@ -64,124 +64,89 @@
           		</div>
           		<div id="submenu" class="blog visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
-          			<h1>Git Cheat Sheet</h1>
+          			<h1>Rest = REpresentational State Transfer</h1>
 
 <section>
-	<h2>Konfiguration</h2>
-    <ul>
-		<li>git config --global user.name "Vorname Nachname"</li>
-		<li>git config --global user.email "vorname.nachname@mailprovider.de"</li>
-		<li>git config --global color.ui auto</li>
+	<h2>Quelle</h2>
+	<ul>
+		<li>Dinge vs. Aktionen</li>
+		<li>Nomen vs. Verben</li>
+		<li>Rest vs. Soap</li>
 	</ul>
+	<p>Wobei die Quelle anhand der Uri identifiziert wird. Was widerum bedeutet: entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
 </section>
 
-<section>  
-	<h2>Initiialisierung</h2>
-	<dl>
-    	<dt>Neues Verzichnisses f&uuml;r Git anlegen</dt>
-		<dd>git init</dd>
-		
-		<dt>Lokales Repository kopieren</dt>
-		<dd>git clone [PATH]</dd>
-		
-		<dt>Entferntes Repository kopieren</dt>
-		<dd>git clone [USER]@[URL]</dd>
-	</dl>
+<section>
+	<h2>Vertretung</h2>
+	<ul>
+		<li>wie die Quelle(n) ver&auml;ndet werden</li>
+		<li>Teil des Zustandes der Quelle (der Transfer zwischen Client und Server)</li>
+		<li>typischerweise JSON oder XML</li>
+		<li>Beispiel:
+			<ul>
+				<li>Quelle: eine Person
+ 				<li>Service: die Kontaktdaten (GET)
+ 				<li>Vertretung: {name, address, phone} oder &lt;name&gt;&lt;/name&gt;
+ 			</ul>
+ 		</li>
+ 	</ul>
 </section>
-
-<section>  
-	<h2>Dateien hinzuf&uuml;gen (oder l&ouml;schen)</h2>
-	<dl>		
-		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
-		<dd>git add [DATEI]</dd>
-    
-		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
-		<dd>git add *</dd>
-		
-		<dt>Datei l&ouml;schen</dt>
-		<dd>git rm [DATEI]</dd>
-	</dl>
-</section>
-
-<!--
-
-<section>  
-	<h2>&Auml;nderungen</h2>
-	<dl>
-		<dt>Datei(en) vergleichen</dt>
-		<dd>git diff (HEAD) [DATEI]</dd>
-		
-		<dt>&Auml;nderungen herunterladen</dt>
-		<dd>git fetch [DATEI]</dd>
-		
-		<dt>&Auml;nderungen an einer Datei zur&uuml;cknehmen</dt>
-		<dd>git checkout -- [DATEI]</dd>
-		
-		<dt>Herausnehmen einer Datei aus dem Repository</dt>
-		<dd>git reset HEAD [DATEI]</dd>	
-	</dl>
-</section>
-
--->
-
-<section>  
-	<h2>Best&auml;tigen und synchronisieren</h2>
-	<dl>
-		<dt>Best&auml;tigung (und Kommentierung) der &Auml;nderungen</dt>
-		<dd>git commit -m "[NACHRICHT]"</dd>
-		
-		<dt>Änderungen an das entfernte Repository senden</dt>
-		<dd>git push origin master</dd>	
-		
-		<dt>Lokales Repository mit einem entfernten verbinden</dt>
-		<dd>git remote add origin [SERVER]/[BENUTZER]/[REPRO]</dd>	
-		
-		<dt>Ein lokales Repository aktualisieren</dt>
-		<dd>git pull</dd>
-	</dl>
-</section>
-
-<section>  
-	<h2>Zweige</h2>
-	<dl>
-		<dt>Einen neuen Zweig anlegen</dt>
-		<dd>git checkout -b [BRANCH]</dd>
-	
-		<dt>Wechseln zum Master-Zweig</dt>
-		<dd>git checkout master</dd>
-	
-		<dt>Einen Zweig l&ouml;schen</dt>
-		<dd>git branch -d [BRANCH]</dd>
-		
-		<dt>Einen Zweig an das entfernte Repository senden</dt>
-		<dd>git push origin [BRANCH]</dd>
-	</dl>
-</section>
-
-<section>  
-	<h2>Zusamenf&uuml;gen</h2>
-	<dl>
-		<dt>&Auml;nderungen zusammenf&uuml;hren</dt>
-		<dd>git merge [BRANCH]</dd>
-		
-		<dt>Zwei Zweige vergleichen</dt>
-		<dd>git diff [BRANCH_1] [BRANCH_2]</dd>
-	</dl>
-</section>
-
-<section>    
-	<h2>Publizieren</h2>
+<section>
+	<h2>Bedingungen</h2>
 	<ol>
-		<li>git status - was hat sich ge&auml;ndert?</li>
-		<li>git add [DATEI] - ver&auml;nderte - und neue - Dateien zum Index hinzuzuf&uuml;gen.</li>
-		<li>git commit -m "[NACHRICHT]" - die &Auml;nderungen kommentieren</li>
-		<li>git push origin master - &Auml;nderungen an Github senden</li>
+		<li>
+			<h4>Einheitliche Schnittstelle</h4>
+   			<p>definiert die Schnittstelle zwischen Client und Server</p>
+			<ul>
+				<li>HTTP Aktionen (GET, PUT, POST, DELETE)</li>
+				<li>URIs (resource name)</li>
+				<li>HTTP Antwort (status, body)</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Verbindungslos</h4>
+			<ul>
+				<li>der Server hat keine Information &uuml;ber den Zustand des Client</li>
+				<li>jede Nachricht ist selbsterkl&auml;rend</li>
+				<li>Sessions werden allein auf dem Client gespeichert</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Austausch zwischen Client und Server</h4>
+			<ul>
+				<li>Client und Server sind nicht miteinander verbunden</li>
+				<li>eine Trennung von Interface und Services</li>
+				<li>http als Verbindung zwischen Client und Server</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Pufferbar</h4>
+			<ul>
+				<li>bedingungslos</li>
+				<li>ausdr&uuml;cklich</li>
+				<li>verhandelbar</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Verschiedene Anwendungsschichten</h4>
+			<ul>
+				<li>der Client kann keine direkte Verbindung zum Server erwarten</li>
+				<li>Vermittler zwischen Software und Hardware bzw. Client und Server</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Zus&auml;tzliche Skripte auf Anforderung</h4>
+			<ul>
+				<li>die M&ouml;glichkeiten des Clients werden erweitert, indem ein Teil der Logik zum Client verlagert wird</li>
+				<li>zum Beispiel: javascript</li>
+			</ul>
+		</li>
 	</ol>
 </section>
 
 <section>
 	<div class="notes">
-		Quelle: <a href="http://rogerdudler.github.com/git-guide/">Nina Jaeschke: git cheat sheet</a>
+		Quelle: <a href="https://www.youtube.com/watch?v=llpr5924N7E">Todd Fredrich: What is REST Anyway?</a>
 	</div>
 </section>
 
