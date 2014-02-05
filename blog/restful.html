@@ -67,29 +67,33 @@
           			<h1>Rest = REpresentational State Transfer</h1>
 
 <section>
-	<h2>Quelle</h2>
-	<ul>
-		<li>Dinge vs. Aktionen</li>
-		<li>Nomen vs. Verben</li>
-		<li>Rest vs. Soap</li>
-	</ul>
-	<p>Wobei die Quelle anhand der Uri identifiziert wird. Was widerum bedeutet: entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
-</section>
-
-<section>
-	<h2>Vertretung</h2>
-	<ul>
-		<li>wie die Quelle(n) ver&auml;ndet werden</li>
-		<li>Teil des Zustandes der Quelle (der Transfer zwischen Client und Server)</li>
-		<li>typischerweise JSON oder XML</li>
-		<li>Beispiel:
+	<h2>Bestandteile</h2>
+	<ol>
+		<li>
+			<h4>Quelle</h4>
 			<ul>
-				<li>Quelle: eine Person
- 				<li>Service: die Kontaktdaten (GET)
- 				<li>Vertretung: {name, address, phone} oder &lt;name&gt;&lt;/name&gt;
+				<li>Dinge vs. Aktionen</li>
+				<li>Nomen vs. Verben</li>
+				<li>Rest vs. Soap</li>
+			</ul>
+			<p>Wobei die Quelle anhand der Uri identifiziert wird. Was widerum bedeutet: 		entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
+		</li>
+		<li>
+			<h4>Vertretung</h4>
+			<ul>
+				<li>wie die Quelle(n) ver&auml;ndet werden (der body)</li>
+				<li>Teil des Zustandes der Quelle (der Transfer zwischen Client und Server)</li>
+				<li>typischerweise JSON oder XML</li>
+				<li>Beispiel:
+					<ul>
+						<li>Quelle: eine Person
+ 						<li>Service: die Kontaktdaten (GET)
+ 						<li>Vertretung: {name, address, phone} oder &lt;name&gt;&lt;/name&gt;
+ 					</ul>
+ 				</li>
  			</ul>
  		</li>
- 	</ul>
+ 	</ol>
 </section>
 <section>
 	<h2>Bedingungen</h2>
