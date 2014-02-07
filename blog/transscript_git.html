@@ -71,22 +71,26 @@
 	<h2>Konfiguration</h2>
     <ul>
 		<li>git config --global user.name "Vorname Nachname"</li>
-		<li>git config --global user.email "vorname.nachname@mailprovider.de"</li>
+		<li>git config --global user.email "name@domain.org"</li>
 		<li>git config --global color.ui auto</li>
 	</ul>
 </section>
 
 <section>  
-	<h2>Initiialisierung</h2>
+	<h2>Ein neues Repository anlegen</h2>
 	<dl>
-    	<dt>Neues Verzichnisses f&uuml;r Git anlegen</dt>
+    	<dt>Ein vorhandenes Verzeichnis f&uuml;r Git initialisieren</dt>
 		<dd>git init</dd>
 		
 		<dt>Lokales Repository kopieren</dt>
 		<dd>git clone [PATH]</dd>
-		
-		<dt>Entferntes Repository kopieren</dt>
-		<dd>git clone ([BENUTZER]@)[REPRO]</dd>
+	</dl>
+</section>
+<section>  
+	<h2>Ein entferntes Repository kopieren</h2>
+	<dl>
+		<dt>Ein neues Verzeichnis anlegen, es initialisieren und alle Daten kopieren</dt>
+		<dd>git clone ([USER]@)[URL] (DIR)</dd>
 	</dl>
 </section>
 
@@ -135,7 +139,7 @@
 		<dd>git push origin master</dd>	
 		
 		<dt>Lokales Repository mit einem entfernten verbinden</dt>
-		<dd>git remote add origin [SERVER]/[BENUTZER]/[REPRO]</dd>	
+		<dd>git remote add origin [SERVER]/[USER]/[URL]</dd>	
 		
 		<dt>Ein lokales Repository aktualisieren</dt>
 		<dd>git pull</dd>
