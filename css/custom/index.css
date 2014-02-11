@@ -25,6 +25,17 @@ h2 {
 	font-size: 1.4em;
 }
 
+h3 {
+	font-family: Maxima, sans-serif;
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 1.1em;
+	font-weight: normal;
+	margin: 0 0 0.4em 0;
+}
+
 sup {
 	font-size: 0.8em;
 }
@@ -354,6 +365,16 @@ body{
 	text-align: right;
 }
 */
+
+.subsection {
+	margin: 0.8em 0 1.2em 0;
+  	padding: 0;
+}
+
+.example, syntax {
+	margin: 0.8em 0;
+  	padding: 0;
+}
 
 #select {
   	width: 100%;
