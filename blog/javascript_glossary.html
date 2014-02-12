@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="../favicon.ico">
+    	<link rel="apple-touch-icon" href="../apple-touch-icon-precomposed.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Javascript Kurzreferenz - Web-Engineering I+II</title>
+    	<!--[if lt IE 9]>
+      		<script src="./assets/js/html5shiv.js"></script>
+      		<script src="./assets/js/respond.min.js"></script>
+    	<![endif]-->
+    
+  	</head>
+	<body>
+		<div id="header">
+    		<div id="supbar">
+				<div class="container">
+      				<div class="navbar-default">
+        				<div class="navbar-header">
+          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          						<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+          					</button>
+        				</div>
+					</div>
+				</div>
+			</div>
+			<div id="bar">
+				<div class="container">
+					<div id="company">
+						<div class="name">WEB ENGINEERING I+II:</div>
+						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
+					</div>
+					<div id="images" class="clearfix">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tür beim ber"><img src="../img/custom/apple.jpg" alt="äpfel im garten">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="main"> 
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li class="active">
+            				<a href="../index.html"><span class="glyphicon glyphicon-book"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			</li>
+            			<li>
+            				<a href="../homework/index.html"><span class="glyphicon glyphicon-wrench"></span><strong>Hausarbeiten</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="blog visible-md visible-lg"></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+<h1>Javascript Kurzreferenz</h1>
+<section id="arrays">
+<h2>Arrays</h2>
+<div class="subsection" id="arrays_accessing-array-elements">
+<h3 class="title">Auf Arrays zugreifen</h3>
+<p class="definition">Einzelne Elemente eines Arrays bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Elemente hat also die Indexzahl 0, das zweiten die Indexzahl 1, das dritte 2 usw.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">array[index]</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> primzahlen = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
+primzahlen[<span class="number">0</span>]; <span class="comment">// 2</span>
+primzahlen[<span class="number">3</span>]; <span class="comment">// 7</span>
+primzahlen[<span class="number">150</span>]; <span class="comment">// undefiniert</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="arrays_array-literals">
+<h3 class="title">Arrays erstellen</h3>
+<p class="definition">Arrays k&ouml;nnen auf zweierlei Art &amp; Weise erstellt werden. Die gebr&auml;uchlichste dabei ist die Werte innerhalb zweier geschweiften Klammern anzugeben. JavaScript Arrays k&ouml;nnen jeden Wertetyp und auch gemischte Typen enthalten</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">var</span> arrayname = [element0, element1, ..., elementN]</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> primzahlen = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
+
+<span class="keyword">var</span> junk = [<span class="number">10</span>, <span class="string">"Hallo"</span>, Math, console, { viele: <span class="string">"verschiedene Typen"</span> }];
+</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+</a>
+</li>
+<li>
+<a href="http://www.javascripter.net/faq/creatingarrays.htm" target="_blank">
+http://www.javascripter.net/faq/creatingarrays.htm
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="arrays_multi-dimensional-arrays">
+<h3 class="title">Mehrdimensionale Arrays</h3>
+<p class="definition">Ein zweidimensionales Array ist ein Array innerhalb eines Arrays. Bef&uuml;llt man dieses widerum mit einem anderen Array, so erh&auml;lt man ein dreidimensionales Array, usw.</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]] <span class="comment">// zwei Dimensionen, 3x3</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="arrays_array-constructor">
+<h3 class="title">Der Array Konstruktor</h3>
+<p class="definition">Man kann ein Array auch &uuml;ber einen Konstruktor erzeugen.</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> meinArray = <span class="keyword">new</span> Array(<span class="number">45</span> , <span class="string">"Hallo Welt!"</span>, <span class="literal">true</span>, <span class="number">3.2</span>, undefined);
+console.log(myArray);
+<span class="comment">// [ 45, 'Hallo Welt!', true, 3.2, undefined ]</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> zeug = <span class="keyword">new</span> Array();
+
+zeug[<span class="number">0</span>] = <span class="number">34</span>;
+zeug[<span class="number">4</span>] = <span class="number">20</span>;
+
+console.log(zeug); 
+  
+<span class="comment">// [34, undefined, undefined, undefined, 20]</span>
+</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Example.3A_Creating_an_array" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Example.3A_Creating_an_array
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="arrays_accessing-nested-array-elements">
+<h3 class="title">Zugriff auf Mehrdimensionale Arrays</h3>
+<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf von einfache Arrays. Sie werden mittels der Notation [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">array[index][index]....</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre>
+<code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = [
+            [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
+            [<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> , [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>] ],
+            [<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span> , [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
+            [<span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ]
+            ];
+
+console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="number">5</span>][<span class="number">4</span>] ); 
+
+<span class="comment">//6 - zweite Zeile, letztes Element, letzter Wert: 5 Element des 6 Arrays des zweiten Arrays von mehrdimensionalesArray.</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="booleans">
+<h2>Boolean</h2>
+<div class="subsection" id="booleans_boolean-literals">
+<h3 class="title">Boolesche Werte</h3>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="literal">true</span>
+<span class="literal">false</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="booleans_boolean-logical-operators">
+<h3 class="title">Boolesche Ausdr&uuml;cke</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">ausdruck1 &amp;&amp; ausdruck2 <span class="comment">// gibt "true" zur&uuml;ck, wenn beide Ausd&uuml;cke wahr sind</span>
+
+ausdruck3 || ausdruck4 <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn einer der beiden Ausd&uumlcke wahr ist</span>
+
+!expression5 <span class="comment">// gibt den umgekehrten boolerischen Wert des Ausdruckes zur&uuml;ck</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span> ( <span class="literal">true</span> &amp;&amp; <span class="literal">false</span> )alert(<span class="string">"Nicht ausgef&uuml;hrt!"</span>);
+<span class="comment">// da der zweite Ausdruck falsch ist</span>
+
+<span class="keyword">if</span>( <span class="literal">false</span> || <span class="literal">true</span> )alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
+<span class="comment">// da jeder der Ausdr&uuml;cke wahr ist</span>
+
+<span class="keyword">if</span>( !<span class="literal">false</span> )alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
+<span class="comment">// da &quot;!false&quot; zu &quot;true&quot; wird</span>
+
+!!<span class="literal">true</span> <span class="comment">// bleibt wahr</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span>(!<span class="literal">false</span> &amp;&amp; ( <span class="literal">false</span> || (<span class="literal">false</span> &amp;&amp; <span class="literal">true</span>) ))alert(<span class="string">"Rate mal ..."</span>);
+
+<span class="comment">/* 
+wird nicht ausgef&uuml;hrt da ... 
+!false &amp;&amp; ( false || (false &amp;&amp; true) ) - wird zu
+!false &amp;&amp; ( false || false) - und das widerum zu
+true &amp;&amp; false - wird, was letztlich falsch ist
+*/</span></code></pre>
+</div>
+<p class="">Ein wichtige Rolle spielt dabei die Rangfolge der Operatoren, d.h. Operatoren mit einer h&ouml;heren Priorität werden fr&uuml;her ausgef&uuml;hrt. Klammern haben oberste Priotrit&auml;t. Der ! -Operator hingegen ist niedriger angesiedelt als Klammern. Dann kommen die &amp;&amp; und schliesslich die || - Operatoren.</p>
+
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span>(<span class="literal">true</span> &amp;&amp; !!<span class="literal">false</span> || <span class="literal">true</span>)alert(<span class="string">"Rate nochmal ?"</span>);
+
+<span class="comment">/* 
+wird ausgef&uuml;hrt da ... 
+true &amp;&amp; !!false || true - wird zu
+true &amp;&amp; false || true - (keine Klammern, also wird ! ausgewertet ) wird
+false || true - (then &amp;&amp; evaluated) was wahr wird.
+*/</span>
+</code></pre>
+</div>
+<p class="comment">Der n&auml;chste wichtige Punkt ist die Assoziativität, d.h. in welcher Reihenfolge Operatoren mit gleicher Priorität ausgef&uuml;hrt werden. Denken Sie z.b. an den Ausdruck: a * b * c . Eine Assoziativität nach Links bedeutet der Ausdruck wird in der entsprechend (a * b) * c ausgewertet, w&auml;hrend eine Assoziativität nach Rechts bedeutet der Ausdruck wird wie a * (b * c) ausgef&uuml;hrt.</p>
+<p class="comment">Klammern, &amp;&amp;, || haben eine Assoziativität nach Links, ! hat eine Assoziativität nach Rechts</p>
+
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">!<span class="literal">false</span> &amp;&amp; !!<span class="literal">false</span> <span class="comment">//false</span>
+<span class="comment">// ausgewertet wie: !false &amp;&amp; false - true &amp;&amp; false - false</span>
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="booleans_comparison-operators">
+<h3 class="title">Vergleichsoperatoren</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">x === y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn zwei Dinge gleich sind</span>
+x !== y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn zwei Dinge nicht gleich sind</span>
+x &lt;= y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x kleiner gleich y ist</span>
+x &gt;= y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x gr&ouml;&szlig;er gleich y ist</span>
+x &lt; y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x kleiner y ist</span>
+x &gt; y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x gr&ouml;&szlig;er y ist</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="booleans_note">
+<h3 class="title">Notiz:</h3>
+<p class="definition">Eine wichtige Anmerkung hierbei ist, das nur die Boolsche Werte (true 
+and false) die Feststellung beinhalten, ob ein Ausdruck wahr oder falsch ist, es aber noch andere Wege gibt aus denen sich der Wahrheitsgehalt einer Aussage ableiten l&auml;sst.</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span>(<span class="number">1</span>)console.log(<span class="string">"True!"</span>); <span class="comment">// Wahr, da jede Zahl ausser Null als wahr betrachtet wird</span>
+
+<span class="keyword">if</span>(<span class="number">0</span>)console.log(<span class="string">"Ich bezweifle, das dies ausgef&uuml;hrt wird."</span>); <span class="comment">// nicht ausgef&uuml;hrt, da 0 als falsch betrachtet wird</span>
+
+<span class="keyword">if</span>(<span class="string">"Hallo"</span>)alert(<span class="string">"D.h., jeder String, der nicht leer ist, ist ebenfalls wahr."</span>); <span class="comment">// wird ausgef&uuml;hrt</span>
+
+<span class="keyword">if</span>(<span class="string">""</span>)alert(<span class="string">"Folglich ist ein leerer String falsch"</span>); <span class="comment">// nicht ausgef&uuml;hrt</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="http://www.sitepoint.com/javascript-truthy-falsy/" target="_blank">
+http://www.sitepoint.com/javascript-truthy-falsy/
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="booleans_vs">
+<h3 class="title">Der Unterschied zwischen == und ===</h3>
+<p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, das == einfach nur den Wert &uuml;berpr&uuml;ft (und nicht den Typ), wohingegen === beides macht - den Wert und den Typ &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnissse hervorrufen kann.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">ausdruck == ausdruck
+ausdruck === ausdruck
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">'1'</span> == <span class="number">1</span> <span class="comment">// true (gleicher Wert)</span>
+<span class="string">'1'</span> === <span class="number">1</span> <span class="comment">// false  (nicht der selbe Typ)</span>
+
+<span class="literal">true</span> == <span class="number">1</span> <span class="comment">// true (da 1 wahr ist - s.o., auch wenn es nicht der selbe Typ ist)</span>
+<span class="literal">true</span> === <span class="number">1</span> <span class="comment">// false (nicht der selbe Typ)</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="code-comments">
+<h2>Kommentare</h2>
+<div class="subsection" id="code-comments_definition">
+<h3 class="title">Defintion</h3>
+<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn du 100 Zeilen Code scheibst und dann vergisst, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r Dich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
+</div>
+
+<div class="subsection" id="code-comments_single-line-comment">
+<h3 class="title">Einzeiliger Kommentare</h3>
+<p class="definition">
+Alles nach  //  ist ein Kommentar (und alles davor Code).
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">console.log(<span class="string">"Dieser Code wird ausgef&uuml;hrt."</span>)
+
+<span class="comment">// console.log("Weil diese Zeile innerhalb eines Kommentares steht, wird sie nicht ausgef&uuml;hrt.")</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">// Dies ist ein einzeiliger Kommentar.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="code-comments_multi-line-comment">
+<h3 class="title">Mehrzeiliger Kommentar</h3>
+<p class="definition">
+Alles zwischen /* und */ ist ein Kommentar.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="comment">/* 
+Dies ist ein mehrzeiliger
+   
+Kommentar!
+*/</span>
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">/* 
+alert("Hallo, ich werde nicht ausgef&uuml;hrt.");
+console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
+*/</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<!--
+<section id="console">
+<h2>console</h2>
+<div class="subsection" id="console_console-log">
+<h3 class="title">console.log</h3>
+<p class="definition">Gibt Informationen auf der Konsole aus. N&uuml;tzlich f&uuml;r das Debugging.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.log(<span class="string">'Poker night!'</span>);</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="console_console-time">
+<h3 class="title">console.time</h3>
+<p class="definition">
+This function starts a timer which is useful for tracking how long an 
+operation takes to happen.You give each timer a unique name, and may 
+have up to 10,000 timers running on a given page.When you call 
+console.timeEnd() with the same name, the browser will output the time, 
+in milliseconds, that elapsed since the timer was started.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">console.time(timerName);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.time("My Math");
+var x = 5 + 5;
+console.log(x);
+console.timeEnd("My Math");
+console.log("Done the math.");
+/* Output:
+10
+My Math: (time taken)
+Done the math.</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.time" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/API/console.time
+</a>
+</li>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="console_console-timeend">
+<h3 class="title">console.timeEnd</h3>
+<p class="definition">
+Stops a timer that was previously started by calling console.time().
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">console.timeEnd(timerName);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.time("My Math");
+var x = 5 + 5;
+console.log(x);
+console.timeEnd("My Math");
+
+/* Output :
+10
+My Math: (time taken)</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="functions">
+<h2>Functions</h2>
+<div class="subsection" id="functions_function-definition">
+<h3 class="title">Function definition</h3>
+<p class="definition">
+A function is a JavaScript procedure—a set of statements that performs a
+ task or calculates a value.It is like a reusable piece of code. Imagine
+ , having 20 for loops ,and then having a single function to handle it 
+all . To use a function, you must define it somewhere in the scope from 
+which you wish to call it. 
+
+A function definition (also called a function declaration) consists of 
+the function keyword, followed by the name of the function, a list of 
+arguments to the function, enclosed in parentheses and separated by 
+commas, the JavaScript statements that define the function, enclosed in 
+curly braces, { }.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">name</span><span class="params">(argument1 , argument2 .... argumentN)</span>{</span>
+    statement1;
+    statement2;
+    ..
+    ..
+    statementN;
+} </code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">greet</span><span class="params">(name)</span> {</span>
+  <span class="keyword">return</span> <span class="string">"Hello"</span> + name + <span class="string">"!"</span>;
+}</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="functions_function-calling">
+<h3 class="title">Function calling</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">functionName(argument1, argument2, ..., argumentN);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">greet(<span class="string">"Anonymous"</span>);
+<span class="comment">// Hello Anonymous!</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="functions_function-hoisting">
+<h3 class="title">Function hoisting</h3>
+<p class="definition">
+The two ways of declaring functions produce different results. Declaring
+ a function one way "hoists" it to the top of the call, and makes it 
+available before it's actually defined.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">hoistedFunction(); <span class="comment">// Hello! I am defined immediately!</span>
+notHoistedFunction(); <span class="comment">// ReferenceError: notHoistedFunction is not defined</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">hoistedFunction</span> <span class="params">()</span> {</span>
+  console.log(<span class="string">'Hello! I am defined immediately!'</span>);
+}
+
+<span class="keyword">var</span> notHoistedFunction = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  console.log(<span class="string">'I am not defined immediately.'</span>);
+}</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascript/" target="_blank">
+http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascript/
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section id="if-statement">
+<h2>If statement</h2>
+<div class="subsection" id="if-statement_if">
+<h3 class="title">if</h3>
+<p class="definition">
+It simply states that if this condition is true , do this , else do something else ( or nothing ) . 
+It occurs in varied forms.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="comment">// Form : Single If</span>
+<span class="keyword">if</span> (condition) {
+  <span class="comment">// code that runs if the condition is true</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span> (answer === <span class="number">42</span>) {
+  console.log(<span class="string">'Told you so!'</span>);
+}</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="if-statement_else">
+<h3 class="title">else</h3>
+<p class="definition">
+A fallback to an if statement. This will only get executed if the previous statement did not.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="comment">// If the condition is true, statement1 will be executed.</span>
+<span class="comment">// Otherwise, statement2 will be executed.</span>
+
+<span class="keyword">if</span> (condition) {
+  <span class="comment">// statement1: code that runs if condition is true</span>
+} <span class="keyword">else</span> {
+  <span class="comment">// statement2: code that runs if condition is false</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span> (gender == <span class="string">"male"</span>) {
+  console.log(<span class="string">"Hello, sir!"</span>);
+} <span class="keyword">else</span> {
+  console.log(<span class="string">"Hello, ma'am!"</span>);
+}</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="if-statement_else-if">
+<h3 class="title">else if</h3>
+<p class="definition">
+This is like an else statement, but with its own condition. It will only
+ run if its condition is true, and the previous statement's condition 
+was false.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="comment">// Form : else if . If the condition is true, statement1 will be executed. Otherwise, condition2 is checked . if it is true , then statement2 is executed. Else , if nothing is true , statement3 is executed.</span>
+<span class="keyword">if</span> (condition1) {
+  statement1;
+} <span class="keyword">else</span> <span class="keyword">if</span> (condition2) {
+  statement2;
+} <span class="keyword">else</span> {
+  statement3;
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span> (someNumber &gt; <span class="number">10</span>) {
+  console.log(<span class="string">"Numbers larger than 10 are not allowed."</span>);
+} <span class="keyword">else</span> <span class="keyword">if</span> (someNumber &lt; <span class="number">0</span>) {
+  console.log(<span class="string">"Negative numbers are not allowed."</span>);
+} <span class="keyword">else</span> {
+  console.log(<span class="string">"Nice number!"</span>);
+}</code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="loops">
+<h2>Loops</h2>
+<div class="subsection" id="loops_for-loops">
+<h3 class="title">For Loops</h3>
+<p class="definition">
+You use for loops, if you know how often you'll loop. The most often used varName in loops is "i".
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> i;  <span class="comment">// "outsourcing" the definition</span>
+<span class="keyword">for</span> (i = <span class="number">10</span>; i &gt;= <span class="number">1</span>; i--) {
+    console.log(i); <span class="comment">// Prints the numbers from 10 to 1</span>
+}</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = startValue];[i &lt; endValue]; [i+=stepValue]) {
+    <span class="comment">// Your code here</span>
+}
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {
+  console.log(i); <span class="comment">// Prints the numbers from 0 to 4</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">/* Note that all of the three statements are optional, i.e. , */</span>
+<span class="keyword">var</span> i = <span class="number">9</span>;
+<span class="keyword">for</span>(;;){
+    <span class="keyword">if</span>(i === <span class="number">0</span>)<span class="keyword">break</span>;
+    console.log(i);
+    i--;
+}
+
+<span class="comment">//This loop is perfectly valid.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="loops_while-loops">
+<h3 class="title">While Loops</h3>
+<p class="definition">
+You use while loops, if you don't know how often you'll loop.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">while</span> (condition) {
+  <span class="comment">// Your code here</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
+<span class="keyword">while</span> (x &lt; <span class="number">5</span>) {
+  console.log(x); <span class="comment">// Prints numbers from 0 to 4</span>
+  x++;
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
+<span class="keyword">while</span> (x &lt;= <span class="number">5</span>) {
+    console.log(x); <span class="comment">// Won't be executed</span>
+    x++;
+}</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="loops_do-while-loops">
+<h3 class="title">Do While Loops</h3>
+<p class="definition">
+You use do while loops, if you have to loop at least once, but if you don't know how often.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">do</span> {
+  <span class="comment">// Your code here</span>
+} <span class="keyword">while</span> (condition);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
+<span class="keyword">do</span> {
+    console.log(x);  <span class="comment">// Prints numbers from 0 to 4</span>
+    x++;
+} <span class="keyword">while</span> (x &lt; <span class="number">5</span>);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
+<span class="keyword">do</span> {
+    console.log(x); <span class="comment">// Prints 10</span>
+    x++;
+} <span class="keyword">while</span> (x &lt;= <span class="number">5</span>);</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="math">
+<h2>Math</h2>
+<div class="subsection" id="math_">
+<p class="definition"></p>
+</div>
+
+<div class="subsection" id="math_random">
+<h3 class="title">random</h3>
+<p class="definition">
+Returns a random number between 0 and 1.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.random()</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.random(); <span class="comment">// A random number between 0 and 1.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="math_floor">
+<h3 class="title">floor</h3>
+<p class="definition">
+Returns the largest integer less than or equal to a number.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.floor(expression)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.floor(<span class="number">9.99</span>); <span class="comment">// 9</span>
+Math.floor(<span class="number">1</span> + <span class="number">0.5</span>); <span class="comment">// 1</span>
+Math.floor(Math.random() * X + <span class="number">1</span>); <span class="comment">// Returns a random number between 1 and X</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="math_pow">
+<h3 class="title">pow</h3>
+<p class="definition">
+Returns base raised to exponent.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.pow(base,exponent)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.pow(<span class="number">2</span>,<span class="number">4</span>); <span class="comment">// gives 16</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="math_ceil">
+<h3 class="title">ceil</h3>
+<p class="definition">
+Returns the smallest integer greater than or equal to a number.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.ceil(expression)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.ceil(<span class="number">45.4</span>); <span class="comment">//  46</span>
+Math.ceil(<span class="number">4</span> - <span class="number">1.9</span>); <span class="comment">//  3</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="math_pi">
+<h3 class="title">PI</h3>
+<p class="definition">
+Returns the ratio of the circumference of a circle to its diameter, 
+approximately 3.14159 or in better terms, the value of PI (π).  
+Note in syntax , we do not put `()` at the end of `Math.PI` because 
+`Math.PI` is not a function.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.PI</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.round(Math.PI); <span class="comment">// rounds the value of PI ,gives 3</span>
+Math.ceil(Math.PI); <span class="comment">// 4</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="math_sqrt">
+<h3 class="title">sqrt</h3>
+<p class="definition">
+Returns the square root of a number.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">Math.sqrt(expression)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">Math.sqrt(<span class="number">5</span>+<span class="number">4</span>); <span class="comment">// 3</span>
+
+Math.sqrt(Math.sqrt(<span class="number">122</span>+<span class="number">22</span>) + Math.sqrt(<span class="number">16</span>)); <span class="comment">//4</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section id="numbers">
+<h2>Numbers</h2>
+<div class="subsection" id="numbers_modulus">
+<h3 class="title">% (Modulus)</h3>
+<p class="definition">
+it returns the remainder left after dividing the left hand side with the right hand side.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">number1 % number2</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="number">14</span> % <span class="number">9</span> <span class="comment">// returns 5</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_isnan">
+<h3 class="title">isNaN</h3>
+<p class="definition">
+Returns true if the given number is not a number , else returns false.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">isNaN([value])</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> user_input = prompt(<span class="string">"Enter a number"</span>); <span class="comment">// Enter "a number"</span>
+
+<span class="keyword">if</span>(isNaN(user_input))
+    alert(<span class="string">"I told you to enter a number."</span>);
+
+<span class="comment">//alert executed , since "a number" is not a number</span>
+
+<span class="comment">//Another important thing:</span>
+
+<span class="keyword">if</span>( isNaN(<span class="string">"3"</span>) )
+    alert(<span class="string">"bad"</span>);
+
+<span class="comment">//wird nicht ausgef&uuml;hrt, da der String "3" in die Zahl 3 umgewandelt wird.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_basic-arithmetic">
+<h3 class="title">Basic Arithmetic</h3>
+<p class="definition">Doing basic arithmetic is simple.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="number">4</span> + <span class="number">5</span>;  <span class="comment">// 9</span>
+<span class="number">4</span> * <span class="number">5</span>;  <span class="comment">// 20</span>
+<span class="number">5</span> - <span class="number">4</span>;  <span class="comment">// 1</span>
+<span class="number">20</span> / <span class="number">5</span>; <span class="comment">// 4</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_prefix-and-postfix-increment-decrement-operators">
+<h3 class="title">Prefix and Postfix increment/decrement operators</h3>
+<p class="definition">
+Prefix increment / decrement operators are operators that first increase
+ the value of the variable by 1 (increment) or decrease the value of an 
+expression / variable by 1 (decrement) and then return this incremented /
+ decremented value. They are used like ++(variable) [increment] or 
+--(varaible) [decrement]
+
+On the other hand , Postfix increment / decrement operators are 
+operators that first return the value of the variable and then increase 
+the value of thAT variable by 1 (increment) or decrease the value of the
+ variable by 1 (decrement) . They are used like (variable)++ [increment]
+ or (varaible)-- [decrement]
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">--variable   <span class="comment">//Prefix Decrement</span>
+++variable   <span class="comment">//Prefix Increment</span>
+variable--   <span class="comment">//Postfix Decrement</span>
+variable++  <span class="comment">//Postfix Increment</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">// The examples will make it clear</span>
+
+<span class="keyword">var</span> x = <span class="number">15</span>; <span class="comment">// x has a value of 15</span>
+<span class="keyword">var</span> y = x++;
+<span class="comment">// since it is postfix , the value of x (15) is first assigned to y and then the value of x is incremented by 1</span>
+console.log(y); <span class="comment">//15</span>
+console.log(x); <span class="comment">//16</span>
+
+<span class="keyword">var</span> a = <span class="number">15</span>; <span class="comment">// a has a value of 15</span>
+<span class="keyword">var</span> b = ++a;
+<span class="comment">// since it is prefix , the value of a (15) is first incremented by 1 and then the value of x is assigned to b</span>
+console.log(b); <span class="comment">//16</span>
+console.log(a); <span class="comment">//16</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">//Guess the output in each, and then check your answer on labs.codecademy.com
+
+//Question 1
+
+var x = 43;
+var y = 34;
+var z = x++ + --y;
+console.log(z);
+console.log(y);
+console.log(x); 
+
+//Question 2
+
+var a = 1;
+var b = 2;
+var c = ++a * b++ / 2 + 1 - b + a;
+console.log(c);
+console.log(b);
+console.log(a);
+
+//Question 3
+
+var p = 6;
+var q = 3;
+var r = Math.pow((--p - 4) , (q++)) + Math.sqrt(q) + --q;
+console.log(r);
+console.log(q);
+console.log(p);
+</code></pre>
+</div>
+</div>
+</section>
+
+<section id="objects">
+<h2>Objects</h2>
+<div class="subsection" id="objects_object-literals">
+<h3 class="title">Object Literals</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">{
+  <span class="string">"property 1"</span>: value1,
+  property2: value2,
+  number: value3
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> obj = {
+  name: <span class="string">"Bob"</span>,
+  married: <span class="literal">true</span>,
+  <span class="string">"mother's name"</span>: <span class="string">"Alice"</span>,
+  <span class="string">"year of birth"</span>: <span class="number">1987</span>,
+  getAge: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="keyword">return</span> <span class="number">2012</span> - obj[<span class="string">"year of birth"</span>];
+  },
+  <span class="number">1</span>: <span class="string">'one'</span>
+};
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="objects_property-access">
+<h3 class="title">Property Access</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">name1[string]
+name2.identifier</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">obj[<span class="string">'name'</span>];  <span class="comment">// 'Bob'</span>
+obj.name;     <span class="comment">// 'Bob'</span>
+obj.getAge(); <span class="comment">// 24</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="oop">
+<h2>OOP</h2>
+<div class="subsection" id="oop_classes">
+<h3 class="title">Classes</h3>
+<p class="definition">
+A class can be thought of as a template to create many objects with 
+similar qualities. Classes are a fundamental component of 
+object-oriented programming (OOP).
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">SubClass.prototype = <span class="keyword">new</span> SuperClass();
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> Lieutenant = <span class="function"><span class="keyword">function</span> <span class="params">(age)</span> {</span>
+  <span class="keyword">this</span>.rank = <span class="string">"Lieutenant"</span>;
+  <span class="keyword">this</span>.age = age;
+};
+
+Lieutenant.prototype = <span class="keyword">new</span> PoliceOfficer();
+
+Lieutenant.prototype.getRank = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  <span class="keyword">return</span> <span class="keyword">this</span>.rank;
+};
+
+<span class="keyword">var</span> John = <span class="keyword">new</span> Lieutenant(<span class="number">67</span>);
+
+John.getJob(); <span class="comment">// 'Police Officer'</span>
+John.getRank(); <span class="comment">// 'Lieutenant'</span>
+John.retire(); <span class="comment">// true</span></code></pre>
+</div>
+</div>
+</section>
+
+<section id="popup-boxes">
+<h2>Popup boxes</h2>
+<div class="subsection" id="popup-boxes_alert">
+<h3 class="title">alert</h3>
+<p class="definition">
+Display an alert dialog with the specified message and an OK button.
+Note: The alert dialog should be used for messages which do not require 
+any response on the part of the user, other than the acknowledgement of 
+the message.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">alert(message);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">alert(<span class="string">"Hello World"</span>);</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">alert(variable_name)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> my_message = !<span class="literal">false</span>;
+alert(my_message);
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="popup-boxes_confirm">
+<h3 class="title">confirm</h3>
+<p class="definition">
+Displays a dialog with the specified message and two buttons, OK and Cancel.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">confirm(<span class="string">"message"</span>) <span class="comment">//returns true if confirmed, false otherwise</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">if</span> ( confirm(<span class="string">"Are you sure you want to delete this post?"</span>) ) {
+  deletePost();
+}</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.confirm" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/API/window.confirm
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="popup-boxes_prompt">
+<h3 class="title">prompt</h3>
+<p class="definition">
+The prompt() displays a dialog with an optional message prompting the 
+user to input some text. If the user clicks the "Cancel" button , null 
+is returned.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">prompt(message);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Enter your name:"</span>);
+console.log(<span class="string">"Hello "</span> + name + <span class="string">"!"</span>);
+</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">prompt(message,value) <span class="comment">// value is a string containing the default value displayed in the text input field. It is an optional parameter.</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Enter your name:"</span>,<span class="string">"Your name here"</span>);
+console.log(<span class="string">"Hello "</span> + name + <span class="string">"!"</span>);</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.prompt" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/API/window.prompt
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section id="strings">
+<h2>Strings</h2>
+
+<div class="subsection" id="strings_">
+<p class="definition">
+Strings are text. They are denoted by surrounding text with either single or double quotes.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="string">"string of text"</span>
+<span class="string">'string of text'</span>
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_concatenation">
+<h3 class="title">Concatenation</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string1 + string2</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"some"</span> + <span class="string">"text"</span>; <span class="comment">// returns "sometext"</span>
+<span class="keyword">var</span> first = <span class="string">"my"</span>;
+<span class="keyword">var</span> second = <span class="string">"string"</span>;
+<span class="keyword">var</span> union = first + second; <span class="comment">// union variable has the string "mystring"</span>
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_length">
+<h3 class="title">length</h3>
+<p class="definition">
+Returns the length of the string.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string.length</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"My name"</span>.length <span class="comment">// 7 , white space is also counted</span>
+<span class="string">""</span>.length <span class="comment">// 0</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_touppercase-tolowercase">
+<h3 class="title">toUpperCase, toLowerCase</h3>
+<p class="definition">
+Changes the cases of all the alphabetical letters in the string.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"my name"</span>.toUpperCase(); <span class="comment">// Returns "MY NAME"</span>
+<span class="string">"MY NAME"</span>.toLowerCase(); <span class="comment">// Returns "my name"</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_trim">
+<h3 class="title">trim()</h3>
+<p class="definition">Entfernt Leerstellen an beiden eins Strings.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string.trim()</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"       a        "</span>.trim(); <span class="comment">// 'a'</span>
+<span class="string">"     a  a       "</span>.trim(); <span class="comment">// 'a  a'</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="strings_replace">
+<h3 class="title">replace()</h3>
+<p class="definition">
+Returns a string with the first match substring replaced with a new substring.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"original string"</span>.replace(<span class="string">"original"</span>, <span class="string">"replaced"</span>); <span class="comment">// returns "replaced string"</span>
+</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_charat">
+<h3 class="title">charAt()</h3>
+<p class="definition">
+Returns the specified character from a string.
+Characters in a string are indexed from left to right. The index of the 
+first character is 0, and the index of the last character in a string 
+called stringName is stringName.length - 1. If the index you supply is 
+out of range, JavaScript returns an empty string.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string.charAt(index) <span class="comment">// index is an integer between 0 and 1 less than the length of the string.</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"Hello World!"</span>.charAt(<span class="number">0</span>); <span class="comment">// 'H'</span>
+<span class="string">"Hello World!"</span>.charAt(<span class="number">234</span>); <span class="comment">// ''</span></code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="strings_substring">
+<h3 class="title">substring()</h3>
+<p class="definition">
+Returns the sequence of characters between two indices within a string. 
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string.substring(indexA[, indexB])
+<span class="comment">//indexA : An integer between 0 and the length of the string</span>
+<span class="comment">// indexB : (optional) An integer between 0 and the length of the string.</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"adventures"</span>.substring(<span class="number">2</span>,<span class="number">9</span>); <span class="comment">// Returns "venture"</span>
+<span class="comment">// It starts from indexA(2) , and goes up to but not including indexB(9)</span>
+<span class="string">"hello"</span>.substring(<span class="number">1</span>); <span class="comment">// returns "ello"</span>
+<span class="string">"Web Fundamentals"</span>.substring(<span class="number">111</span>); <span class="comment">// returns ''</span>
+<span class="string">"In the market"</span>.substring(<span class="number">2</span>,<span class="number">999</span>); <span class="comment">// returns ' the market'</span>
+<span class="string">"Fast and efficient"</span>.substring(<span class="number">3</span>,<span class="number">3</span>); <span class="comment">// returns ''</span>
+<span class="string">"Go away"</span>.substring(<span class="string">"abcd"</span> , <span class="number">5</span>); <span class="comment">// gibt 'Go aw' zur&uuml;ck</span>
+<span class="comment">// Any non-numeric thing is treated as 0</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="strings_indexof">
+<h3 class="title">indexOf()</h3>
+<p class="definition">
+Returns the index within the calling String object of the first 
+occurrence of the specified value, starting the search at fromIndex,
+Returns -1 if the value is not found.
+The indexOf method is case sensitive.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">string.indexOf(searchValue[, fromIndex]) <span class="comment">//fromIndex is optional.It specifies from which index should the search start.Its default value is 0.</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="string">"My name is very long."</span>.indexOf(<span class="string">"name"</span>); <span class="comment">// returns 3</span>
+<span class="string">"My name is very long."</span>.indexOf(<span class="string">"Name"</span>); <span class="comment">// returns -1 , it's case sensitive</span>
+<span class="string">"Where are you going?"</span>.indexOf(<span class="string">"are"</span>,<span class="number">11</span>); <span class="comment">//returns -1</span>
+<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>); <span class="comment">//returns 0 </span>
+<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>,<span class="number">3</span>); <span class="comment">//returns 3</span>
+<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>,<span class="number">229</span>); <span class="keyword">return</span>s <span class="number">13</span> , which is the string.length</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf" target="_blank">
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section id="switch-statements">
+<h2>Switch statements</h2>
+
+<div class="subsection" id="switch-statements_switch">
+<h3 class="title">switch</h3>
+<p class="definition">
+Acts like a big  if / else if / else  chain. Checks a value against a 
+list of cases, and executes the first case that is true. It goes on 
+executing all other cases it finds after the first true case till it 
+finds a breaking statement,after which it breaks out of the switch  If 
+it does not find any matching case , it executes the default case.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> gender = <span class="string">"female"</span>;
+
+<span class="keyword">switch</span> (gender) {
+  <span class="keyword">case</span> <span class="string">"female"</span>:
+    console.log(<span class="string">"Hello, ma'am!"</span>);
+  <span class="keyword">case</span> <span class="string">"male"</span>:
+    console.log(<span class="string">"Hello, sir!"</span>);
+    <span class="keyword">break</span>;
+  <span class="keyword">default</span>:
+    console.log(<span class="string">"Hello!"</span>);
+}
+
+<span class="comment">/* Output:
+Hello, ma'am!
+Hello, sir!
+because break statement is found at the second case so execution stops there */</span></code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">switch</span> (expression) {
+  <span class="keyword">case</span> label1:
+    statements1
+    [<span class="keyword">break</span>;]
+  <span class="keyword">case</span> label2:
+    statements2
+    [<span class="keyword">break</span>;]
+  ...
+  <span class="keyword">case</span> labelN:
+    statementsN
+    [<span class="keyword">break</span>;]
+  <span class="keyword">default</span>:
+    statements_def
+    [<span class="keyword">break</span>;]
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> gender = <span class="string">"female"</span>;
+
+<span class="keyword">switch</span> (gender) {
+  <span class="keyword">case</span> <span class="string">"female"</span>:
+    console.log(<span class="string">"Hello, ma'am!"</span>);
+  <span class="keyword">case</span> <span class="string">"male"</span>:
+    console.log(<span class="string">"Hello, sir!"</span>);
+  <span class="keyword">default</span>:
+    console.log(<span class="string">"Hello!"</span>);
+}
+
+<span class="comment">/* Output:
+Hello, ma'am!
+Hello, sir!
+Hello!
+because no breaking statement is found it executes all of the cases after the true case (which is case 1) */</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="ternary-operator">
+<h2>Dreifach-Schalter</h2>
+
+<div class="subsection" id="ternary-operator_">
+<p class="definition">
+Der Dreifach-Schalter ist normalerweise eine Kurzform f&uuml;r eine if Aussage.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">bedingung ? ausdruck1 : ausdruck2
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">85</span>;
+console.log(<span class="string">"Du hast "</span> + (grad &gt; <span class="number">50</span> ? <span class="string">"gewonnen!"</span> : <span class="string">"verloren!"</span>));
+
+<span class="comment">// Du hast gewonnen!</span>
+
+<span class="comment">// Das ist die gleiche Aussage, wie:
+if(grad &gt; 50){
+    console.log("Du hast " + "gewonnen!");  // oder einfach "Du hast gewonnen!"
+}
+else{
+    console.log("Du hast " + "verloren!"); 
+}</span></code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">bedingung ? (bedingung ? ausdruck1 : ausdruck2) : ausdruck3</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">90</span>;
+console.log( <span class="string">"Dein Grad ist: "</span> + (grad &gt; <span class="number">50</span> ? (grad &gt;= <span class="number">90</span>? <span class="string">"ausgezeichnet"</span>:<span class="string">"durchschnittlich"</span>):<span class="string">"verbesserungsw&uuml;rdig"</span>) );
+
+<span class="comment">// Als verschachtelte if Aussage, sieht das so aus:
+
+if(grad &gt; 50){
+    if(grad &gt;= 90){
+        console.log("Dein Grad ist: ausgezeichnet"):
+    }
+    else{
+        console.log("Dein Grad ist: durchschnittlich");
+    }
+}
+else{
+    console.log("Dein Grad ist: verbesserungsw&uuml;rdig"); 
+}
+</span>
+<span class="comment">// Dein Grad ist: ausgezeichnet</span>
+</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">bedingung ? ausdruck1 : (bedingung( ausdruck2 : ausdruck3 ))</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">51</span>;
+
+console.log( <span class="string">"Dein Rang ist: "</span> + (grad &gt;= <span class="number">90</span> ? <span class="string">"ausgezeichnet"</span>: (grad &gt; <span class="number">50</span>? <span class="string">"durchschnittlich"</span> : <span class="string">"verbesserungsw&uuml;rdig"</span>)) );
+<span class="comment">
+// In Form einer else if Aussage, sieht das so aus:
+
+if(grad &gt;= 90){
+    console.log("Dein Grad ist: ausgezeichnet");
+}
+else if (grad &gt; 50){
+    console.log("Dein Grad ist: durchschnittlich"); 
+}
+else{
+    console.log("Dein Grad ist: verbesserungsw&uuml;rdig"); 
+}
+
+// Dein Grad ist: durchschnittlich
+</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="variables">
+<h2>Variables</h2>
+
+<div class="subsection" id="variables_variable-assignment">
+<h3 class="title">Variablen zuweisen</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = value;</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">1</span>;
+<span class="keyword">var</span> meinName = <span class="string">"Bert"</span>;
+<span class="keyword">var</span> seinName = meinName;</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="variables_variable-changing">
+<h3 class="title">Variablen &auml;ndern</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">var name = neuerWert</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = <span class="string">"Michael"</span> <span class="comment">// erzeugt eine Variable &quot;name&quot; und gibt ihr der Wert "Michael"</span>
+name = <span class="string">"Samuel"</span> <span class="comment">// ändert den Wert der Varibale &quot;name&quot; zu "Samuel"</span></code></pre>
+</div>
+</div>
+
+</section>
+-->
+
+</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

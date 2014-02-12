@@ -33,7 +33,7 @@ h3 {
 h4 {
 	font-size: 1.1em;
 	font-weight: normal;
-	margin: 0 0 0.4em 0;
+	margin: 0.4em 0;
 }
 
 sup {
@@ -87,6 +87,14 @@ h1 {
 
 h2, h2 a {
 	color: #B24D2E;
+}
+
+h3 {
+	color: #333333;	
+}
+
+h4 {
+	color: #666666;	
 }
 
 #bar {
@@ -367,7 +375,7 @@ body{
 */
 
 .subsection {
-	margin: 0.8em 0 1.2em 0;
+	margin: 0.8em 0 2em 0;
   	padding: 0;
 }
 
