@@ -87,7 +87,7 @@ primzahlen[<span class="number">150</span>]; <span class="comment">// undefinier
 
 <div class="subsection" id="arrays_array-literals">
 <h3 class="title">Arrays erzeugen</h3>
-<p class="definition">Arrays k&ouml;nnen auf zweierlei Art &amp; Weise erstellt werden. Die gebr&auml;uchlichste dabei ist die Werte innerhalb zweier geschweiften Klammern anzugeben. JavaScript Arrays k&ouml;nnen jeden Wertetyp und auch gemischte Typen enthalten</p>
+<p class="definition">Arrays k&ouml;nnen auf zweierlei Art &amp; Weise erstellt werden. Die gebr&auml;uchlichste dabei ist die Werte innerhalb zweier geschweiften Klammern anzugeben. JavaScript Arrays k&ouml;nnen jeden Datentyp und auch gemischte Typen enthalten</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="keyword">var</span> arrayname = [element0, element1, ..., elementN]</code></pre>
@@ -160,7 +160,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="arrays_accessing-nested-array-elements">
 <h3 class="title">Zugriff auf mehrdimensionale Arrays</h3>
-<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf von einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
+<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">array[index][index]....</code></pre>
@@ -306,10 +306,10 @@ ausdruck === ausdruck
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="string">'1'</span> == <span class="number">1</span> <span class="comment">// true (gleicher Wert)</span>
-<span class="string">'1'</span> === <span class="number">1</span> <span class="comment">// false  (nicht der selbe Typ)</span>
+<span class="string">'1'</span> === <span class="number">1</span> <span class="comment">// false  (nicht der selbe Datentyp)</span>
 
-<span class="literal">true</span> == <span class="number">1</span> <span class="comment">// true (da 1 wahr ist - s.o., auch wenn es nicht der selbe Typ ist)</span>
-<span class="literal">true</span> === <span class="number">1</span> <span class="comment">// false (nicht der selbe Typ)</span></code></pre>
+<span class="literal">true</span> == <span class="number">1</span> <span class="comment">// true (da 1 wahr ist - s.o., auch wenn es nicht der selbe Datentyp ist)</span>
+<span class="literal">true</span> === <span class="number">1</span> <span class="comment">// false (nicht der selbe Datentyp)</span></code></pre>
 </div>
 </div>
 
@@ -440,7 +440,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
 <!--
 
 <section id="functions">
-<h2>Functions</h2>
+<h2>Funktionen</h2>
 <div class="subsection" id="functions_function-definition">
 <h3 class="title">Function definition</h3>
 <p class="definition">
