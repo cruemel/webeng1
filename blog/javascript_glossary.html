@@ -71,7 +71,7 @@
 <h2>Arrays</h2>
 <div class="subsection" id="arrays_accessing-array-elements">
 <h3 class="title">Auf Arrays zugreifen</h3>
-<p class="definition">Einzelne Elemente eines Arrays bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Elemente hat also die Indexzahl 0, das zweiten die Indexzahl 1, das dritte 2 usw.</p>
+<p class="definition">Einzelne Elemente eines Arraysliterals bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Elemente hat also die Indexzahl 0, das zweiten die Indexzahl 1, das dritte 2 usw.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">array[index]</code></pre>
@@ -86,7 +86,7 @@ primzahlen[<span class="number">150</span>]; <span class="comment">// undefinier
 </div>
 
 <div class="subsection" id="arrays_array-literals">
-<h3 class="title">Arrays erstellen</h3>
+<h3 class="title">Arrays erzeugen</h3>
 <p class="definition">Arrays k&ouml;nnen auf zweierlei Art &amp; Weise erstellt werden. Die gebr&auml;uchlichste dabei ist die Werte innerhalb zweier geschweiften Klammern anzugeben. JavaScript Arrays k&ouml;nnen jeden Wertetyp und auch gemischte Typen enthalten</p>
 <div class="syntax">
 <h4>Syntax</h4>
@@ -159,8 +159,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 </div>
 
 <div class="subsection" id="arrays_accessing-nested-array-elements">
-<h3 class="title">Zugriff auf Mehrdimensionale Arrays</h3>
-<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf von einfache Arrays. Sie werden mittels der Notation [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
+<h3 class="title">Zugriff auf mehrdimensionale Arrays</h3>
+<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf von einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">array[index][index]....</code></pre>
@@ -203,7 +203,7 @@ console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="
 
 ausdruck3 || ausdruck4 <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn einer der beiden Ausd&uumlcke wahr ist</span>
 
-!expression5 <span class="comment">// gibt den umgekehrten boolerischen Wert des Ausdruckes zur&uuml;ck</span></code></pre>
+!expression5 <span class="comment">// gibt den umgekehrten booleschen Wert des Ausdruckes zur&uuml;ck</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -244,7 +244,7 @@ false || true - (then &amp;&amp; evaluated) was wahr wird.
 </code></pre>
 </div>
 <p class="comment">Der n&auml;chste wichtige Punkt ist die Assoziativität, d.h. in welcher Reihenfolge Operatoren mit gleicher Priorität ausgef&uuml;hrt werden. Denken Sie z.b. an den Ausdruck: a * b * c . Eine Assoziativität nach Links bedeutet der Ausdruck wird in der entsprechend (a * b) * c ausgewertet, w&auml;hrend eine Assoziativität nach Rechts bedeutet der Ausdruck wird wie a * (b * c) ausgef&uuml;hrt.</p>
-<p class="comment">Klammern, &amp;&amp;, || haben eine Assoziativität nach Links, ! hat eine Assoziativität nach Rechts</p>
+<p class="comment">Klammern, &amp;&amp; und || haben eine Assoziativität nach Links, ! hat eine Assoziativität nach Rechts</p>
 
 <div class="example">
 <h4>Beispiel</h4>
@@ -296,7 +296,7 @@ http://www.sitepoint.com/javascript-truthy-falsy/
 
 <div class="subsection" id="booleans_vs">
 <h3 class="title">Der Unterschied zwischen == und ===</h3>
-<p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, das == einfach nur den Wert &uuml;berpr&uuml;ft (und nicht den Typ), wohingegen === beides macht - den Wert und den Typ &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnissse hervorrufen kann.</p>
+<p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, das == einfach nur den Wert &uuml;berpr&uuml;ft - und nicht den Datentyp, wohingegen === beides macht - den Wert und den Typ zu &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnissse hervorrufen kann.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">ausdruck == ausdruck
@@ -319,7 +319,7 @@ ausdruck === ausdruck
 <h2>Kommentare</h2>
 <div class="subsection" id="code-comments_definition">
 <h3 class="title">Defintion</h3>
-<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn du 100 Zeilen Code scheibst und dann vergisst, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r Dich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
+<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code scheiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
 </div>
 
 <div class="subsection" id="code-comments_single-line-comment">
@@ -364,10 +364,9 @@ console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
 
 </section>
 
-<!--
-
 <section id="console">
 <h2>Konsole</h2>
+
 <div class="subsection" id="console_console-log">
 <h3 class="title">console.log</h3>
 <p class="definition">Gibt Informationen auf der Konsole aus. N&uuml;tzlich f&uuml;r das Debugging.
@@ -437,6 +436,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
 </div>
 
 </section>
+
+<!--
 
 <section id="functions">
 <h2>Functions</h2>
