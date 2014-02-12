@@ -365,42 +365,33 @@ console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
 </section>
 
 <!--
+
 <section id="console">
-<h2>console</h2>
+<h2>Konsole</h2>
 <div class="subsection" id="console_console-log">
 <h3 class="title">console.log</h3>
 <p class="definition">Gibt Informationen auf der Konsole aus. N&uuml;tzlich f&uuml;r das Debugging.
 </p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">console.log(<span class="string">'Poker night!'</span>);</code></pre>
+<pre><code class="javascript">console.log(<span class="string">'Gute Nacht!'</span>);</code></pre>
 </div>
 </div>
 
 <div class="subsection" id="console_console-time">
 <h3 class="title">console.time</h3>
-<p class="definition">
-This function starts a timer which is useful for tracking how long an 
-operation takes to happen.You give each timer a unique name, and may 
-have up to 10,000 timers running on a given page.When you call 
-console.timeEnd() with the same name, the browser will output the time, 
-in milliseconds, that elapsed since the timer was started.
-</p>
+<p class="definition">Diese Funktion startet einen Timer, der n&uuml;tzlich ist um  nachzuvollziehen, wieviel Zeit eine Operation braucht. Sie k&ouml;nnen jedem Timer einen eigenen Namen geben und Sie k&ouml;nnen bis zu 10.000 Timer auf einer Seite plazieren. Wenn Sie console.timeEnd() mit dem selben Namen wie console.time aufrufen, so wird der Browser die Zeit (in Millisekunden) anzeigen, die vergangen ist seitdem der Timer gestartet wurde.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">console.time(timerName);</code></pre>
+<pre><code class="javascript">console.time(TimerName);</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">console.time("My Math");
+<pre><code class="javascript">console.time("Meine Berechnung");
 var x = 5 + 5;
-console.log(x);
-console.timeEnd("My Math");
-console.log("Done the math.");
-/* Output:
-10
-My Math: (time taken)
-Done the math.</code></pre>
+console.log(x); // 10
+console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist
+console.log("Berechnung abgeschlossen.");</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
@@ -421,23 +412,17 @@ https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
 
 <div class="subsection" id="console_console-timeend">
 <h3 class="title">console.timeEnd</h3>
-<p class="definition">
-Stops a timer that was previously started by calling console.time().
-</p>
+<p class="definition">H&auml;lt einen Timer an, der zuvor mit console.time() gestartet wurde.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">console.timeEnd(timerName);</code></pre>
+<pre><code class="javascript">console.timeEnd(TimerName);</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">console.time("My Math");
+<pre><code class="javascript">console.time("Meine Berechnung");
 var x = 5 + 5;
-console.log(x);
-console.timeEnd("My Math");
-
-/* Output :
-10
-My Math: (time taken)</code></pre>
+console.log(x); // 10
+console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
@@ -450,6 +435,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
 </ul>
 </div>
 </div>
+
 </section>
 
 <section id="functions">
