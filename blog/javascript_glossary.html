@@ -71,7 +71,7 @@
 <h2>Arrays</h2>
 <div class="subsection" id="arrays_accessing-array-elements">
 <h3 class="title">Auf Arrays zugreifen</h3>
-<p class="definition">Einzelne Elemente eines Arraysliterals bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Elemente hat also die Indexzahl 0, das zweiten die Indexzahl 1, das dritte 2 usw.</p>
+<p class="definition">Einzelne Elemente eines Arraysliterals bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Element hat also die Indexzahl 0, das zweite die Indexzahl 1, das dritte 2 usw.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">array[index]</code></pre>
@@ -160,7 +160,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ar
 
 <div class="subsection" id="arrays_accessing-nested-array-elements">
 <h3 class="title">Zugriff auf mehrdimensionale Arrays</h3>
-<p class="definition">Der Zugriff auf mehrdimensionale Array &auml;ndelt dem auf einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
+<p class="definition">Der Zugriff auf mehrdimensionale Arrays &auml;hnelt dem auf einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">array[index][index]....</code></pre>
@@ -229,7 +229,7 @@ wird nicht ausgef&uuml;hrt da ...
 true &amp;&amp; false - wird, was letztlich falsch ist
 */</span></code></pre>
 </div>
-<p class="">Ein wichtige Rolle spielt dabei die Rangfolge der Operatoren, d.h. Operatoren mit einer h&ouml;heren Priorität werden fr&uuml;her ausgef&uuml;hrt. Klammern haben oberste Priotrit&auml;t. Der ! -Operator hingegen ist niedriger angesiedelt als Klammern. Dann kommen die &amp;&amp; und schliesslich die || - Operatoren.</p>
+<p class="">Eine wichtige Rolle spielt dabei die Rangfolge der Operatoren, d.h. Operatoren mit einer h&ouml;heren Priorit&auml;t werden fr&uuml;her ausgef&uuml;hrt. Klammern haben oberste Priorit&auml;t. Der ! -Operator hingegen ist niedriger angesiedelt als Klammern. Dann kommen die &amp;&amp; und schliesslich die || - Operatoren.</p>
 
 <div class="example">
 <h4>Beispiel</h4>
@@ -243,8 +243,8 @@ false || true - (then &amp;&amp; evaluated) was wahr wird.
 */</span>
 </code></pre>
 </div>
-<p class="comment">Der n&auml;chste wichtige Punkt ist die Assoziativität, d.h. in welcher Reihenfolge Operatoren mit gleicher Priorität ausgef&uuml;hrt werden. Denken Sie z.b. an den Ausdruck: a * b * c . Eine Assoziativität nach Links bedeutet der Ausdruck wird in der entsprechend (a * b) * c ausgewertet, w&auml;hrend eine Assoziativität nach Rechts bedeutet der Ausdruck wird wie a * (b * c) ausgef&uuml;hrt.</p>
-<p class="comment">Klammern, &amp;&amp; und || haben eine Assoziativität nach Links, ! hat eine Assoziativität nach Rechts</p>
+<p class="comment">Der n&auml;chste wichtige Punkt ist die Assoziativit&auml;t, d.h. in welcher Reihenfolge Operatoren mit gleicher Priorität ausgef&uuml;hrt werden. Denken Sie z.B. an den Ausdruck: a * b * c . Eine Assoziativit&auml;t nach Links bedeutet der Ausdruck wird entsprechend (a * b) * c ausgewertet, w&auml;hrend eine Assoziativit&auml;t nach Rechts bedeutet der Ausdruck wird wie a * (b * c) ausgef&uuml;hrt.</p>
+<p class="comment">Klammern, &amp;&amp; und || haben eine Assoziativit&auml;t nach Links, ! hat eine Assoziativit&auml;t nach Rechts</p>
 
 <div class="example">
 <h4>Beispiel</h4>
@@ -270,7 +270,7 @@ x &gt; y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x gr&o
 
 <div class="subsection" id="booleans_note">
 <h3 class="title">Notiz:</h3>
-<p class="definition">Eine wichtige Anmerkung hierbei ist, das nur die Boolsche Werte (true 
+<p class="definition">Eine wichtige Anmerkung hierbei ist, dass nur die Boolsche Werte (true 
 and false) die Feststellung beinhalten, ob ein Ausdruck wahr oder falsch ist, es aber noch andere Wege gibt aus denen sich der Wahrheitsgehalt einer Aussage ableiten l&auml;sst.</p>
 <div class="example">
 <h4>Beispiel</h4>
@@ -296,7 +296,7 @@ http://www.sitepoint.com/javascript-truthy-falsy/
 
 <div class="subsection" id="booleans_vs">
 <h3 class="title">Der Unterschied zwischen == und ===</h3>
-<p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, das == einfach nur den Wert &uuml;berpr&uuml;ft - und nicht den Datentyp, wohingegen === beides macht - den Wert und den Typ zu &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnissse hervorrufen kann.</p>
+<p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, dass == einfach nur den Wert &uuml;berpr&uuml;ft - und nicht den Datentyp, wohingegen === beides macht - den Wert und den Typ zu &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnisse hervorrufen kann.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">ausdruck == ausdruck
@@ -319,7 +319,7 @@ ausdruck === ausdruck
 <h2>Kommentare</h2>
 <div class="subsection" id="code-comments_definition">
 <h3 class="title">Definition</h3>
-<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code scheiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
+<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code schreiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
 </div>
 
 <div class="subsection" id="code-comments_single-line-comment">
@@ -441,8 +441,8 @@ https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
 <h2>Funktionen</h2>
 <div class="subsection" id="functions_function-definition">
 <h3 class="title">Funktionsdefinition</h3>
-<p class="definition">Eine Funktion ist eine Abfolge von einzelnen Ausdr&uuml;cken in Javascript, die eine Aufgabe erledigt oder eine Berechnung durchf&uuml;hrt. Sie ist wie ein wiederverwendbar Codebestandteil. Stellen Sie sich vor, Sie haben 20 Schleifen und eine Funktion, die all diese verbindet. Um eine Funktion zu verwenden, m&uuml;ssen Sie den Bereich angeben, in dem Sie sie verwenden wollen.</p>
-<p class="definition">Eine Funktionsdefinition (oder auch -deklaration) besteht aus dem den Stichwort <em>function</em>, gefolgt von dem Namen der Funktion, einer Liste mit Argumenten der Funktion - eingeschlossen in Klammern und jeweils getrennt durch ein Komma, sowie den Javascript Angaben, die die Funktion definieren - eingeschlossen in geschweifte Klammern.</p>
+<p class="definition">Eine Funktion ist eine Abfolge von einzelnen Ausdr&uuml;cken in Javascript, die eine Aufgabe erledigt oder eine Berechnung durchf&uuml;hrt. Sie ist wie ein wiederverwendbarer Codebestandteil. Stellen Sie sich vor, Sie haben 20 Schleifen und eine Funktion, die all diese verbindet. Um eine Funktion zu verwenden, m&uuml;ssen Sie den Bereich angeben, in dem Sie sie verwenden wollen.</p>
+<p class="definition">Eine Funktionsdefinition (oder auch -deklaration) besteht aus dem Stichwort <em>function</em>, gefolgt von dem Namen der Funktion, einer Liste mit Argumenten der Funktion - eingeschlossen in Klammern und jeweils getrennt durch ein Komma, sowie den Javascript Angaben, die die Funktion definieren - eingeschlossen in geschweifte Klammern.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">name</span><span class="params">(argument1 , argument2 .... argumentN)</span>{</span>
@@ -519,7 +519,7 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 <h2>If Abfragen</h2>
 <div class="subsection" id="if-statement_if">
 <h3 class="title">if</h3>
-<p class="definition">Gibt einfach an, dass wenn die Bedingung richtig ist, das Programm einen bestimmten Code ausf&uuml;hren soll, wenn nicht etwas anderes (oder nichts) tun soll. Tritt in verschiedenen Formen auf</p>
+<p class="definition">Gibt an, wenn die Bedingung richtig ist, dass das Programm einen bestimmten Code ausf&uuml;hren soll, wenn es nicht etwas anderes (oder nichts) tun soll. Tritt in verschiedenen Formen auf</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="keyword">if</span> (bedingung) {
