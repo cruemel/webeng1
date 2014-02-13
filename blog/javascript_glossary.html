@@ -516,7 +516,7 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 </section>
 
 <section id="if-statement">
-<h2>If Abfragen</h2>
+<h2>If Anweisungen</h2>
 <div class="subsection" id="if-statement_if">
 <h3 class="title">if</h3>
 <p class="definition">Gibt an, wenn die Bedingung richtig ist, dass das Programm einen bestimmten Code ausf&uuml;hren soll, wenn es nicht etwas anderes (oder nichts) tun soll. Tritt in verschiedenen Formen auf</p>
@@ -537,11 +537,11 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 <div class="subsection" id="if-statement_else">
 <h3 class="title">else</h3>
 <p class="definition">
-Der R&uuml;ckgriff zu einer <em>if</em> Abfrage. Wird nur ausgef&uuml;hrt, falls die vorherige Abfrage nicht ausgef&uuml;hrt wurde.
+Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, falls die vorherige Anweisung nicht ausgef&uuml;hrt wurde.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// Wenn die Bedinging wahr ist, wird aussage1 ausgef&uuml;hrt,</span>
+<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt,</span>
 <span class="comment">// andernfalls wird aussage2 ausgef&uuml;hrt.</span>
 
 <span class="keyword">if</span> (condition) {
@@ -562,7 +562,7 @@ Der R&uuml;ckgriff zu einer <em>if</em> Abfrage. Wird nur ausgef&uuml;hrt, falls
 
 <div class="subsection" id="if-statement_else-if">
 <h3 class="title">else if</h3>
-<p class="definition">Wie eine <em>else</em> Abfrage, nur mit einer eigenen Bedingung. Wird nur ausgef&uuml;hrt, wenn die Bedingung wahr ist und die vorherigen Abfragebedingungen falsch sind.</p>
+<p class="definition">Wie eine <em>else</em> Anweisung, nur mit einer eigenen Bedingung. Wird nur ausgef&uuml;hrt, wenn die Bedingung wahr ist und die vorherigen Anweisungsbedingungen falsch sind.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt. Falls nicht, wird bedingung2 gepr&uuml;ft. Ist sie wahr, wird aussage2 ausgef&uuml;hrt, wenn nicht wird aussage3 ausgef&uuml;hrt.</span>
@@ -588,38 +588,34 @@ Der R&uuml;ckgriff zu einer <em>if</em> Abfrage. Wird nur ausgef&uuml;hrt, falls
 
 </section>
 
-<!--
-
 <section id="loops">
-<h2>Loops</h2>
+<h2>Schleifen</h2>
 <div class="subsection" id="loops_for-loops">
-<h3 class="title">For Loops</h3>
-<p class="definition">
-You use for loops, if you know how often you'll loop. The most often used varName in loops is "i".
-</p>
+<h3 class="title">For Schleifen</h3>
+<p class="definition"><em>for</em> Schleifen werden benutzt, wenn man vorher weiss, wie oft eine Schleife durchlaufen werden soll. Der meist verwendete Variablenname in Schleifen ist &quot;i&quot;.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> i;  <span class="comment">// "outsourcing" the definition</span>
+<pre><code class="javascript"><span class="keyword">var</span> i;  <span class="comment">// auslagern der Definition</span>
 <span class="keyword">for</span> (i = <span class="number">10</span>; i &gt;= <span class="number">1</span>; i--) {
-    console.log(i); <span class="comment">// Prints the numbers from 10 to 1</span>
+    console.log(i); <span class="comment">// Gibt die Zahlen von 10 bis 1 aus</span>
 }</code></pre>
 </div>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = startValue];[i &lt; endValue]; [i+=stepValue]) {
-    <span class="comment">// Your code here</span>
+<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = anfangsWert];[i &lt; endWert]; [i+=schrittWert]) {
+    <span class="comment">// Hier kommt die Berechnung hin</span>
 }
 </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {
-  console.log(i); <span class="comment">// Prints the numbers from 0 to 4</span>
+  console.log(i); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">/* Note that all of the three statements are optional, i.e. , */</span>
+<pre><code class="javascript"><span class="comment">/* Beachten Sie, dass all drei Anweisungen optional sind, wie im folgenden: */</span>
 <span class="keyword">var</span> i = <span class="number">9</span>;
 <span class="keyword">for</span>(;;){
     <span class="keyword">if</span>(i === <span class="number">0</span>)<span class="keyword">break</span>;
@@ -627,26 +623,25 @@ You use for loops, if you know how often you'll loop. The most often used varNam
     i--;
 }
 
-<span class="comment">//This loop is perfectly valid.</span></code></pre>
+<span class="comment">// Diese Schleife ist durchaus korrekt.</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="loops_while-loops">
-<h3 class="title">While Loops</h3>
-<p class="definition">
-You use while loops, if you don't know how often you'll loop.
+<h3 class="title">While Schleifen</h3>
+<p class="definition"><em>while</em> Schleifen werden verwendet, wenn man vorher nicht weiss, wie oft eine Schleife durchlaufen wird.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="keyword">while</span> (condition) {
-  <span class="comment">// Your code here</span>
+  <span class="comment">// Hier kommt die Berechnung hin</span>
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
 <span class="keyword">while</span> (x &lt; <span class="number">5</span>) {
-  console.log(x); <span class="comment">// Prints numbers from 0 to 4</span>
+  console.log(x); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
   x++;
 }</code></pre>
 </div>
@@ -654,7 +649,7 @@ You use while loops, if you don't know how often you'll loop.
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
 <span class="keyword">while</span> (x &lt;= <span class="number">5</span>) {
-    console.log(x); <span class="comment">// Won't be executed</span>
+    console.log(x); <span class="comment">// Wird nicht ausgef&uuml;hrt.</span>
     x++;
 }</code></pre>
 </div>
@@ -671,21 +666,20 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while
 </div>
 
 <div class="subsection" id="loops_do-while-loops">
-<h3 class="title">Do While Loops</h3>
+<h3 class="title">Do While Schleifen</h3>
 <p class="definition">
-You use do while loops, if you have to loop at least once, but if you don't know how often.
-</p>
+<em>do while</em> Schleifen werden verwendet, wenn die Schleife mindestens einmal durchlaufen werden soll, man aber nicht weiss, wie oft sonst noch.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="keyword">do</span> {
-  <span class="comment">// Your code here</span>
-} <span class="keyword">while</span> (condition);</code></pre>
+  <span class="comment">// Hier kommt die Berechnung hin</span>
+} <span class="keyword">while</span> (bedingung);</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
 <span class="keyword">do</span> {
-    console.log(x);  <span class="comment">// Prints numbers from 0 to 4</span>
+    console.log(x);  <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
     x++;
 } <span class="keyword">while</span> (x &lt; <span class="number">5</span>);</code></pre>
 </div>
@@ -693,7 +687,7 @@ You use do while loops, if you have to loop at least once, but if you don't know
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
 <span class="keyword">do</span> {
-    console.log(x); <span class="comment">// Prints 10</span>
+    console.log(x); <span class="comment">// Gibt die Zahl 10 aus</span>
     x++;
 } <span class="keyword">while</span> (x &lt;= <span class="number">5</span>);</code></pre>
 </div>
@@ -701,14 +695,16 @@ You use do while loops, if you have to loop at least once, but if you don't know
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while
 </a>
 </li>
 </ul>
 </div>
 </div>
 </section>
+
+<!--
 
 <section id="math">
 <h2>Math</h2>
