@@ -103,8 +103,8 @@ primzahlen[<span class="number">150</span>]; <span class="comment">// undefinier
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
 </a>
 </li>
 <li>
@@ -150,8 +150,8 @@ console.log(zeug);
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Example.3A_Creating_an_array" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Example.3A_Creating_an_array
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array#Beispiel.3A_Erzeugung_eines_Arrays" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array#Beispiel.3A_Erzeugung_eines_Arrays
 </a>
 </li>
 </ul>
@@ -318,7 +318,7 @@ ausdruck === ausdruck
 <section id="code-comments">
 <h2>Kommentare</h2>
 <div class="subsection" id="code-comments_definition">
-<h3 class="title">Defintion</h3>
+<h3 class="title">Definition</h3>
 <p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code scheiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
 </div>
 
@@ -396,13 +396,13 @@ console.log("Berechnung abgeschlossen.");</code></pre>
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.time" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/API/console.time
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.time" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.time
 </a>
 </li>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
 </a>
 </li>
 </ul>
@@ -427,8 +427,8 @@ console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist</code></pre>
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
 </a>
 </li>
 </ul>
@@ -437,47 +437,34 @@ https://developer.mozilla.org/en-US/docs/Web/API/console.timeEnd
 
 </section>
 
-<!--
-
 <section id="functions">
 <h2>Funktionen</h2>
 <div class="subsection" id="functions_function-definition">
-<h3 class="title">Function definition</h3>
-<p class="definition">
-A function is a JavaScript procedure—a set of statements that performs a
- task or calculates a value.It is like a reusable piece of code. Imagine
- , having 20 for loops ,and then having a single function to handle it 
-all . To use a function, you must define it somewhere in the scope from 
-which you wish to call it. 
-
-A function definition (also called a function declaration) consists of 
-the function keyword, followed by the name of the function, a list of 
-arguments to the function, enclosed in parentheses and separated by 
-commas, the JavaScript statements that define the function, enclosed in 
-curly braces, { }.
-</p>
+<h3 class="title">Funktionsdefinition</h3>
+<p class="definition">Eine Funktion ist eine Abfolge von einzelnen Ausdr&uuml;cken in Javascript, die eine Aufgabe erledigt oder eine Berechnung durchf&uuml;hrt. Sie ist wie ein wiederverwendbar Codebestandteil. Stellen Sie sich vor, Sie haben 20 Schleifen und eine Funktion, die all diese verbindet. Um eine Funktion zu verwenden, m&uuml;ssen Sie den Bereich angeben, in dem Sie sie verwenden wollen.</p>
+<p class="definition">Eine Funktionsdefinition (oder auch -deklaration) besteht aus dem den Stichwort <em>function</em>, gefolgt von dem Namen der Funktion, einer Liste mit Argumenten der Funktion - eingeschlossen in Klammern und jeweils getrennt durch ein Komma, sowie den Javascript Angaben, die die Funktion definieren - eingeschlossen in geschweifte Klammern.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">name</span><span class="params">(argument1 , argument2 .... argumentN)</span>{</span>
-    statement1;
-    statement2;
+    aussage1;
+    aussage2;
     ..
     ..
-    statementN;
+    aussageN;
 } </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">greet</span><span class="params">(name)</span> {</span>
-  <span class="keyword">return</span> <span class="string">"Hello"</span> + name + <span class="string">"!"</span>;
+<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">gruesse</span><span class="params">(name)</span> {</span>
+  <span class="keyword">return</span> <span class="string">"Hallo"</span> + name + <span class="string">"!"</span>;
 }</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+<a href="https://developer.mozilla.org/de/docs/JavaScript/Guide/Funktionen" target="_blank">
+https://developer.mozilla.org/de/docs/JavaScript/Guide/Funktionen
 </a>
 </li>
 </ul>
@@ -485,37 +472,33 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 </div>
 
 <div class="subsection" id="functions_function-calling">
-<h3 class="title">Function calling</h3>
+<h3 class="title">Funktionsaufruf</h3>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">functionName(argument1, argument2, ..., argumentN);</code></pre>
+<pre><code class="javascript">funktionsName(argument1, argument2, ..., argumentN);</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">greet(<span class="string">"Anonymous"</span>);
-<span class="comment">// Hello Anonymous!</span></code></pre>
+<pre><code class="javascript">gruesse(<span class="string">"Anonym"</span>);
+<span class="comment">// Hallo Anonym!</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="functions_function-hoisting">
-<h3 class="title">Function hoisting</h3>
-<p class="definition">
-The two ways of declaring functions produce different results. Declaring
- a function one way "hoists" it to the top of the call, and makes it 
-available before it's actually defined.
-</p>
+<h3 class="title">Funktionshebung</h3>
+<p class="definition">Die beiden M&ouml;glichkeiten eine Funktion zu definieren erzeugen unterschiedliche Ergebnisse. D.h. eine Funktion ohne Variable zu erzeugen hievt sie an den Anfang des Aufrufes und macht sie vor ihrer eigentlichen Definition verf&uuml;gbar.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">hoistedFunction(); <span class="comment">// Hello! I am defined immediately!</span>
-notHoistedFunction(); <span class="comment">// ReferenceError: notHoistedFunction is not defined</span>
+<pre><code class="javascript">gehobeneFunktion(); <span class="comment">// Hallo! Ich bin schon da!</span>
+nichtgehobeneFunktion(); <span class="comment">// ReferenceError: nichtgehobeneFunktion is not defined</span>
 
-<span class="function"><span class="keyword">function</span> <span class="title">hoistedFunction</span> <span class="params">()</span> {</span>
-  console.log(<span class="string">'Hello! I am defined immediately!'</span>);
+<span class="function"><span class="keyword">function</span> <span class="title">gehobeneFunktion</span> <span class="params">()</span> {</span>
+  console.log(<span class="string">'Hallo! Ich bin schon da!'</span>);
 }
 
-<span class="keyword">var</span> notHoistedFunction = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-  console.log(<span class="string">'I am not defined immediately.'</span>);
+<span class="keyword">var</span> nichtgehobeneFunktion = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  console.log(<span class="string">'Ich bin noch nicht da!'</span>);
 }</code></pre>
 </div>
 <div class="read-more">
@@ -531,6 +514,8 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 </div>
 
 </section>
+
+<!--
 
 <section id="if-statement">
 <h2>If statement</h2>
