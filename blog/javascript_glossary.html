@@ -515,27 +515,21 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 
 </section>
 
-<!--
-
 <section id="if-statement">
-<h2>If statement</h2>
+<h2>If Abfragen</h2>
 <div class="subsection" id="if-statement_if">
 <h3 class="title">if</h3>
-<p class="definition">
-It simply states that if this condition is true , do this , else do something else ( or nothing ) . 
-It occurs in varied forms.
-</p>
+<p class="definition">Gibt einfach an, dass wenn die Bedingung richtig ist, das Programm einen bestimmten Code ausf&uuml;hren soll, wenn nicht etwas anderes (oder nichts) tun soll. Tritt in verschiedenen Formen auf</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// Form : Single If</span>
-<span class="keyword">if</span> (condition) {
-  <span class="comment">// code that runs if the condition is true</span>
+<pre><code class="javascript"><span class="keyword">if</span> (bedingung) {
+  <span class="comment">// der Code, der ausgef&uuml;hrt wird, wenn die Bedingung wahr ist</span>
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span> (answer === <span class="number">42</span>) {
-  console.log(<span class="string">'Told you so!'</span>);
+<pre><code class="javascript"><span class="keyword">if</span> (antwort === <span class="number">42</span>) {
+	console.log(<span class="string">'Ich habe es Dir gesagt!'</span>);
 }</code></pre>
 </div>
 </div>
@@ -543,60 +537,58 @@ It occurs in varied forms.
 <div class="subsection" id="if-statement_else">
 <h3 class="title">else</h3>
 <p class="definition">
-A fallback to an if statement. This will only get executed if the previous statement did not.
+Der R&uuml;ckgriff zu einer <em>if</em> Abfrage. Wird nur ausgef&uuml;hrt, falls die vorherige Abfrage nicht ausgef&uuml;hrt wurde.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// If the condition is true, statement1 will be executed.</span>
-<span class="comment">// Otherwise, statement2 will be executed.</span>
+<pre><code class="javascript"><span class="comment">// Wenn die Bedinging wahr ist, wird aussage1 ausgef&uuml;hrt,</span>
+<span class="comment">// andernfalls wird aussage2 ausgef&uuml;hrt.</span>
 
 <span class="keyword">if</span> (condition) {
-  <span class="comment">// statement1: code that runs if condition is true</span>
+  <span class="comment">// aussage1: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung wahr ist</span>
 } <span class="keyword">else</span> {
-  <span class="comment">// statement2: code that runs if condition is false</span>
+  <span class="comment">// aussage2: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung falsch ist</span>
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span> (gender == <span class="string">"male"</span>) {
-  console.log(<span class="string">"Hello, sir!"</span>);
+<pre><code class="javascript"><span class="keyword">if</span> (geschlecht == <span class="string">"weiblich"</span>) {
+  console.log(<span class="string">"Gn&auml;dige Frau!"</span>);
 } <span class="keyword">else</span> {
-  console.log(<span class="string">"Hello, ma'am!"</span>);
+  console.log(<span class="string">"Der Herr w&uuml;nschen?"</span>);
 }</code></pre>
 </div>
 </div>
 
 <div class="subsection" id="if-statement_else-if">
 <h3 class="title">else if</h3>
-<p class="definition">
-This is like an else statement, but with its own condition. It will only
- run if its condition is true, and the previous statement's condition 
-was false.
-</p>
+<p class="definition">Wie eine <em>else</em> Abfrage, nur mit einer eigenen Bedingung. Wird nur ausgef&uuml;hrt, wenn die Bedingung wahr ist und die vorherigen Abfragebedingungen falsch sind.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// Form : else if . If the condition is true, statement1 will be executed. Otherwise, condition2 is checked . if it is true , then statement2 is executed. Else , if nothing is true , statement3 is executed.</span>
-<span class="keyword">if</span> (condition1) {
-  statement1;
-} <span class="keyword">else</span> <span class="keyword">if</span> (condition2) {
-  statement2;
+<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt. Falls nicht, wird bedingung2 gepr&uuml;ft. Ist sie wahr, wird aussage2 ausgef&uuml;hrt, wenn nicht wird aussage3 ausgef&uuml;hrt.</span>
+<span class="keyword">if</span> (bedingung1) {
+  aussage1;
+} <span class="keyword">else</span> <span class="keyword">if</span> (bedingung2) {
+  aussage2;
 } <span class="keyword">else</span> {
-  statement3;
+  aussage3;
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span> (someNumber &gt; <span class="number">10</span>) {
-  console.log(<span class="string">"Numbers larger than 10 are not allowed."</span>);
-} <span class="keyword">else</span> <span class="keyword">if</span> (someNumber &lt; <span class="number">0</span>) {
-  console.log(<span class="string">"Negative numbers are not allowed."</span>);
+<pre><code class="javascript"><span class="keyword">if</span> (eineZahl &gt; <span class="number">10</span>) {
+  console.log(<span class="string">"Zahlen gr&ouml;&szlig;er als 10 sind nicht erlaubt."</span>);
+} <span class="keyword">else</span> <span class="keyword">if</span> (eineZahl &lt; <span class="number">0</span>) {
+  console.log(<span class="string">"Negative Zahlen sind auch nicht erlaubt."</span>);
 } <span class="keyword">else</span> {
-  console.log(<span class="string">"Nice number!"</span>);
+  console.log(<span class="string">"Sch&ouml;ne Zahl!"</span>);
 }</code></pre>
 </div>
 </div>
 
 </section>
+
+<!--
 
 <section id="loops">
 <h2>Loops</h2>
@@ -670,8 +662,8 @@ You use while loops, if you don't know how often you'll loop.
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while
 </a>
 </li>
 </ul>
