@@ -615,7 +615,7 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">/* Beachten Sie, dass all drei Anweisungen optional sind, wie im folgenden: */</span>
+<pre><code class="javascript"><span class="comment">/* Beachten Sie, dass alle drei Anweisungen optional sind, wie im folgenden: */</span>
 <span class="keyword">var</span> i = <span class="number">9</span>;
 <span class="keyword">for</span>(;;){
     <span class="keyword">if</span>(i === <span class="number">0</span>)<span class="keyword">break</span>;
@@ -704,65 +704,55 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...w
 </div>
 </section>
 
-<!--
-
 <section id="math">
-<h2>Math</h2>
+<h2>Mathe</h2>
 <div class="subsection" id="math_">
-<p class="definition"></p>
-</div>
-
+<p class="definition"></p></div>
 <div class="subsection" id="math_random">
 <h3 class="title">random</h3>
-<p class="definition">
-Returns a random number between 0 and 1.
-</p>
+<p class="definition">Gibt eine Zufallszahl zwischen 0 und 1 zur&uuml;ck</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">Math.random()</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">Math.random(); <span class="comment">// A random number between 0 and 1.</span></code></pre>
+<pre><code class="javascript">Math.random(); <span class="comment">// Eine Zufallszahl zwischen 0 und 1</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="math_floor">
 <h3 class="title">floor</h3>
-<p class="definition">
-Returns the largest integer less than or equal to a number.
-</p>
+<p class="definition">Gibt die gr&ouml;&szlig;te Ganzzahl kleiner oder gleich einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.floor(expression)</code></pre>
+<pre><code class="javascript">Math.floor(ausdruck)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript">Math.floor(<span class="number">9.99</span>); <span class="comment">// 9</span>
 Math.floor(<span class="number">1</span> + <span class="number">0.5</span>); <span class="comment">// 1</span>
-Math.floor(Math.random() * X + <span class="number">1</span>); <span class="comment">// Returns a random number between 1 and X</span></code></pre>
+Math.floor(Math.random() * X + <span class="number">1</span>); <span class="comment">// Gibt eine Zufallszahl zwischen 1 und X zur&uuml;ck</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="math_pow">
 <h3 class="title">pow</h3>
-<p class="definition">
-Returns base raised to exponent.
-</p>
+<p class="definition">Ergibt den Wert der Basis potenziert mit der Hochzahl.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.pow(base,exponent)</code></pre>
+<pre><code class="javascript">Math.pow(basis,hochzahl)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">Math.pow(<span class="number">2</span>,<span class="number">4</span>); <span class="comment">// gives 16</span></code></pre>
+<pre><code class="javascript">Math.pow(<span class="number">2</span>,<span class="number">4</span>); <span class="comment">// ergibt 16</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=de&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/pow?redirectlocale=de&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fpow
 </a>
 </li>
 </ul>
@@ -771,12 +761,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="math_ceil">
 <h3 class="title">ceil</h3>
-<p class="definition">
-Returns the smallest integer greater than or equal to a number.
-</p>
+<p class="definition">Gibt die kleinste Ganzzahl gr&ouml;&szlig;er oder gleich einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.ceil(expression)</code></pre>
+<pre><code class="javascript">Math.ceil(ausdruck)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -787,8 +775,8 @@ Math.ceil(<span class="number">4</span> - <span class="number">1.9</span>); <spa
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
 </a>
 </li>
 </ul>
@@ -797,27 +785,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="math_pi">
 <h3 class="title">PI</h3>
-<p class="definition">
-Returns the ratio of the circumference of a circle to its diameter, 
-approximately 3.14159 or in better terms, the value of PI (π).  
-Note in syntax , we do not put `()` at the end of `Math.PI` because 
-`Math.PI` is not a function.
-</p>
+<p class="definition">Gibt das Verhältnis des Umfangs eines Kreises zu seinem Durchmesser zur&uuml;ck - also etwa 3.14159 oder noch genauer den Wert von PI (&pi;).
+Bitte beachten Sie, dass bei der Syntaxangabe keine Klammern hinter &quot;Math.PI&quot; stehen, da dies keine Funktion ist.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">Math.PI</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">Math.round(Math.PI); <span class="comment">// rounds the value of PI ,gives 3</span>
+<pre><code class="javascript">Math.round(Math.PI); <span class="comment">// der gerundete Wert von PI, ergibt 3</span>
 Math.ceil(Math.PI); <span class="comment">// 4</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
 </a>
 </li>
 </ul>
@@ -826,25 +810,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="math_sqrt">
 <h3 class="title">sqrt</h3>
-<p class="definition">
-Returns the square root of a number.
-</p>
+<p class="definition">Gibt die Quadratwurzel einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.sqrt(expression)</code></pre>
+<pre><code class="javascript">Math.sqrt(ausdruck)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript">Math.sqrt(<span class="number">5</span>+<span class="number">4</span>); <span class="comment">// 3</span>
 
-Math.sqrt(Math.sqrt(<span class="number">122</span>+<span class="number">22</span>) + Math.sqrt(<span class="number">16</span>)); <span class="comment">//4</span></code></pre>
+Math.sqrt(Math.sqrt(<span class="number">122</span>+<span class="number">22</span>) + Math.sqrt(<span class="number">16</span>)); <span class="comment">// 4</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=en-US&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=de&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt?redirectlocale=de&amp;redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FMath%2Fsqrt
 </a>
 </li>
 </ul>
@@ -852,6 +834,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 </div>
 
 </section>
+
+<!--
 
 <section id="numbers">
 <h2>Numbers</h2>
