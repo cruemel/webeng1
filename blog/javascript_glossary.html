@@ -203,7 +203,7 @@ console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="
 
 ausdruck3 || ausdruck4 <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn einer der beiden Ausd&uumlcke wahr ist</span>
 
-!expression5 <span class="comment">// gibt den umgekehrten booleschen Wert des Ausdruckes zur&uuml;ck</span></code></pre>
+!ausdruck5 <span class="comment">// gibt den umgekehrten booleschen Wert des Ausdruckes zur&uuml;ck</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -238,8 +238,8 @@ true &amp;&amp; false - wird, was letztlich falsch ist
 <span class="comment">/* 
 wird ausgef&uuml;hrt da ... 
 true &amp;&amp; !!false || true - wird zu
-true &amp;&amp; false || true - (keine Klammern, also wird ! ausgewertet ) wird
-false || true - (then &amp;&amp; evaluated) was wahr wird.
+true &amp;&amp; false || true - (keine Klammern, also wird ! ausgewertet),
+false || true - (es wird &amp;&amp; ausgewertet) was letztlich wahr wird.
 */</span>
 </code></pre>
 </div>
@@ -248,7 +248,7 @@ false || true - (then &amp;&amp; evaluated) was wahr wird.
 
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">!<span class="literal">false</span> &amp;&amp; !!<span class="literal">false</span> <span class="comment">//false</span>
+<pre><code class="javascript">!<span class="literal">false</span> &amp;&amp; !!<span class="literal">false</span> <span class="comment">// false</span>
 <span class="comment">// ausgewertet wie: !false &amp;&amp; false - true &amp;&amp; false - false</span>
 </code></pre>
 </div>
@@ -299,8 +299,8 @@ http://www.sitepoint.com/javascript-truthy-falsy/
 <p class="definition">Eine einfache Erkl&auml;rung w&auml;re die, dass == einfach nur den Wert &uuml;berpr&uuml;ft - und nicht den Datentyp, wohingegen === beides macht - den Wert und den Typ zu &uuml;berpr&uuml;fen. Wenn Sie die Beispiele betrachten, wird es vielleicht klarer. Dar&uuml;berhinaus es ist immer empfehlenswert === zu benutzen, da == durchaus unerwartete Ergebnisse hervorrufen kann.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">ausdruck == ausdruck
-ausdruck === ausdruck
+<pre><code class="javascript">wert == wert
+wert === wert
 </code></pre>
 </div>
 <div class="example">
@@ -544,7 +544,7 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 <pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt,</span>
 <span class="comment">// andernfalls wird aussage2 ausgef&uuml;hrt.</span>
 
-<span class="keyword">if</span> (condition) {
+<span class="keyword">if</span> (bedingung) {
   <span class="comment">// aussage1: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung wahr ist</span>
 } <span class="keyword">else</span> {
   <span class="comment">// aussage2: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung falsch ist</span>
@@ -633,7 +633,7 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">while</span> (condition) {
+<pre><code class="javascript"><span class="keyword">while</span> (bedingung) {
   <span class="comment">// Hier kommt die Berechnung hin</span>
 }</code></pre>
 </div>
@@ -726,7 +726,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...w
 <p class="definition">Gibt die gr&ouml;&szlig;te Ganzzahl kleiner oder gleich einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.floor(ausdruck)</code></pre>
+<pre><code class="javascript">Math.floor(wert)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -764,7 +764,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 <p class="definition">Gibt die kleinste Ganzzahl gr&ouml;&szlig;er oder gleich einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.ceil(ausdruck)</code></pre>
+<pre><code class="javascript">Math.ceil(wert)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -813,7 +813,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 <p class="definition">Gibt die Quadratwurzel einer Zahl zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">Math.sqrt(ausdruck)</code></pre>
+<pre><code class="javascript">Math.sqrt(wert)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -835,55 +835,51 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 
 </section>
 
-<!--
-
 <section id="numbers">
-<h2>Numbers</h2>
+<h2>Zahlen</h2>
 <div class="subsection" id="numbers_modulus">
-<h3 class="title">% (Modulus)</h3>
-<p class="definition">
-it returns the remainder left after dividing the left hand side with the right hand side.
-</p>
+<h3 class="title">% (Modulo)</h3>
+<p class="definition">Gibt den Rest der Division zweier Zahlen zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">number1 % number2</code></pre>
+<pre><code class="javascript">zahl1 % zahl2</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="number">14</span> % <span class="number">9</span> <span class="comment">// returns 5</span></code></pre>
+<pre><code class="javascript"><span class="number">14</span> % <span class="number">9</span> <span class="comment">// ergibt 5</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="numbers_isnan">
 <h3 class="title">isNaN</h3>
-<p class="definition">
-Returns true if the given number is not a number , else returns false.
+<p class="definition">Ist wahr, wenn der Wert keine Zahl ist, andersfalls falsch.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">isNaN([value])</code></pre>
+<pre><code class="javascript">isNaN(wert)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> user_input = prompt(<span class="string">"Enter a number"</span>); <span class="comment">// Enter "a number"</span>
+<pre><code class="javascript"><span class="keyword">var</span> user_input = prompt(<span class="string">"Bitte geben Sie eine Zahl ein."</span>);
 
-<span class="keyword">if</span>(isNaN(user_input))
-    alert(<span class="string">"I told you to enter a number."</span>);
+<span class="keyword">if</span>(isNaN(eingabe) {
+    alert(<span class="string">"Ich sagte: bitte geben Sie eine Zahl ein!"</span>);
+}
 
-<span class="comment">//alert executed , since "a number" is not a number</span>
+<span class="comment">// gibt eine Meldung aus, da &quot;eine Zahl" keine Zahl ist.</span>
+<span class="comment">// ebenfalls zu beachten:</span>
 
-<span class="comment">//Another important thing:</span>
+<span class="keyword">if</span>( isNaN(<span class="string">"3"</span>) {
+    alert(<span class="string">"schlecht!"</span>);
+}
 
-<span class="keyword">if</span>( isNaN(<span class="string">"3"</span>) )
-    alert(<span class="string">"bad"</span>);
-
-<span class="comment">//wird nicht ausgef&uuml;hrt, da der String "3" in die Zahl 3 umgewandelt wird.</span></code></pre>
+<span class="comment">// wird nicht ausgef&uuml;hrt, da der String "3" in die Zahl 3 umgewandelt wird.</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="numbers_basic-arithmetic">
-<h3 class="title">Basic Arithmetic</h3>
-<p class="definition">Doing basic arithmetic is simple.</p>
+<h3 class="title">Einfache Berechnungen</h3>
+<p class="definition">Einfache Berechnungen sind simple.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="number">4</span> + <span class="number">5</span>;  <span class="comment">// 9</span>
@@ -894,77 +890,36 @@ Returns true if the given number is not a number , else returns false.
 </div>
 
 <div class="subsection" id="numbers_prefix-and-postfix-increment-decrement-operators">
-<h3 class="title">Prefix and Postfix increment/decrement operators</h3>
-<p class="definition">
-Prefix increment / decrement operators are operators that first increase
- the value of the variable by 1 (increment) or decrease the value of an 
-expression / variable by 1 (decrement) and then return this incremented /
- decremented value. They are used like ++(variable) [increment] or 
---(varaible) [decrement]
-
-On the other hand , Postfix increment / decrement operators are 
-operators that first return the value of the variable and then increase 
-the value of thAT variable by 1 (increment) or decrease the value of the
- variable by 1 (decrement) . They are used like (variable)++ [increment]
- or (varaible)-- [decrement]
-</p>
+<h3 class="title">vorangestellte bzw. nachgeordnete De- und Inkrementoren</h3>
+<p class="definition">In- oder Dekrementoren, die der Varibale vorangestellt sind, erh&ouml;hen bzw. verringern den Wert einer Variable und geben dann den neuen Wert zur&uuml;ck.</p>
+<p class="definition">W&auml;hrend In- oder Dekrementoren, die der Varibale nachgeordnet sind, zuerst den neuen Wert zur&uuml;ckgeben und dann den Wert der Variable erh&ouml;hen bzw. verringern.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">--variable   <span class="comment">//Prefix Decrement</span>
-++variable   <span class="comment">//Prefix Increment</span>
-variable--   <span class="comment">//Postfix Decrement</span>
-variable++  <span class="comment">//Postfix Increment</span></code></pre>
+<pre><code class="javascript">--variable  <span class="comment">// vorangestellte Verringerung</span>
+++variable <span class="comment">// vorangestellt Erh&ouml;hung</span>
+variable--  <span class="comment">// nachgeordnete Verringerung</span>
+variable++  <span class="comment">// nachgeordente Erh&ouml;hung</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">// The examples will make it clear</span>
+<pre><code class="javascript"><span class="comment">// diese Beispiele verdeutlichen es:</span>
 
-<span class="keyword">var</span> x = <span class="number">15</span>; <span class="comment">// x has a value of 15</span>
-<span class="keyword">var</span> y = x++;
-<span class="comment">// since it is postfix , the value of x (15) is first assigned to y and then the value of x is incremented by 1</span>
-console.log(y); <span class="comment">//15</span>
-console.log(x); <span class="comment">//16</span>
-
-<span class="keyword">var</span> a = <span class="number">15</span>; <span class="comment">// a has a value of 15</span>
+<span class="keyword">var</span> a = <span class="number">15</span>; <span class="comment">// a ist 15</span>
 <span class="keyword">var</span> b = ++a;
-<span class="comment">// since it is prefix , the value of a (15) is first incremented by 1 and then the value of x is assigned to b</span>
-console.log(b); <span class="comment">//16</span>
-console.log(a); <span class="comment">//16</span></code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript">//Guess the output in each, and then check your answer on labs.codecademy.com
+<span class="comment">// da vorangestellt, wird a (15) zuerst um 1 erh&ouml;ht und dann wird der Wert auf b &uuml;bertragen</span>
+console.log(b); <span class="comment">// 16</span>
+console.log(a); <span class="comment">// 16</span>
 
-//Question 1
-
-var x = 43;
-var y = 34;
-var z = x++ + --y;
-console.log(z);
-console.log(y);
-console.log(x); 
-
-//Question 2
-
-var a = 1;
-var b = 2;
-var c = ++a * b++ / 2 + 1 - b + a;
-console.log(c);
-console.log(b);
-console.log(a);
-
-//Question 3
-
-var p = 6;
-var q = 3;
-var r = Math.pow((--p - 4) , (q++)) + Math.sqrt(q) + --q;
-console.log(r);
-console.log(q);
-console.log(p);
-</code></pre>
+<span class="keyword">var</span> x = <span class="number">15</span>; <span class="comment">// x ist 15</span>
+<span class="keyword">var</span> y = x++;
+<span class="comment">// da nachgeordnet, erh&auml;lt y zuerst den Wert von x (15) und dann wird x um 1 erh&ouml;ht.</span>
+console.log(y); <span class="comment">// 15</span>
+console.log(x); <span class="comment">// 16</span></code></pre>
 </div>
 </div>
 </section>
+
+<!--
 
 <section id="objects">
 <h2>Objects</h2>
