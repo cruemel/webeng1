@@ -446,11 +446,11 @@ https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">name</span><span class="params">(argument1 , argument2 .... argumentN)</span>{</span>
-    aussage1;
-    aussage2;
+    anweisung1;
+    anweisung2;
     ..
     ..
-    aussageN;
+    anweisungN;
 } </code></pre>
 </div>
 <div class="example">
@@ -541,13 +541,13 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt,</span>
-<span class="comment">// andernfalls wird aussage2 ausgef&uuml;hrt.</span>
+<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird anweisung1 ausgef&uuml;hrt,</span>
+<span class="comment">// andernfalls wird anweisung2 ausgef&uuml;hrt.</span>
 
 <span class="keyword">if</span> (bedingung) {
-  <span class="comment">// aussage1: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung wahr ist</span>
+  <span class="comment">// anweisung1: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung wahr ist</span>
 } <span class="keyword">else</span> {
-  <span class="comment">// aussage2: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung falsch ist</span>
+  <span class="comment">// anweisung2: der Code, der ausgef&uuml;hrt wird, wenn die Bedingung falsch ist</span>
 }</code></pre>
 </div>
 <div class="example">
@@ -565,13 +565,13 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 <p class="definition">Wie eine <em>else</em> Anweisung, nur mit einer eigenen Bedingung. Wird nur ausgef&uuml;hrt, wenn die Bedingung wahr ist und die vorherigen Anweisungsbedingungen falsch sind.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird aussage1 ausgef&uuml;hrt. Falls nicht, wird bedingung2 gepr&uuml;ft. Ist sie wahr, wird aussage2 ausgef&uuml;hrt, wenn nicht wird aussage3 ausgef&uuml;hrt.</span>
+<pre><code class="javascript"><span class="comment">// Wenn die Bedingung wahr ist, wird anweisung1 ausgef&uuml;hrt. Falls nicht, wird bedingung2 gepr&uuml;ft. Ist sie wahr, wird anweisung2 ausgef&uuml;hrt, wenn nicht wird anweisung3 ausgef&uuml;hrt.</span>
 <span class="keyword">if</span> (bedingung1) {
-  aussage1;
+  anweisung1;
 } <span class="keyword">else</span> <span class="keyword">if</span> (bedingung2) {
-  aussage2;
+  anweisung2;
 } <span class="keyword">else</span> {
-  aussage3;
+  anweisung3;
 }</code></pre>
 </div>
 <div class="example">
@@ -923,7 +923,7 @@ console.log(x); <span class="comment">// 16</span></code></pre>
 <section id="objects">
 <h2>Objekte</h2>
 <div class="subsection" id="objects_object-literals">
-<h3 class="title">Objekte erstellen</h3>
+<h3 class="title">Objekte definieren</h3>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
@@ -954,8 +954,8 @@ console.log(x); <span class="comment">// 16</span></code></pre>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">objekt1["bezeichnung"]
-objekt2.bezeichnung</code></pre>
+<pre><code class="javascript">objekt1["eigenschaft"]
+objekt2.eigenschaft</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
