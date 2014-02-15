@@ -999,59 +999,51 @@ Erich.inRente(); <span class="comment">// true</span></code></pre>
 </div>
 </section>
 
-<!--
-
 <section id="popup-boxes">
-<h2>Popup boxes</h2>
+<h2>Popups</h2>
 <div class="subsection" id="popup-boxes_alert">
 <h3 class="title">alert</h3>
-<p class="definition">
-Display an alert dialog with the specified message and an OK button.
-Note: The alert dialog should be used for messages which do not require 
-any response on the part of the user, other than the acknowledgement of 
-the message.
-</p>
+<p class="definition">Wird verwendet um einen Warnhinweis samt Nachricht und einer Best&auml;tigung auf dem Bildschirm anzuzeigen. Anmerkung: Ausser einer Best&auml;tigung (, dass der Benutzer die Nachricht gelesen hat) sollte dieser Dialog keine weitere Aktion des Benutzers erfordern.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">alert(message);</code></pre>
+<pre><code class="javascript">alert("zeichenkette");</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">alert(<span class="string">"Hello World"</span>);</code></pre>
+<pre><code class="javascript">alert(<span class="string">"Hallo Welt!"</span>);</code></pre>
 </div>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">alert(variable_name)</code></pre>
+<pre><code class="javascript">alert(variable)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> my_message = !<span class="literal">false</span>;
-alert(my_message);
+<pre><code class="javascript"><span class="keyword">var</span> nachricht = !<span class="literal">false</span>;
+alert(nachricht);
 </code></pre>
 </div>
 </div>
 
 <div class="subsection" id="popup-boxes_confirm">
 <h3 class="title">confirm</h3>
-<p class="definition">
-Displays a dialog with the specified message and two buttons, OK and Cancel.
+<p class="definition">Gibt ein Dialogfeld samt Nachricht und zwei Schaltfl&auml;chen - OK und Abbrechen - aus.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">confirm(<span class="string">"message"</span>) <span class="comment">//returns true if confirmed, false otherwise</span></code></pre>
+<pre><code class="javascript">confirm(<span class="string">"zeichenkette"</span>) <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn best&auml;tigt, andernfalls &quot;false&quot;.</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span> ( confirm(<span class="string">"Are you sure you want to delete this post?"</span>) ) {
-  deletePost();
+<pre><code class="javascript"><span class="keyword">if</span> ( confirm(<span class="string">"Sind Sie sicher, dass Sie diese Nachricht l&ouml;schen wollen ?"</span>) ) {
+  loescheNachricht();
 }</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.confirm" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/API/window.confirm
+<a href="https://developer.mozilla.org/de/docs/Web/API/window.confirm" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/window.confirm
 </a>
 </li>
 </ul>
@@ -1060,36 +1052,32 @@ https://developer.mozilla.org/en-US/docs/Web/API/window.confirm
 
 <div class="subsection" id="popup-boxes_prompt">
 <h3 class="title">prompt</h3>
-<p class="definition">
-The prompt() displays a dialog with an optional message prompting the 
-user to input some text. If the user clicks the "Cancel" button , null 
-is returned.
-</p>
+<p class="definition">Blendet eine Dialogbox samt optionaler Mitteilung ein, die den Benutzer auffordert einen Text einzugeben. Bricht der Benutzer diesen Dialog ab, gibt die Funktion <em>null</em> zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">prompt(message);</code></pre>
+<pre><code class="javascript">prompt("zeichenkette");</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Enter your name:"</span>);
-console.log(<span class="string">"Hello "</span> + name + <span class="string">"!"</span>);
+<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Bitte geben Sie Ihren Namen an:"</span>);
+console.log(<span class="string">"Hallo "</span> + name + <span class="string">"!"</span>);
 </code></pre>
 </div>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">prompt(message,value) <span class="comment">// value is a string containing the default value displayed in the text input field. It is an optional parameter.</span></code></pre>
+<pre><code class="javascript">prompt(nachricht,wert) <span class="comment">// wobei wert die Zeichenkette darstellt, die standardm&auml;ssig in dem Eingabefeld angezeigt wird.</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Enter your name:"</span>,<span class="string">"Your name here"</span>);
-console.log(<span class="string">"Hello "</span> + name + <span class="string">"!"</span>);</code></pre>
+<pre><code class="javascript"><span class="keyword">var</span> name = prompt(<span class="string">"Bitte geben Sie Ihren Namen an:"</span>,<span class="string">"Ihr Name?"</span>);
+console.log(<span class="string">"Hallo "</span> + name + <span class="string">"!"</span>);</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.prompt" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/API/window.prompt
+<a href="https://developer.mozilla.org/de/docs/Web/API/window.prompt" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/window.prompt
 </a>
 </li>
 </ul>
@@ -1099,7 +1087,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/window.prompt
 </section>
 
 <section id="strings">
-<h2>Strings</h2>
+<h2>Zeichenketten (Strings)</h2>
 
 <div class="subsection" id="strings_">
 <p class="definition">
