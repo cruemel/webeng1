@@ -177,7 +177,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ar
 
 console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="number">5</span>][<span class="number">4</span>] ); 
 
-<span class="comment">//6 - zweite Zeile, letztes Element, letzter Wert: 5 Element des 6 Arrays des zweiten Arrays von mehrdimensionalesArray.</span></code></pre>
+<span class="comment">// 6 - zweite Zeile, letztes Element, letzter Wert: 5 Element des 6 Arrays des zweiten Arrays von mehrdimensionalesArray.</span></code></pre>
 </div>
 </div>
 
@@ -768,8 +768,8 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">Math.ceil(<span class="number">45.4</span>); <span class="comment">//  46</span>
-Math.ceil(<span class="number">4</span> - <span class="number">1.9</span>); <span class="comment">//  3</span></code></pre>
+<pre><code class="javascript">Math.ceil(<span class="number">45.4</span>); <span class="comment">// 46</span>
+Math.ceil(<span class="number">4</span> - <span class="number">1.9</span>); <span class="comment">// 3</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
@@ -919,90 +919,87 @@ console.log(x); <span class="comment">// 16</span></code></pre>
 </div>
 </section>
 
-<!--
 
 <section id="objects">
-<h2>Objects</h2>
+<h2>Objekte</h2>
 <div class="subsection" id="objects_object-literals">
-<h3 class="title">Object Literals</h3>
+<h3 class="title">Objekte erstellen</h3>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">{
-  <span class="string">"property 1"</span>: value1,
-  property2: value2,
-  number: value3
+  <span class="string">"eigenschaft 1"</span>: wert1,
+  eigenschaft2: wert2,
+  zahl: wert3
 }</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> obj = {
-  name: <span class="string">"Bob"</span>,
-  married: <span class="literal">true</span>,
-  <span class="string">"mother's name"</span>: <span class="string">"Alice"</span>,
-  <span class="string">"year of birth"</span>: <span class="number">1987</span>,
-  getAge: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    <span class="keyword">return</span> <span class="number">2012</span> - obj[<span class="string">"year of birth"</span>];
+  name: <span class="string">"Anton"</span>,
+  verheiratet: <span class="literal">true</span>,
+  <span class="string">"Name der Mutter"</span>: <span class="string">"Berta"</span>,
+  <span class="string">"Geburtsjahr"</span>: <span class="number">1987</span>,
+  wieAlt: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="keyword">return</span> <span class="number">2012</span> - obj[<span class="string">"Geburtsjahr"</span>];
   },
-  <span class="number">1</span>: <span class="string">'one'</span>
+  <span class="number">1</span>: <span class="string">'eins'</span>
 };
 </code></pre>
 </div>
 </div>
 
 <div class="subsection" id="objects_property-access">
-<h3 class="title">Property Access</h3>
+<h3 class="title">Zugriff auf Objekteigenschaften</h3>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">name1[string]
-name2.identifier</code></pre>
+<pre><code class="javascript">objekt1["bezeichnung"]
+objekt2.bezeichnung</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">obj[<span class="string">'name'</span>];  <span class="comment">// 'Bob'</span>
-obj.name;     <span class="comment">// 'Bob'</span>
-obj.getAge(); <span class="comment">// 24</span></code></pre>
+<pre><code class="javascript">obj[<span class="string">'name'</span>];  <span class="comment">// 'Anton'</span>
+obj.name;     <span class="comment">// 'Anton'</span>
+obj.wieAlt(); <span class="comment">// 24</span></code></pre>
 </div>
 </div>
 
 </section>
 
 <section id="oop">
-<h2>OOP</h2>
+<h2>Objektorientierung</h2>
 <div class="subsection" id="oop_classes">
-<h3 class="title">Classes</h3>
-<p class="definition">
-A class can be thought of as a template to create many objects with 
-similar qualities. Classes are a fundamental component of 
-object-oriented programming (OOP).
-</p>
+<h3 class="title">Klassen</h3>
+<p class="definition">Eine Klasse kann man sich als eine Art Vorlage f&uuml;r Objekte mit &auml;hnlichen Eigenschaften vorstellen. Klassen sind ein fundamentaler Bestandteil der objektorientierten Programmierung (OOP).</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">SubClass.prototype = <span class="keyword">new</span> SuperClass();
+<pre><code class="javascript">UnterKlasse.prototype = <span class="keyword">new</span> OberKlasse();
 </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> Lieutenant = <span class="function"><span class="keyword">function</span> <span class="params">(age)</span> {</span>
-  <span class="keyword">this</span>.rank = <span class="string">"Lieutenant"</span>;
-  <span class="keyword">this</span>.age = age;
+<pre><code class="javascript"><span class="keyword">var</span> Kommissar = <span class="function"><span class="keyword">function</span> <span class="params">(alter)</span> {</span>
+  <span class="keyword">this</span>.rang = <span class="string">"Kommissar"</span>;
+  <span class="keyword">this</span>.alter = alter;
 };
 
-Lieutenant.prototype = <span class="keyword">new</span> PoliceOfficer();
+Kommissar.prototype = <span class="keyword">new</span> Polizist();
 
-Lieutenant.prototype.getRank = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-  <span class="keyword">return</span> <span class="keyword">this</span>.rank;
+Kommissar.prototype.welcherRang = <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+  <span class="keyword">return</span> <span class="keyword">this</span>.rang;
 };
 
-<span class="keyword">var</span> John = <span class="keyword">new</span> Lieutenant(<span class="number">67</span>);
+<span class="keyword">var</span> Erich = <span class="keyword">new</span> Kommissar(<span class="number">68</span>);
 
-John.getJob(); <span class="comment">// 'Police Officer'</span>
-John.getRank(); <span class="comment">// 'Lieutenant'</span>
-John.retire(); <span class="comment">// true</span></code></pre>
+Erich.welcherBeruf(); <span class="comment">// 'Polizist'</span>
+Erich.welcherRang(); <span class="comment">// 'Kommissar'</span>
+Erich.inRente(); <span class="comment">// true</span></code></pre>
 </div>
 </div>
 </section>
+
+<!--
 
 <section id="popup-boxes">
 <h2>Popup boxes</h2>
