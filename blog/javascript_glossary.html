@@ -1086,71 +1086,63 @@ https://developer.mozilla.org/de/docs/Web/API/window.prompt
 
 </section>
 
-<!--
-
 <section id="strings">
-<h2>Zeichenketten (Strings)</h2>
+<h2>Zeichenketten</h2>
 
 <div class="subsection" id="strings_">
-<p class="definition">
-Strings are text. They are denoted by surrounding text with either single or double quotes.
-</p>
+<p class="definition">Zeichenketten (Strings) sind Text, der entweder mit einfachen oder doppelten Anf&uuml;hrungszeichen umschlossen ist.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="string">"string of text"</span>
-<span class="string">'string of text'</span>
+<pre><code class="javascript"><span class="string">"eine Kette von Schriftzeichen"</span>
+<span class="string">'eine Kette von Schriftzeichen'</span>
 </code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_concatenation">
-<h3 class="title">Concatenation</h3>
+<h3 class="title">Verkettung</h3>
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string1 + string2</code></pre>
+<pre><code class="javascript">zeichenkette1 + zeichenkette2</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"some"</span> + <span class="string">"text"</span>; <span class="comment">// returns "sometext"</span>
-<span class="keyword">var</span> first = <span class="string">"my"</span>;
-<span class="keyword">var</span> second = <span class="string">"string"</span>;
-<span class="keyword">var</span> union = first + second; <span class="comment">// union variable has the string "mystring"</span>
+<pre><code class="javascript"><span class="string">"mehr "</span> + <span class="string">"Text"</span>; <span class="comment">// ergibt "mehr Text"</span>
+<span class="keyword">var</span> eins = <span class="string">"meine "</span>;
+<span class="keyword">var</span> zwei = <span class="string">"kette"</span>;
+<span class="keyword">var</span> insgesamt = eins + zwei; <span class="comment">// die Variable insgesamt hat den Wert "meine kette"</span>
 </code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_length">
 <h3 class="title">length</h3>
-<p class="definition">
-Returns the length of the string.
-</p>
+<p class="definition">Gibt die L&auml;nge einer Zeichenkette zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string.length</code></pre>
+<pre><code class="javascript">zeichenkette.length</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"My name"</span>.length <span class="comment">// 7 , white space is also counted</span>
+<pre><code class="javascript"><span class="string">"Mein Name"</span>.length <span class="comment">// 9, da Leerzeichen auch gez&auml;hlt werden</span>
 <span class="string">""</span>.length <span class="comment">// 0</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_touppercase-tolowercase">
 <h3 class="title">toUpperCase, toLowerCase</h3>
-<p class="definition">
-Changes the cases of all the alphabetical letters in the string.
-</p>
+<p class="definition">Ersetzt alle Grossbuchstaben einer Zeichenkette durch kleine Buchstaben und umgekehrt.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"my name"</span>.toUpperCase(); <span class="comment">// Returns "MY NAME"</span>
-<span class="string">"MY NAME"</span>.toLowerCase(); <span class="comment">// Returns "my name"</span></code></pre>
+<pre><code class="javascript"><span class="string">"Mein Name"</span>.toUpperCase(); <span class="comment">// Rergibt "MEIN NAME"</span>
+<span class="string">"MEIN NAME"</span>.toLowerCase(); <span class="comment">// ergibt "mein name"</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_trim">
 <h3 class="title">trim()</h3>
-<p class="definition">Entfernt Leerstellen an beiden eins Strings.</p>
+<p class="definition">Entfernt Leerstellen an beiden Enden einer Zeichenkette.</p>
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">string.trim()</code></pre>
@@ -1164,8 +1156,8 @@ Changes the cases of all the alphabetical letters in the string.
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 </a>
 </li>
 </ul>
@@ -1174,40 +1166,32 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="strings_replace">
 <h3 class="title">replace()</h3>
-<p class="definition">
-Returns a string with the first match substring replaced with a new substring.
-</p>
+<p class="definition">Gibt eine Zeichenkette zur&uuml;ck, in das erste Auftauchen eines Teilst&uuml;ckes durch ein neues ersetzt wird.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"original string"</span>.replace(<span class="string">"original"</span>, <span class="string">"replaced"</span>); <span class="comment">// returns "replaced string"</span>
+<pre><code class="javascript"><span class="string">"urspr&uuml;ngliche zeichenkette"</span>.replace(<span class="string">"urspr&uuml;ngliche"</span>, <span class="string">"ersetzte"</span>); <span class="comment">// ergibt "ersetzte zeichenkette"</span>
 </code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_charat">
 <h3 class="title">charAt()</h3>
-<p class="definition">
-Returns the specified character from a string.
-Characters in a string are indexed from left to right. The index of the 
-first character is 0, and the index of the last character in a string 
-called stringName is stringName.length - 1. If the index you supply is 
-out of range, JavaScript returns an empty string.
-</p>
+<p class="definition">Gibt ein bestimmtes Zeichen einer Zeichenkette zur&uuml;ck. Einzelne Zeichen einer Zeichenkette werden von links nach rechts indiziert. Die Indexzahl des ersten Zeichens ist 0 und die Indexzahl des letzten Zeichens in einer Zeichenkette ist <em>zeichenkette.length - 1</em>. Gibt man eine Indexzahl gr&ouml;&szlig;er der tats&auml;chlichen L&auml;nge der Zeichenkette an, so gibt Javascript eine leere Zeichenkette zur&uuml;ck.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string.charAt(index) <span class="comment">// index is an integer between 0 and 1 less than the length of the string.</span></code></pre>
+<pre><code class="javascript">zeichenkette.charAt(index)</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"Hello World!"</span>.charAt(<span class="number">0</span>); <span class="comment">// 'H'</span>
-<span class="string">"Hello World!"</span>.charAt(<span class="number">234</span>); <span class="comment">// ''</span></code></pre>
+<pre><code class="javascript"><span class="string">"Hallo Welt!"</span>.charAt(<span class="number">0</span>); <span class="comment">// 'H'</span>
+<span class="string">"Hallo Welt!"</span>.charAt(<span class="number">234</span>); <span class="comment">// ''</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/charAt" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 </a>
 </li>
 </ul>
@@ -1216,55 +1200,47 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 <div class="subsection" id="strings_substring">
 <h3 class="title">substring()</h3>
-<p class="definition">
-Returns the sequence of characters between two indices within a string. 
-</p>
+<p class="definition">Gibt das Teilst&uuml;ck einer Zeichenkette zur&uuml;ck - bestimmt durch ein oder zwei Indexzahlen.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string.substring(indexA[, indexB])
-<span class="comment">//indexA : An integer between 0 and the length of the string</span>
-<span class="comment">// indexB : (optional) An integer between 0 and the length of the string.</span></code></pre>
+<pre><code class="javascript">zeichenkette.substring(indexA[, indexB])
+<span class="comment">// indexA : eine Ganzzahl zwischen 0 und der L&auml;nge der Zeichenkette</span>
+<span class="comment">// indexB : (optional) eine Ganzzahl zwischen 0 und der L&auml;nge der Zeichenkette.</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"adventures"</span>.substring(<span class="number">2</span>,<span class="number">9</span>); <span class="comment">// Returns "venture"</span>
-<span class="comment">// It starts from indexA(2) , and goes up to but not including indexB(9)</span>
-<span class="string">"hello"</span>.substring(<span class="number">1</span>); <span class="comment">// returns "ello"</span>
-<span class="string">"Web Fundamentals"</span>.substring(<span class="number">111</span>); <span class="comment">// returns ''</span>
-<span class="string">"In the market"</span>.substring(<span class="number">2</span>,<span class="number">999</span>); <span class="comment">// returns ' the market'</span>
-<span class="string">"Fast and efficient"</span>.substring(<span class="number">3</span>,<span class="number">3</span>); <span class="comment">// returns ''</span>
-<span class="string">"Go away"</span>.substring(<span class="string">"abcd"</span> , <span class="number">5</span>); <span class="comment">// gibt 'Go aw' zur&uuml;ck</span>
-<span class="comment">// Any non-numeric thing is treated as 0</span></code></pre>
+<pre><code class="javascript"><span class="string">"Abenteuer"</span>.substring(<span class="number">4</span>,<span class="number">9</span>); <span class="comment">// ergibt "teuer"</span>
+<span class="comment">// f&auml;ngt bei indexA(4) an und geht bis zu indexB(9) - 1</span>
+<span class="string">"hallo"</span>.substring(<span class="number">1</span>); <span class="comment">// returns "allo"</span>
+<span class="string">"Donaudampfschifffahrt"</span>.substring(<span class="number">111</span>); <span class="comment">// ergibt ''</span>
+<span class="string">"auf dem Markt"</span>.substring(<span class="number">3</span>,<span class="number">999</span>); <span class="comment">// ergibt ' dem Markt'</span>
+<span class="string">"Auf Wiedersehen!"</span>.substring(<span class="string">"abc"</span> , <span class="number">3</span>); <span class="comment">// gibt 'Auf' zur&uuml;ck</span>
+<span class="comment">// jedes nicht-nummerisches Zeichen wird als 0 gewertet</span></code></pre>
 </div>
 </div>
 
 <div class="subsection" id="strings_indexof">
 <h3 class="title">indexOf()</h3>
-<p class="definition">
-Returns the index within the calling String object of the first 
-occurrence of the specified value, starting the search at fromIndex,
-Returns -1 if the value is not found.
-The indexOf method is case sensitive.
-</p>
+<p class="definition">Gibt die Indexzahl der Stelle zur&uuml;ck, an der die gesuchte Zeichenkette zum ersten Mal gefunden wird, beginnend mit dem Wert <em>index</em>, welcher die Stelle angibt, an der die Suche beginnen soll. Gibt -1 zur&uuml;ck, wenn der Wert nicht gefunden wurde. Die Methode ist abh&auml;ngig von der Gross- und Kleinschreibung.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string.indexOf(searchValue[, fromIndex]) <span class="comment">//fromIndex is optional.It specifies from which index should the search start.Its default value is 0.</span></code></pre>
+<pre><code class="javascript">string.indexOf(gesuchterWert[, index]) <span class="comment">// die Angabe eines <em>index</em> ist optional. Der Standardwert ist 0.</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="string">"My name is very long."</span>.indexOf(<span class="string">"name"</span>); <span class="comment">// returns 3</span>
-<span class="string">"My name is very long."</span>.indexOf(<span class="string">"Name"</span>); <span class="comment">// returns -1 , it's case sensitive</span>
-<span class="string">"Where are you going?"</span>.indexOf(<span class="string">"are"</span>,<span class="number">11</span>); <span class="comment">//returns -1</span>
-<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>); <span class="comment">//returns 0 </span>
-<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>,<span class="number">3</span>); <span class="comment">//returns 3</span>
-<span class="string">"Learn to Code"</span>.indexOf(<span class="string">""</span>,<span class="number">229</span>); <span class="keyword">return</span>s <span class="number">13</span> , which is the string.length</code></pre>
+<pre><code class="javascript"><span class="string">"Mein Name ist ziemlich lang."</span>.indexOf(<span class="string">"Name"</span>); <span class="comment">// ergibt  5</span>
+<span class="string">"Mein Name ist ziemlich lang."</span>.indexOf(<span class="string">"name"</span>); <span class="comment">// ergibt -1, da case-sensitive</span>
+<span class="string">"Wo geht es hin?"</span>.indexOf(<span class="string">"es"</span>, <span class="number">11</span>); <span class="comment">// ergibt -1</span>
+<span class="string">"Lernen"</span>.indexOf(<span class="string">""</span>); <span class="comment">// ergibt 0 </span>
+<span class="string">"Lernen"</span>.indexOf(<span class="string">""</span>, <span class="number">3</span>); <span class="comment">// ergibt 3</span>
+<span class="string">"Lernen"</span>.indexOf(<span class="string">""</span>, <span class="number">229</span>); <span class="keyword">ergibt</span> <span class="number">13</span>, also &quot;Lernen&quot;.length</code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf" target="_blank">
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 </a>
 </li>
 </ul>
@@ -1272,6 +1248,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 </div>
 
 </section>
+
+<!--
 
 <section id="switch-statements">
 <h2>Switch statements</h2>
