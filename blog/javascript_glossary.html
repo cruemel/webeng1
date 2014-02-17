@@ -66,6 +66,8 @@
           		</div>
           		<div id="submenu" class="blog visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<!-- start content -->
+
 <h1>Javascript Kurzreferenz</h1>
 <section id="arrays">
 <h2>Arrays</h2>
@@ -184,7 +186,7 @@ console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="
 </section>
 
 <section id="booleans">
-<h2>Boolean</h2>
+<h2>Boolesch</h2>
 <div class="subsection" id="booleans_boolean-literals">
 <h3 class="title">Boolesche Werte</h3>
 <div class="syntax">
@@ -315,129 +317,89 @@ wert === wert
 
 </section>
 
-<section id="code-comments">
-<h2>Kommentare</h2>
-<div class="subsection" id="code-comments_definition">
-<h3 class="title">Definition</h3>
-<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code schreiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
-</div>
+<section id="dreifach-schalter">
+<h2>Dreifach-Schalter</h2>
 
-<div class="subsection" id="code-comments_single-line-comment">
-<h3 class="title">Einzeiliger Kommentare</h3>
+<div class="subsection" id="ternary-operator_">
 <p class="definition">
-Alles nach  //  ist ein Kommentar (und alles davor Code).
+Der Dreifach-Schalter ist normalerweise eine Kurzform f&uuml;r eine <em>if</em> Anweisung.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">console.log(<span class="string">"Dieser Code wird ausgef&uuml;hrt."</span>)
-
-<span class="comment">// console.log("Weil diese Zeile innerhalb eines Kommentares steht, wird sie nicht ausgef&uuml;hrt.")</span></code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">// Dies ist ein einzeiliger Kommentar.</span></code></pre>
-</div>
-</div>
-
-<div class="subsection" id="code-comments_multi-line-comment">
-<h3 class="title">Mehrzeiliger Kommentar</h3>
-<p class="definition">
-Alles zwischen /* und */ ist ein Kommentar.
-</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">/* 
-Dies ist ein mehrzeiliger
-   
-Kommentar!
-*/</span>
+<pre><code class="javascript">bedingung ? ausdruck1 : ausdruck2
 </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">/* 
-alert("Hallo, ich werde nicht ausgef&uuml;hrt.");
-console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
-*/</span></code></pre>
+<pre><code class="javascript"><span class="keyword">var</span> punkte = <span class="number">85</span>;
+console.log(<span class="string">"Du hast "</span> + (punkte &gt; <span class="number">50</span> ? <span class="string">"gewonnen!"</span> : <span class="string">"verloren!"</span>));
+
+<span class="comment">// Du hast gewonnen!</span>
+
+<span class="comment">// Das ist die gleiche Aussage, wie:
+if(punkte &gt; 50){
+    console.log("Du hast " + "gewonnen!");  // oder einfach "Du hast gewonnen!"
+}
+else{
+    console.log("Du hast " + "verloren!"); 
+}</span></code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">bedingung ? (bedingung ? ausdruck1 : ausdruck2) : ausdruck3</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">90</span>;
+console.log( <span class="string">"Dein Grad ist: "</span> + (grad &gt; <span class="number">50</span> ? (grad &gt;= <span class="number">90</span>? <span class="string">"ausgezeichnet"</span>:<span class="string">"durchschnittlich"</span>):<span class="string">"verbesserungsw&uuml;rdig"</span>) );
+
+<span class="comment">// Als verschachtelte if Anweisung, sieht das so aus:
+
+if(punkte &gt; 50){
+    if(punkte &gt;= 90){
+        console.log("Deine Note ist: ausgezeichnet"):
+    }
+    else{
+        console.log("Deine Note ist: durchschnittlich");
+    }
+}
+else{
+    console.log("Deine Note ist: verbesserungsw&uuml;rdig"); 
+}
+</span>
+<span class="comment">// Deine Note ist: ausgezeichnet</span>
+</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">bedingung ? ausdruck1 : (bedingung( ausdruck2 : ausdruck3 ))</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> punkte = <span class="number">51</span>;
+
+console.log( <span class="string">"Deine Note ist: "</span> + (grad &gt;= <span class="number">90</span> ? <span class="string">"ausgezeichnet"</span>: (grad &gt; <span class="number">50</span>? <span class="string">"durchschnittlich"</span> : <span class="string">"verbesserungsw&uuml;rdig"</span>)) );
+<span class="comment">
+// In Form einer else if Anweisung, sieht das so aus:
+
+if(grad &gt;= 90){
+    console.log("Deine Note ist: ausgezeichnet");
+}
+else if (grad &gt; 50){
+    console.log("Deine Note ist: durchschnittlich"); 
+}
+else{
+    console.log("Deine Note ist: verbesserungsw&uuml;rdig"); 
+}
+
+// Deine Note ist: durchschnittlich
+</span></code></pre>
 </div>
 </div>
 
 </section>
 
-<section id="console">
-<h2>Konsole</h2>
-
-<div class="subsection" id="console_console-log">
-<h3 class="title">console.log</h3>
-<p class="definition">Gibt Informationen auf der Konsole aus. N&uuml;tzlich f&uuml;r das Debugging.
-</p>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript">console.log(<span class="string">'Gute Nacht!'</span>);</code></pre>
-</div>
-</div>
-
-<div class="subsection" id="console_console-time">
-<h3 class="title">console.time</h3>
-<p class="definition">Diese Funktion startet einen Timer, der n&uuml;tzlich ist um  nachzuvollziehen, wieviel Zeit eine Operation braucht. Sie k&ouml;nnen jedem Timer einen eigenen Namen geben und Sie k&ouml;nnen bis zu 10.000 Timer auf einer Seite plazieren. Wenn Sie console.timeEnd() mit dem selben Namen wie console.time aufrufen, so wird der Browser die Zeit (in Millisekunden) anzeigen, die vergangen ist seitdem der Timer gestartet wurde.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">console.time(TimerName);</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript">console.time("Meine Berechnung");
-var x = 5 + 5;
-console.log(x); // 10
-console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist
-console.log("Berechnung abgeschlossen.");</code></pre>
-</div>
-<div class="read-more">
-<h4>Weiterlesen</h4>
-<ul>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/API/console.time" target="_blank">
-https://developer.mozilla.org/de/docs/Web/API/console.time
-</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
-https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
-</a>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="subsection" id="console_console-timeend">
-<h3 class="title">console.timeEnd</h3>
-<p class="definition">H&auml;lt einen Timer an, der zuvor mit console.time() gestartet wurde.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">console.timeEnd(TimerName);</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript">console.time("Meine Berechnung");
-var x = 5 + 5;
-console.log(x); // 10
-console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist</code></pre>
-</div>
-<div class="read-more">
-<h4>Weiterlesen</h4>
-<ul>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
-https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
-</a>
-</li>
-</ul>
-</div>
-</div>
-
-</section>
-
-<section id="functions">
+<section id="funktionen">
 <h2>Funktionen</h2>
 <div class="subsection" id="functions_function-definition">
 <h3 class="title">Funktionsdefinition</h3>
@@ -515,7 +477,7 @@ http://jamesallardice.com/explaining-function-and-variable-hoisting-in-javascrip
 
 </section>
 
-<section id="if-statement">
+<section id="if-anweisungen">
 <h2>If Anweisungen</h2>
 <div class="subsection" id="if-statement_if">
 <h3 class="title">if</h3>
@@ -588,123 +550,128 @@ Der R&uuml;ckgriff zu einer <em>if</em> Anweisung. Wird nur ausgef&uuml;hrt, fal
 
 </section>
 
-<section id="loops">
-<h2>Schleifen</h2>
-<div class="subsection" id="loops_for-loops">
-<h3 class="title">For Schleifen</h3>
-<p class="definition"><em>for</em> Schleifen werden benutzt, wenn man vorher weiss, wie oft eine Schleife durchlaufen werden soll. Der meist verwendete Variablenname in Schleifen ist &quot;i&quot;.</p>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> i;  <span class="comment">// auslagern der Definition</span>
-<span class="keyword">for</span> (i = <span class="number">10</span>; i &gt;= <span class="number">1</span>; i--) {
-    console.log(i); <span class="comment">// Gibt die Zahlen von 10 bis 1 aus</span>
-}</code></pre>
+<section id="kommentare">
+<h2>Kommentare</h2>
+<div class="subsection" id="code-comments_definition">
+<p class="definition">Kommentare werden benutzt um die Lesbarkeit des Codes zu erh&ouml;hen. Wenn Sie 100 Zeilen Code schreiben und dann vergessen, was die einzelnen Funktionen bewirken sollen, so ist dies nicht sinnvoll. Kommentare sind also so etwas wie Notizen, Anregungen und Warnungen f&uuml;r sich selbst. Kommentare werden nicht ausgef&uuml;hrt.</p>
 </div>
+
+<div class="subsection" id="code-comments_single-line-comment">
+<h3 class="title">Einzeiliger Kommentare</h3>
+<p class="definition">
+Alles nach  //  ist ein Kommentar (und alles davor Code).
+</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = anfangsWert];[i &lt; endWert]; [i+=schrittWert]) {
-    <span class="comment">// Hier kommt die Berechnung hin</span>
-}
+<pre><code class="javascript">console.log(<span class="string">"Dieser Code wird ausgef&uuml;hrt."</span>)
+
+<span class="comment">// console.log("Weil diese Zeile innerhalb eines Kommentares steht, wird sie nicht ausgef&uuml;hrt.")</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">// Dies ist ein einzeiliger Kommentar.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="code-comments_multi-line-comment">
+<h3 class="title">Mehrzeiliger Kommentar</h3>
+<p class="definition">
+Alles zwischen /* und */ ist ein Kommentar.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="comment">/* 
+Dies ist ein mehrzeiliger
+   
+Kommentar!
+*/</span>
 </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {
-  console.log(i); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
-}</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">/* Beachten Sie, dass alle drei Anweisungen optional sind, wie im folgenden: */</span>
-<span class="keyword">var</span> i = <span class="number">9</span>;
-<span class="keyword">for</span>(;;){
-    <span class="keyword">if</span>(i === <span class="number">0</span>)<span class="keyword">break</span>;
-    console.log(i);
-    i--;
-}
-
-<span class="comment">// Diese Schleife ist durchaus korrekt.</span></code></pre>
+<pre><code class="javascript"><span class="comment">/* 
+alert("Hallo, ich werde nicht ausgef&uuml;hrt.");
+console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
+*/</span></code></pre>
 </div>
 </div>
 
-<div class="subsection" id="loops_while-loops">
-<h3 class="title">While Schleifen</h3>
-<p class="definition"><em>while</em> Schleifen werden verwendet, wenn man vorher nicht weiss, wie oft eine Schleife durchlaufen wird.
-</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">while</span> (bedingung) {
-  <span class="comment">// Hier kommt die Berechnung hin</span>
-}</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
-<span class="keyword">while</span> (x &lt; <span class="number">5</span>) {
-  console.log(x); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
-  x++;
-}</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
-<span class="keyword">while</span> (x &lt;= <span class="number">5</span>) {
-    console.log(x); <span class="comment">// Wird nicht ausgef&uuml;hrt.</span>
-    x++;
-}</code></pre>
-</div>
-<div class="read-more">
-<h4>Weiterlesen</h4>
-<ul>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while" target="_blank">
-https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while
-</a>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="subsection" id="loops_do-while-loops">
-<h3 class="title">Do While Schleifen</h3>
-<p class="definition">
-<em>do while</em> Schleifen werden verwendet, wenn die Schleife mindestens einmal durchlaufen werden soll, man aber nicht weiss, wie oft sonst noch.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">do</span> {
-  <span class="comment">// Hier kommt die Berechnung hin</span>
-} <span class="keyword">while</span> (bedingung);</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
-<span class="keyword">do</span> {
-    console.log(x);  <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
-    x++;
-} <span class="keyword">while</span> (x &lt; <span class="number">5</span>);</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
-<span class="keyword">do</span> {
-    console.log(x); <span class="comment">// Gibt die Zahl 10 aus</span>
-    x++;
-} <span class="keyword">while</span> (x &lt;= <span class="number">5</span>);</code></pre>
-</div>
-<div class="read-more">
-<h4>Weiterlesen</h4>
-<ul>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
-https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while
-</a>
-</li>
-</ul>
-</div>
-</div>
 </section>
 
-<section id="math">
+<section id="konsole">
+<h2>Konsole</h2>
+
+<div class="subsection" id="console_console-log">
+<h3 class="title">console.log</h3>
+<p class="definition">Gibt Informationen auf der Konsole aus. N&uuml;tzlich f&uuml;r das Debugging.
+</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.log(<span class="string">'Gute Nacht!'</span>);</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="console_console-time">
+<h3 class="title">console.time</h3>
+<p class="definition">Diese Funktion startet einen Timer, der n&uuml;tzlich ist um  nachzuvollziehen, wieviel Zeit eine Operation braucht. Sie k&ouml;nnen jedem Timer einen eigenen Namen geben und Sie k&ouml;nnen bis zu 10.000 Timer auf einer Seite plazieren. Wenn Sie console.timeEnd() mit dem selben Namen wie console.time aufrufen, so wird der Browser die Zeit (in Millisekunden) anzeigen, die vergangen ist seitdem der Timer gestartet wurde.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">console.time(TimerName);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.time("Meine Berechnung");
+var x = 5 + 5;
+console.log(x); // 10
+console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist
+console.log("Berechnung abgeschlossen.");</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.time" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.time
+</a>
+</li>
+<li>
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="console_console-timeend">
+<h3 class="title">console.timeEnd</h3>
+<p class="definition">H&auml;lt einen Timer an, der zuvor mit console.time() gestartet wurde.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">console.timeEnd(TimerName);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">console.time("Meine Berechnung");
+var x = 5 + 5;
+console.log(x); // 10
+console.timeEnd("Meine Berechnung"); // die Zeit, die vergangen ist</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/de/docs/Web/API/console.timeEnd" target="_blank">
+https://developer.mozilla.org/de/docs/Web/API/console.timeEnd
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section id="mathe">
 <h2>Mathe</h2>
 <div class="subsection" id="math_">
 <p class="definition"></p></div>
@@ -835,92 +802,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 
 </section>
 
-<section id="numbers">
-<h2>Zahlen</h2>
-<div class="subsection" id="numbers_modulus">
-<h3 class="title">% (Modulo)</h3>
-<p class="definition">Gibt den Rest der Division zweier Zahlen zur&uuml;ck.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">zahl1 % zahl2</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="number">14</span> % <span class="number">9</span> <span class="comment">// ergibt 5</span></code></pre>
-</div>
-</div>
-
-<div class="subsection" id="numbers_isnan">
-<h3 class="title">isNaN</h3>
-<p class="definition">Ist wahr, wenn der Wert keine Zahl ist, andersfalls falsch.
-</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">isNaN(wert)</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> user_input = prompt(<span class="string">"Bitte geben Sie eine Zahl ein."</span>);
-
-<span class="keyword">if</span>(isNaN(eingabe) {
-    alert(<span class="string">"Ich sagte: bitte geben Sie eine Zahl ein!"</span>);
-}
-
-<span class="comment">// gibt eine Meldung aus, da &quot;eine Zahl" keine Zahl ist.</span>
-<span class="comment">// ebenfalls zu beachten:</span>
-
-<span class="keyword">if</span>( isNaN(<span class="string">"3"</span>) {
-    alert(<span class="string">"schlecht!"</span>);
-}
-
-<span class="comment">// wird nicht ausgef&uuml;hrt, da der String "3" in die Zahl 3 umgewandelt wird.</span></code></pre>
-</div>
-</div>
-
-<div class="subsection" id="numbers_basic-arithmetic">
-<h3 class="title">Einfache Berechnungen</h3>
-<p class="definition">Einfache Berechnungen sind simple.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="number">4</span> + <span class="number">5</span>;  <span class="comment">// 9</span>
-<span class="number">4</span> * <span class="number">5</span>;  <span class="comment">// 20</span>
-<span class="number">5</span> - <span class="number">4</span>;  <span class="comment">// 1</span>
-<span class="number">20</span> / <span class="number">5</span>; <span class="comment">// 4</span></code></pre>
-</div>
-</div>
-
-<div class="subsection" id="numbers_prefix-and-postfix-increment-decrement-operators">
-<h3 class="title">vorangestellte bzw. nachgeordnete De- und Inkrementoren</h3>
-<p class="definition">In- oder Dekrementoren, die der Varibale vorangestellt sind, erh&ouml;hen bzw. verringern den Wert einer Variable und geben dann den neuen Wert zur&uuml;ck.</p>
-<p class="definition">W&auml;hrend In- oder Dekrementoren, die der Varibale nachgeordnet sind, zuerst den neuen Wert zur&uuml;ckgeben und dann den Wert der Variable erh&ouml;hen bzw. verringern.</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">--variable  <span class="comment">// vorangestellte Verringerung</span>
-++variable <span class="comment">// vorangestellt Erh&ouml;hung</span>
-variable--  <span class="comment">// nachgeordnete Verringerung</span>
-variable++  <span class="comment">// nachgeordente Erh&ouml;hung</span></code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">// diese Beispiele verdeutlichen es:</span>
-
-<span class="keyword">var</span> a = <span class="number">15</span>; <span class="comment">// a ist 15</span>
-<span class="keyword">var</span> b = ++a;
-<span class="comment">// da vorangestellt, wird a (15) zuerst um 1 erh&ouml;ht und dann wird der Wert auf b &uuml;bertragen</span>
-console.log(b); <span class="comment">// 16</span>
-console.log(a); <span class="comment">// 16</span>
-
-<span class="keyword">var</span> x = <span class="number">15</span>; <span class="comment">// x ist 15</span>
-<span class="keyword">var</span> y = x++;
-<span class="comment">// da nachgeordnet, erh&auml;lt y zuerst den Wert von x (15) und dann wird x um 1 erh&ouml;ht.</span>
-console.log(y); <span class="comment">// 15</span>
-console.log(x); <span class="comment">// 16</span></code></pre>
-</div>
-</div>
-</section>
-
-
-<section id="objects">
+<section id="objekte">
 <h2>Objekte</h2>
 <div class="subsection" id="objects_object-literals">
 <h3 class="title">Objekte definieren</h3>
@@ -999,7 +881,7 @@ Erich.inRente(); <span class="comment">// true</span></code></pre>
 </div>
 </section>
 
-<section id="popup-boxes">
+<section id="popups">
 <h2>Popups</h2>
 <div class="subsection" id="popup-boxes_alert">
 <h3 class="title">alert</h3>
@@ -1086,7 +968,305 @@ https://developer.mozilla.org/de/docs/Web/API/window.prompt
 
 </section>
 
-<section id="strings">
+<section id="schleifen">
+<h2>Schleifen</h2>
+<div class="subsection" id="loops_for-loops">
+<h3 class="title">For Schleifen</h3>
+<p class="definition"><em>for</em> Schleifen werden benutzt, wenn man vorher weiss, wie oft eine Schleife durchlaufen werden soll. Der meist verwendete Variablenname in Schleifen ist &quot;i&quot;.</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> i;  <span class="comment">// auslagern der Definition</span>
+<span class="keyword">for</span> (i = <span class="number">10</span>; i &gt;= <span class="number">1</span>; i--) {
+    console.log(i); <span class="comment">// Gibt die Zahlen von 10 bis 1 aus</span>
+}</code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = anfangsWert];[i &lt; endWert]; [i+=schrittWert]) {
+    <span class="comment">// Hier kommt die Berechnung hin</span>
+}
+</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {
+  console.log(i); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">/* Beachten Sie, dass alle drei Anweisungen optional sind, wie im folgenden: */</span>
+<span class="keyword">var</span> i = <span class="number">9</span>;
+<span class="keyword">for</span>(;;){
+    <span class="keyword">if</span>(i === <span class="number">0</span>)<span class="keyword">break</span>;
+    console.log(i);
+    i--;
+}
+
+<span class="comment">// Diese Schleife ist durchaus korrekt.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="loops_while-loops">
+<h3 class="title">While Schleifen</h3>
+<p class="definition"><em>while</em> Schleifen werden verwendet, wenn man vorher nicht weiss, wie oft eine Schleife durchlaufen wird.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">while</span> (bedingung) {
+  <span class="comment">// Hier kommt die Berechnung hin</span>
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
+<span class="keyword">while</span> (x &lt; <span class="number">5</span>) {
+  console.log(x); <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
+  x++;
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
+<span class="keyword">while</span> (x &lt;= <span class="number">5</span>) {
+    console.log(x); <span class="comment">// Wird nicht ausgef&uuml;hrt.</span>
+    x++;
+}</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/while
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="subsection" id="loops_do-while-loops">
+<h3 class="title">Do While Schleifen</h3>
+<p class="definition">
+<em>do while</em> Schleifen werden verwendet, wenn die Schleife mindestens einmal durchlaufen werden soll, man aber nicht weiss, wie oft sonst noch.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">do</span> {
+  <span class="comment">// Hier kommt die Berechnung hin</span>
+} <span class="keyword">while</span> (bedingung);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">0</span>;
+<span class="keyword">do</span> {
+    console.log(x);  <span class="comment">// Gibt die Zahlen von 0 bis 4 aus</span>
+    x++;
+} <span class="keyword">while</span> (x &lt; <span class="number">5</span>);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">10</span>;
+<span class="keyword">do</span> {
+    console.log(x); <span class="comment">// Gibt die Zahl 10 aus</span>
+    x++;
+} <span class="keyword">while</span> (x &lt;= <span class="number">5</span>);</code></pre>
+</div>
+<div class="read-more">
+<h4>Weiterlesen</h4>
+<ul>
+<li>
+<a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...while
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="switch-anweisungen">
+<h2>Switch Anweisungen</h2>
+
+<div class="subsection" id="switch-statements_switch">
+<h3 class="title">switch</h3>
+<p class="definition">Funktioniert wie eine gro&szlig;e <em>if / else if / else</em> Kette. D.h. eine Switch Anweisung &uuml;berpr&uuml;ft eine Reihe von F&auml;llen und f&uuml;hrt den ersten aus, der wahr ist. Die Anweisung f&uuml;hrt auch alle weiteren F&auml;lle aus, bis sie auf eine break-Anweisung trifft, woraufhin die weitere Verarbeitung des Switches abgebrochen wird. Sollte es keinen zutreffenden Fall geben, wird eine Standardanweisung ausgef&uuml;hrt.</p>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> geschlecht = <span class="string">"weiblich"</span>;
+
+<span class="keyword">switch</span> (geschlecht) {
+  <span class="keyword">case</span> <span class="string">"weiblich"</span>:
+    console.log(<span class="string">"Gn&auml;dige Frau!"</span>);
+  <span class="keyword">case</span> <span class="string">"m&auml;nnlich"</span>:
+    console.log(<span class="string">"Herr Kommerzienrat!"</span>);
+    <span class="keyword">break</span>;
+  <span class="keyword">default</span>:
+    console.log(<span class="string">"Guten Tag!"</span>);
+}
+
+<span class="comment">// Gn&auml;dige Frau!
+// Herr Kommerzienrat
+// da nur zweiten Fall eine break-Anweisung enth&auml;lt, werden die ersten beiden F&auml;lle ausgef&uuml;hrt.</span></code></pre>
+</div>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">switch</span> (bedingung) {
+  <span class="keyword">case</span> fall1:
+    anweisung1
+    [<span class="keyword">break</span>;]
+  <span class="keyword">case</span> fall2:
+    anweisung2
+    [<span class="keyword">break</span>;]
+  ...
+  <span class="keyword">case</span> fallN:
+    anweisungN
+    [<span class="keyword">break</span>;]
+  <span class="keyword">default</span>:
+    standardAnweisung
+    [<span class="keyword">break</span>;]
+}</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> gender = <span class="string">"female"</span>;
+
+<span class="keyword">switch</span> (geschlecht) {
+  <span class="keyword">case</span> <span class="string">"weiblich"</span>:
+    console.log(<span class="string">"Gn&auml;dige Frau!"</span>);
+  <span class="keyword">case</span> <span class="string">"male"</span>:
+    console.log(<span class="string">"Herr Kommerzienrat!"</span>);
+  <span class="keyword">default</span>:
+    console.log(<span class="string">"Guten Tag!"</span>);
+}
+
+<span class="comment">// Gn&auml;dige Frau!
+// Herr Kommerzienrat
+// Guten Tag!
+// da es keine break-Anweisung gibt, werden alle F&auml;lle ausgef&uuml;hrt.</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="variablen">
+<h2>Variablen</h2>
+
+<div class="subsection" id="variables_variable-assignment">
+<h3 class="title">Variablen zuweisen</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = value;</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">1</span>;
+<span class="keyword">var</span> meinName = <span class="string">"Anton"</span>;
+<span class="keyword">var</span> seinName = meinName;</code></pre>
+</div>
+</div>
+
+<div class="subsection" id="variables_variable-changing">
+<h3 class="title">Variablen &auml;ndern</h3>
+<p class="definition"></p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">var name = neuerWert</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> name = <span class="string">"Berta"</span> <span class="comment">// erzeugt eine Variable &quot;name&quot; und gibt ihr der Wert "Berta"</span>
+name = <span class="string">"Clara"</span> <span class="comment">// ändert den Wert der Varibale &quot;name&quot; zu "Clara"</span></code></pre>
+</div>
+</div>
+
+</section>
+
+<section id="zahlen">
+<h2>Zahlen</h2>
+<div class="subsection" id="numbers_modulus">
+<h3 class="title">% (Modulo)</h3>
+<p class="definition">Gibt den Rest der Division zweier Zahlen zur&uuml;ck.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">zahl1 % zahl2</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="number">14</span> % <span class="number">9</span> <span class="comment">// ergibt 5</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_isnan">
+<h3 class="title">isNaN</h3>
+<p class="definition">Ist wahr, wenn der Wert keine Zahl ist, andersfalls falsch.
+</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">isNaN(wert)</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="keyword">var</span> user_input = prompt(<span class="string">"Bitte geben Sie eine Zahl ein."</span>);
+
+<span class="keyword">if</span>(isNaN(eingabe) {
+    alert(<span class="string">"Ich sagte: bitte geben Sie eine Zahl ein!"</span>);
+}
+
+<span class="comment">// gibt eine Meldung aus, da &quot;eine Zahl" keine Zahl ist.</span>
+<span class="comment">// ebenfalls zu beachten:</span>
+
+<span class="keyword">if</span>( isNaN(<span class="string">"3"</span>) {
+    alert(<span class="string">"schlecht!"</span>);
+}
+
+<span class="comment">// wird nicht ausgef&uuml;hrt, da der String "3" in die Zahl 3 umgewandelt wird.</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_basic-arithmetic">
+<h3 class="title">Einfache Berechnungen</h3>
+<p class="definition">Einfache Berechnungen sind simple.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript"><span class="number">4</span> + <span class="number">5</span>;  <span class="comment">// 9</span>
+<span class="number">4</span> * <span class="number">5</span>;  <span class="comment">// 20</span>
+<span class="number">5</span> - <span class="number">4</span>;  <span class="comment">// 1</span>
+<span class="number">20</span> / <span class="number">5</span>; <span class="comment">// 4</span></code></pre>
+</div>
+</div>
+
+<div class="subsection" id="numbers_prefix-and-postfix-increment-decrement-operators">
+<h3 class="title">vorangestellte bzw. nachgeordnete De- und Inkrementoren</h3>
+<p class="definition">In- oder Dekrementoren, die der Varibale vorangestellt sind, erh&ouml;hen bzw. verringern den Wert einer Variable und geben dann den neuen Wert zur&uuml;ck.</p>
+<p class="definition">W&auml;hrend In- oder Dekrementoren, die der Varibale nachgeordnet sind, zuerst den neuen Wert zur&uuml;ckgeben und dann den Wert der Variable erh&ouml;hen bzw. verringern.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">--variable  <span class="comment">// vorangestellte Verringerung</span>
+++variable <span class="comment">// vorangestellt Erh&ouml;hung</span>
+variable--  <span class="comment">// nachgeordnete Verringerung</span>
+variable++  <span class="comment">// nachgeordente Erh&ouml;hung</span></code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript"><span class="comment">// diese Beispiele verdeutlichen es:</span>
+
+<span class="keyword">var</span> a = <span class="number">15</span>; <span class="comment">// a ist 15</span>
+<span class="keyword">var</span> b = ++a;
+<span class="comment">// da vorangestellt, wird a (15) zuerst um 1 erh&ouml;ht und dann wird der Wert auf b &uuml;bertragen</span>
+console.log(b); <span class="comment">// 16</span>
+console.log(a); <span class="comment">// 16</span>
+
+<span class="keyword">var</span> x = <span class="number">15</span>; <span class="comment">// x ist 15</span>
+<span class="keyword">var</span> y = x++;
+<span class="comment">// da nachgeordnet, erh&auml;lt y zuerst den Wert von x (15) und dann wird x um 1 erh&ouml;ht.</span>
+console.log(y); <span class="comment">// 15</span>
+console.log(x); <span class="comment">// 16</span></code></pre>
+</div>
+</div>
+</section>
+
+<section id="Zeichenketten">
 <h2>Zeichenketten</h2>
 
 <div class="subsection" id="strings_">
@@ -1248,203 +1428,38 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/St
 </div>
 
 </section>
-
-<!--
-
-<section id="switch-statements">
-<h2>Switch statements</h2>
-
-<div class="subsection" id="switch-statements_switch">
-<h3 class="title">switch</h3>
-<p class="definition">
-Acts like a big  if / else if / else  chain. Checks a value against a 
-list of cases, and executes the first case that is true. It goes on 
-executing all other cases it finds after the first true case till it 
-finds a breaking statement,after which it breaks out of the switch  If 
-it does not find any matching case , it executes the default case.
-</p>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> gender = <span class="string">"female"</span>;
-
-<span class="keyword">switch</span> (gender) {
-  <span class="keyword">case</span> <span class="string">"female"</span>:
-    console.log(<span class="string">"Hello, ma'am!"</span>);
-  <span class="keyword">case</span> <span class="string">"male"</span>:
-    console.log(<span class="string">"Hello, sir!"</span>);
-    <span class="keyword">break</span>;
-  <span class="keyword">default</span>:
-    console.log(<span class="string">"Hello!"</span>);
-}
-
-<span class="comment">/* Output:
-Hello, ma'am!
-Hello, sir!
-because break statement is found at the second case so execution stops there */</span></code></pre>
-</div>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">switch</span> (expression) {
-  <span class="keyword">case</span> label1:
-    statements1
-    [<span class="keyword">break</span>;]
-  <span class="keyword">case</span> label2:
-    statements2
-    [<span class="keyword">break</span>;]
-  ...
-  <span class="keyword">case</span> labelN:
-    statementsN
-    [<span class="keyword">break</span>;]
-  <span class="keyword">default</span>:
-    statements_def
-    [<span class="keyword">break</span>;]
-}</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> gender = <span class="string">"female"</span>;
-
-<span class="keyword">switch</span> (gender) {
-  <span class="keyword">case</span> <span class="string">"female"</span>:
-    console.log(<span class="string">"Hello, ma'am!"</span>);
-  <span class="keyword">case</span> <span class="string">"male"</span>:
-    console.log(<span class="string">"Hello, sir!"</span>);
-  <span class="keyword">default</span>:
-    console.log(<span class="string">"Hello!"</span>);
-}
-
-<span class="comment">/* Output:
-Hello, ma'am!
-Hello, sir!
-Hello!
-because no breaking statement is found it executes all of the cases after the true case (which is case 1) */</span></code></pre>
-</div>
-</div>
-
-</section>
-
-<section id="ternary-operator">
-<h2>Dreifach-Schalter</h2>
-
-<div class="subsection" id="ternary-operator_">
-<p class="definition">
-Der Dreifach-Schalter ist normalerweise eine Kurzform f&uuml;r eine if Aussage.
-</p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">bedingung ? ausdruck1 : ausdruck2
-</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">85</span>;
-console.log(<span class="string">"Du hast "</span> + (grad &gt; <span class="number">50</span> ? <span class="string">"gewonnen!"</span> : <span class="string">"verloren!"</span>));
-
-<span class="comment">// Du hast gewonnen!</span>
-
-<span class="comment">// Das ist die gleiche Aussage, wie:
-if(grad &gt; 50){
-    console.log("Du hast " + "gewonnen!");  // oder einfach "Du hast gewonnen!"
-}
-else{
-    console.log("Du hast " + "verloren!"); 
-}</span></code></pre>
-</div>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">bedingung ? (bedingung ? ausdruck1 : ausdruck2) : ausdruck3</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">90</span>;
-console.log( <span class="string">"Dein Grad ist: "</span> + (grad &gt; <span class="number">50</span> ? (grad &gt;= <span class="number">90</span>? <span class="string">"ausgezeichnet"</span>:<span class="string">"durchschnittlich"</span>):<span class="string">"verbesserungsw&uuml;rdig"</span>) );
-
-<span class="comment">// Als verschachtelte if Aussage, sieht das so aus:
-
-if(grad &gt; 50){
-    if(grad &gt;= 90){
-        console.log("Dein Grad ist: ausgezeichnet"):
-    }
-    else{
-        console.log("Dein Grad ist: durchschnittlich");
-    }
-}
-else{
-    console.log("Dein Grad ist: verbesserungsw&uuml;rdig"); 
-}
-</span>
-<span class="comment">// Dein Grad ist: ausgezeichnet</span>
-</code></pre>
-</div>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">bedingung ? ausdruck1 : (bedingung( ausdruck2 : ausdruck3 ))</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> grad = <span class="number">51</span>;
-
-console.log( <span class="string">"Dein Rang ist: "</span> + (grad &gt;= <span class="number">90</span> ? <span class="string">"ausgezeichnet"</span>: (grad &gt; <span class="number">50</span>? <span class="string">"durchschnittlich"</span> : <span class="string">"verbesserungsw&uuml;rdig"</span>)) );
-<span class="comment">
-// In Form einer else if Aussage, sieht das so aus:
-
-if(grad &gt;= 90){
-    console.log("Dein Grad ist: ausgezeichnet");
-}
-else if (grad &gt; 50){
-    console.log("Dein Grad ist: durchschnittlich"); 
-}
-else{
-    console.log("Dein Grad ist: verbesserungsw&uuml;rdig"); 
-}
-
-// Dein Grad ist: durchschnittlich
-</span></code></pre>
-</div>
-</div>
-
-</section>
-
-<section id="variables">
-<h2>Variables</h2>
-
-<div class="subsection" id="variables_variable-assignment">
-<h3 class="title">Variablen zuweisen</h3>
-<p class="definition"></p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">var</span> name = value;</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> x = <span class="number">1</span>;
-<span class="keyword">var</span> meinName = <span class="string">"Bert"</span>;
-<span class="keyword">var</span> seinName = meinName;</code></pre>
-</div>
-</div>
-
-<div class="subsection" id="variables_variable-changing">
-<h3 class="title">Variablen &auml;ndern</h3>
-<p class="definition"></p>
-<div class="syntax">
-<h4>Syntax</h4>
-<pre><code class="javascript">var name = neuerWert</code></pre>
-</div>
-<div class="example">
-<h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> name = <span class="string">"Michael"</span> <span class="comment">// erzeugt eine Variable &quot;name&quot; und gibt ihr der Wert "Michael"</span>
-name = <span class="string">"Samuel"</span> <span class="comment">// ändert den Wert der Varibale &quot;name&quot; zu "Samuel"</span></code></pre>
-</div>
-</div>
-
-</section>
--->
-
-</div>
-
+				
+					<!-- ende content -->
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	
+		<div id="footer">
+        	<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td class="active">
+            					<a href="../index.html">Blog</a>
+            				</td>
+            				<td>
+            					<a href="../chapter.html">Kapitel</a>
+            				</td>
+            				<td>
+            					<a href="../tags.html">Themen</a>
+            				</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
+				</div>	
+          	</div>
+    	</div>
+    	
+    	 <!-- scripts-->
+    	<script src="../assets/js/jquery.js"></script>
+    	<script src="../dist/js/bootstrap.min.js"></script>
+    	
+	</body>
 </html>
