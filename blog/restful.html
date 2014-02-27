@@ -77,24 +77,23 @@
 				<li>Nomen vs. Verben</li>
 				<li>Rest vs. Soap</li>
 			</ul>
-			<p>Wobei die Quelle anhand der Resource, der Uri identifiziert wird. Was widerum bedeutet: entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
 		</li>
 		<li>
-			<h4>Vertretung</h4>
+			<h4>Abbildung</h4>
 			<ul>
-				<li>wie die Quelle(n) ver&auml;ndert werden (die Seite(n), der Body)</li>
-				<li>Teil des Zustandes der Quelle (der Transfer zwischen Client und Server)</li>
+				<li>die Seite(n), der Body und wie diese Quelle(n) ver&auml;ndert werden</li>
+				<li>welchen Zustand sie einnehmen - der Transfer zwischen Client und Server</li>
 				<li>typischerweise JSON oder XML</li>
-				<li>Beispiel:
-					<ul>
-						<li>Quelle: eine Person
- 						<li>Service: die Kontaktdaten (GET)
- 						<li>Vertretung: {name, address, phone} oder &lt;name&gt;&lt;/name&gt;
- 					</ul>
- 				</li>
  			</ul>
  		</li>
  	</ol>
+ 	<p>Die Quelle wird anhand ihrer Resource (Uri) identifiziert. Das bedeutet: entscheidend ist nicht die Quelle, sondern deren Abbildung ...</p>
+ 	<p>Beispiel:</p>
+	<ul>
+		<li>Quelle: eine Person
+ 		<li>Service: die Kontaktdaten (GET)
+ 		<li>Abbildung: {name, address, phone} oder &lt;name&gt;&lt;/name&gt;
+ 	</ul>
 </section>
 <section>
 	<h2>Bedingungen</h2>
@@ -129,7 +128,7 @@
 			<ul>
 				<li>HTTP Aktionen (haupts&auml;chlich GET, ansonsten PUT, POST od. DELETE)</li>
 				<li>URIs (der Resourcenname)</li>
-				<li>HTTP Antwort (Status & die Seite selbst)</li>
+				<li>HTTP Antwort (der Status & die Seite selbst)</li>
 			</ul>
 		</li>
 		<li>
