@@ -185,7 +185,7 @@ console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="
 
 </section>
 
-<section id="booleans">
+<section id="boolesch">
 <h2>Boolesch</h2>
 <div class="subsection" id="booleans_boolean-literals">
 <h3 class="title">Boolesche Werte</h3>
@@ -316,6 +316,30 @@ wert === wert
 </div>
 
 </section>
+ 
+<section id="datum">
+<h2>Datum</h2>
+
+<div class="subsection" id="date_">
+<p class="definition"></p></div>
+<div class="subsection" id="date_">
+<h3 class="title">Datum erzeugen</h3>
+<p class="definition">Gibt entweder das aktuelle oder ein vorbelegtes Datum zur&uuml;ck.</p>
+<div class="syntax">
+<h4>Syntax</h4>
+<pre><code class="javascript">aktuellesDatum = new Date();
+bestimmtesDatum = new Date(jahr, monat, tag [, stunde, minuten, sekunden]);</code></pre>
+</div>
+<div class="example">
+<h4>Beispiel</h4>
+<pre><code class="javascript">var heute = new Date(); 
+var carl.geburtstag = new Date(1996, 2, 5, 3, 30, 0); 
+
+<span class="comment">// 5.3.1996 - dabei ist zu beachten, dass die Z&auml;hlung des Monates bei 0 beginnt.</span></code></pre>
+</div>
+</div>
+
+</section>
 
 <section id="dreifach-schalter">
 <h2>Dreifach-Schalter</h2>
@@ -353,7 +377,7 @@ else{
 <pre><code class="javascript"><span class="keyword">var</span> punkte = <span class="number">90</span>;
 console.log( <span class="string">"Deine Note ist: "</span> + (punkte &gt; <span class="number">50</span> ? (punkte &gt;= <span class="number">90</span>? <span class="string">"ausgezeichnet"</span>:<span class="string">"durchschnittlich"</span>):<span class="string">"verbesserungsw&uuml;rdig"</span>) );
 
-<span class="comment">// Als verschachtelte if Anweisung, sieht das so aus:
+<span class="comment">// Als verschachtelte <code>if</code> Anweisung, sieht das so aus:
 
 if(punkte &gt; 50){
     if(punkte &gt;= 90){
@@ -1266,7 +1290,7 @@ console.log(x); <span class="comment">// 16</span></code></pre>
 </div>
 </section>
 
-<section id="Zeichenketten">
+<section id="zeichenketten">
 <h2>Zeichenketten</h2>
 
 <div class="subsection" id="strings_">

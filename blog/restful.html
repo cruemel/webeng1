@@ -77,12 +77,12 @@
 				<li>Nomen vs. Verben</li>
 				<li>Rest vs. Soap</li>
 			</ul>
-			<p>Wobei die Quelle anhand der Uri identifiziert wird. Was widerum bedeutet: 		entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
+			<p>Wobei die Quelle anhand der Resource, der Uri identifiziert wird. Was widerum bedeutet: entscheidend ist nicht die Quelle, sondern deren Vertretung ...</p>
 		</li>
 		<li>
 			<h4>Vertretung</h4>
 			<ul>
-				<li>wie die Quelle(n) ver&auml;ndet werden (der body)</li>
+				<li>wie die Quelle(n) ver&auml;ndert werden (die Seite(n), der Body)</li>
 				<li>Teil des Zustandes der Quelle (der Transfer zwischen Client und Server)</li>
 				<li>typischerweise JSON oder XML</li>
 				<li>Beispiel:
@@ -100,12 +100,11 @@
 	<h2>Bedingungen</h2>
 	<ol>
 		<li>
-			<h4>Einheitliche Schnittstelle</h4>
-   			<p>definiert die Schnittstelle zwischen Client und Server</p>
+			<h4>Client und Server</h4>
 			<ul>
-				<li>HTTP Aktionen (GET, PUT, POST, DELETE)</li>
-				<li>URIs (resource name)</li>
-				<li>HTTP Antwort (status, body)</li>
+				<li>Client und Server sind nicht miteinander verbunden</li>
+				<li>eine Trennung von Interface und Services</li>
+				<li>http als Verbindung zwischen Client und Server</li>
 			</ul>
 		</li>
 		<li>
@@ -117,19 +116,20 @@
 			</ul>
 		</li>
 		<li>
-			<h4>Austausch zwischen Client und Server</h4>
-			<ul>
-				<li>Client und Server sind nicht miteinander verbunden</li>
-				<li>eine Trennung von Interface und Services</li>
-				<li>http als Verbindung zwischen Client und Server</li>
-			</ul>
-		</li>
-		<li>
 			<h4>Pufferbar</h4>
 			<ul>
 				<li>bedingungslos</li>
 				<li>ausdr&uuml;cklich</li>
 				<li>verhandelbar</li>
+			</ul>
+		</li>
+		<li>
+			<h4>Einheitliche Schnittstelle</h4>
+   			<p>definiert die Schnittstelle zwischen Client und Server</p>
+			<ul>
+				<li>HTTP Aktionen (haupts&auml;chlich GET, ansonsten PUT, POST od. DELETE)</li>
+				<li>URIs (der Resourcenname)</li>
+				<li>HTTP Antwort (Status & die Seite selbst)</li>
 			</ul>
 		</li>
 		<li>
@@ -143,7 +143,7 @@
 			<h4>Zus&auml;tzliche Skripte auf Anforderung</h4>
 			<ul>
 				<li>die M&ouml;glichkeiten des Clients werden erweitert, indem ein Teil der Logik zum Client verlagert wird</li>
-				<li>zum Beispiel: javascript</li>
+				<li>zum Beispiel: javascript, ajax ...</li>
 			</ul>
 		</li>
 	</ol>
