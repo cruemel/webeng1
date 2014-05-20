@@ -73,7 +73,7 @@ th {
 /* colors */
 
 body {
-	background-color: #fffcf5;
+	background-color: #f2eee3;
 	color: #000000;
 }
 
@@ -163,8 +163,7 @@ h4 {
 }
 
 #submenu.chapter {
-	background-color: #ADBD6C;
-	/* background-color: #996600; */
+	background-color: #75A48B;
 }
 
 #subbar {
@@ -415,15 +414,15 @@ body{
 }
 
 #select .current a {
-	color: #ADBD6C;
+	color: #75A48B;
     background-color: #ffffff;
-    border: 1px solid #ADBD6C;
+    border: 1px solid #75A48B;
 }
 
 #select li:hover a {
 	color: #ffffff;
-    background-color: #ADBD6C;
-    border: 2px solid #ADBD6C;
+    background-color: #75A48B;
+    border: 2px solid #75A48B;
 }
 
 #courses .chapter span {

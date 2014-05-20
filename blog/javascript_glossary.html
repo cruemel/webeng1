@@ -9,10 +9,10 @@
 		<link href="../dist/css/bootstrap.css" rel="stylesheet">
     	<link href="../css/custom/index.css" rel="stylesheet">
     	<title>Javascript Kurzreferenz - Web-Engineering I+II</title>
-    	<!--[if lt IE 9]>
+    	<!--if lt IE 9]>
       		<script src="./assets/js/html5shiv.js"></script>
       		<script src="./assets/js/respond.min.js"></script>
-    	<![endif]-->
+    	<!endif]-->
     
   	</head>
 	<body>
@@ -76,14 +76,14 @@
 <p class="definition">Einzelne Elemente eines Arraysliterals bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Element hat also die Indexzahl 0, das zweite die Indexzahl 1, das dritte 2 usw.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">array[index]</code></pre>
+<pre><code class="javascript">arrayindex]</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> primzahlen = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
-primzahlen[<span class="number">0</span>]; <span class="comment">// 2</span>
-primzahlen[<span class="number">3</span>]; <span class="comment">// 7</span>
-primzahlen[<span class="number">150</span>]; <span class="comment">// undefiniert</span></code></pre>
+<pre><code class="javascript"><span class="keyword">var</span> primzahlen = <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
+primzahlen<span class="number">0</span>]; <span class="comment">// 2</span>
+primzahlen<span class="number">3</span>]; <span class="comment">// 7</span>
+primzahlen<span class="number">150</span>]; <span class="comment">// undefiniert</span></code></pre>
 </div>
 </div>
 
@@ -92,13 +92,13 @@ primzahlen[<span class="number">150</span>]; <span class="comment">// undefinier
 <p class="definition">Arrays k&ouml;nnen auf zweierlei Art &amp; Weise erstellt werden. Die gebr&auml;uchlichste dabei ist die Werte innerhalb zweier geschweiften Klammern anzugeben. JavaScript Arrays k&ouml;nnen jeden Datentyp und auch gemischte Typen enthalten</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">var</span> arrayname = [element0, element1, ..., elementN]</code></pre>
+<pre><code class="javascript"><span class="keyword">var</span> arrayname = element0, element1, ..., elementN]</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> primzahlen = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
+<pre><code class="javascript"><span class="keyword">var</span> primzahlen = <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>];
 
-<span class="keyword">var</span> junk = [<span class="number">10</span>, <span class="string">"Hallo"</span>, Math, console, { viele: <span class="string">"verschiedene Typen"</span> }];
+<span class="keyword">var</span> junk = <span class="number">10</span>, <span class="string">"Hallo"</span>, Math, console, { viele: <span class="string">"verschiedene Typen"</span> }];
 </code></pre>
 </div>
 <div class="read-more">
@@ -123,7 +123,7 @@ http://www.javascripter.net/faq/creatingarrays.htm
 <p class="definition">Ein zweidimensionales Array ist ein Array innerhalb eines Arrays. Bef&uuml;llt man dieses widerum mit einem anderen Array, so erh&auml;lt man ein dreidimensionales Array, usw.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]] <span class="comment">// zwei Dimensionen, 3x3</span></code></pre>
+<pre><code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]] <span class="comment">// zwei Dimensionen, 3x3</span></code></pre>
 </div>
 </div>
 
@@ -134,18 +134,18 @@ http://www.javascripter.net/faq/creatingarrays.htm
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> meinArray = <span class="keyword">new</span> Array(<span class="number">45</span> , <span class="string">"Hallo Welt!"</span>, <span class="literal">true</span>, <span class="number">3.2</span>, undefined);
 console.log(myArray);
-<span class="comment">// [ 45, 'Hallo Welt!', true, 3.2, undefined ]</span></code></pre>
+<span class="comment">//  45, 'Hallo Welt!', true, 3.2, undefined ]</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">var</span> zeug = <span class="keyword">new</span> Array();
 
-zeug[<span class="number">0</span>] = <span class="number">34</span>;
-zeug[<span class="number">4</span>] = <span class="number">20</span>;
+zeug<span class="number">0</span>] = <span class="number">34</span>;
+zeug<span class="number">4</span>] = <span class="number">20</span>;
 
 console.log(zeug); 
   
-<span class="comment">// [34, undefined, undefined, undefined, 20]</span>
+<span class="comment">// 34, undefined, undefined, undefined, 20]</span>
 </code></pre>
 </div>
 <div class="read-more">
@@ -162,22 +162,22 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ar
 
 <div class="subsection" id="arrays_accessing-nested-array-elements">
 <h3 class="title">Zugriff auf mehrdimensionale Arrays</h3>
-<p class="definition">Der Zugriff auf mehrdimensionale Arrays &auml;hnelt dem auf einfache Arrays. Sie werden mittels der Operatoren [index][index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
+<p class="definition">Der Zugriff auf mehrdimensionale Arrays &auml;hnelt dem auf einfache Arrays. Sie werden mittels der Operatoren index]index] ... angesprochen, wobei die Anzahl der Indexzahlen davon abh&auml;ngt, wie tief man in ein Array hinabsteigen will.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">array[index][index]....</code></pre>
+<pre><code class="javascript">arrayindex]index]....</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
 <pre>
-<code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = [
-            [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
-            [<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> , [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>] ],
-            [<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span> , [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
-            [<span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ]
+<code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = 
+            <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>, <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
+            <span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> , <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>] ],
+            <span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span> , <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
+            <span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>, <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ]
             ];
 
-console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="number">5</span>][<span class="number">4</span>] ); 
+console.log( mehrdimensionalesArray<span class="number">1</span>]<span class="number">5</span>]<span class="number">4</span>] ); 
 
 <span class="comment">// 6 - zweite Zeile, letztes Element, letzter Wert: 5 Element des 6 Arrays des zweiten Arrays von mehrdimensionalesArray.</span></code></pre>
 </div>
@@ -328,7 +328,7 @@ wert === wert
 <div class="syntax">
 <h4>Syntax</h4>
 <pre><code class="javascript">aktuellesDatum = new Date();
-bestimmtesDatum = new Date(jahr, monat, tag [, stunde, minuten, sekunden]);</code></pre>
+bestimmtesDatum = new Date(jahr, monat, tag , stunde, minuten, sekunden]);</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -847,7 +847,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
   <span class="string">"Name der Mutter"</span>: <span class="string">"Berta"</span>,
   <span class="string">"Geburtsjahr"</span>: <span class="number">1987</span>,
   wieAlt: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    <span class="keyword">return</span> <span class="number">2012</span> - obj[<span class="string">"Geburtsjahr"</span>];
+    <span class="keyword">return</span> <span class="number">2012</span> - obj<span class="string">"Geburtsjahr"</span>];
   },
   <span class="number">1</span>: <span class="string">'eins'</span>
 };
@@ -860,12 +860,12 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ma
 <p class="definition"></p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">objekt1["eigenschaft"]
+<pre><code class="javascript">objekt1"eigenschaft"]
 objekt2.eigenschaft</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">obj[<span class="string">'name'</span>];  <span class="comment">// 'Anton'</span>
+<pre><code class="javascript">obj<span class="string">'name'</span>];  <span class="comment">// 'Anton'</span>
 obj.name;     <span class="comment">// 'Anton'</span>
 obj.wieAlt(); <span class="comment">// 24</span></code></pre>
 </div>
@@ -1006,7 +1006,7 @@ https://developer.mozilla.org/de/docs/Web/API/window.prompt
 </div>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="keyword">for</span> ([<span class="keyword">var</span> i = anfangsWert];[i &lt; endWert]; [i+=schrittWert]) {
+<pre><code class="javascript"><span class="keyword">for</span> (<span class="keyword">var</span> i = anfangsWert];i &lt; endWert]; i+=schrittWert]) {
     <span class="comment">// Hier kommt die Berechnung hin</span>
 }
 </code></pre>
@@ -1137,17 +1137,17 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/do...w
 <pre><code class="javascript"><span class="keyword">switch</span> (bedingung) {
   <span class="keyword">case</span> fall1:
     anweisung1
-    [<span class="keyword">break</span>;]
+    <span class="keyword">break</span>;]
   <span class="keyword">case</span> fall2:
     anweisung2
-    [<span class="keyword">break</span>;]
+    <span class="keyword">break</span>;]
   ...
   <span class="keyword">case</span> fallN:
     anweisungN
-    [<span class="keyword">break</span>;]
+    <span class="keyword">break</span>;]
   <span class="keyword">default</span>:
     standardAnweisung
-    [<span class="keyword">break</span>;]
+    <span class="keyword">break</span>;]
 }</code></pre>
 </div>
 <div class="example">
@@ -1407,7 +1407,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/St
 <p class="definition">Gibt das Teilst&uuml;ck einer Zeichenkette zur&uuml;ck - bestimmt durch ein oder zwei Indexzahlen.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">zeichenkette.substring(indexA[, indexB])
+<pre><code class="javascript">zeichenkette.substring(indexA, indexB])
 <span class="comment">// indexA : eine Ganzzahl zwischen 0 und der L&auml;nge der Zeichenkette</span>
 <span class="comment">// indexB : (optional) eine Ganzzahl zwischen 0 und der L&auml;nge der Zeichenkette.</span></code></pre>
 </div>
@@ -1428,7 +1428,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/St
 <p class="definition">Gibt die Indexzahl der Stelle zur&uuml;ck, an der die gesuchte Zeichenkette zum ersten Mal gefunden wird, beginnend mit dem Wert <em>index</em>, welcher die Stelle angibt, an der die Suche beginnen soll. Gibt -1 zur&uuml;ck, wenn der Wert nicht gefunden wurde. Die Methode ist abh&auml;ngig von der Gross- und Kleinschreibung.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">string.indexOf(gesuchterWert[, index]) <span class="comment">// die Angabe eines <em>index</em> ist optional. Der Standardwert ist 0.</span></code></pre>
+<pre><code class="javascript">string.indexOf(gesuchterWert, index]) <span class="comment">// die Angabe eines <em>index</em> ist optional. Der Standardwert ist 0.</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
