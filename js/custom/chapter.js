@@ -10,26 +10,23 @@ $(document).ready(function() {
 	var tab = "";
 	
 	courses.hide();
-	tabs.attr("class","");
+	// tabs.attr("class","other");
 	
 	if (!target) {
 		course = courses.filter('.current');
-		tab = tabs.children().filter(function(i) {
-			return i === 1 || $(this).attr( "title" ) === course.attr('id');
-		});
 	}
 	else {
 		course = courses.filter(target.substring(0,4));
-		tab = tabs.children().filter(function(i) {
-			return i === 0 || $(this).attr('title') === target.substring(1,4);
-		});
 		var list = $(target.substring(0,8) + " ol.expand");
 		list.addClass('current');
 		list.prev("em").removeClass('plus');
 		list.prev("em").addClass('minus');
 	}
 	
-	tab.parent().attr("class","current");
+	tab = tabs.filter('.' + course.attr('id'));
+	
+	tab.addClass("current");
+		
 	course.fadeIn();
     
     tabs.children().click(function(e) {
