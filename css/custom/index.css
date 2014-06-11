@@ -98,11 +98,11 @@ h4 {
 }
 
 #bar {
-	background-color: #c0c0c0;
+	background-color: #666666;
 }
 
 #company {
-	color: #333333;
+	color: #ffffff;
 }
 
 #menu {
@@ -514,6 +514,10 @@ label {
 	display: none;
 }
 
+.quiz-antworten li label {
+	display: block;
+}
+
 input {
 	display: block;
 	margin: 0.5em 0;
@@ -612,6 +616,7 @@ button {
   		position: fixed;
   		top: 140px;
 		width: 124px;
+		height: auto;
   		padding: 24px 0 0 0;
   		margin: 0;
   		border: 0;
