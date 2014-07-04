@@ -147,23 +147,27 @@ h4 {
 }
 
 #submenu.blog {
-	background-color: #CC9933;
+	background-color: #CC6633;
 }
 
 #submenu.tags{
 	background-color: #CC6633;
 }
 
-#submenu.contact {
-	background-color: #993333;
+#submenu.chapter {
+	background-color: #75A48B;
 }
 
 #submenu.homework {
-	background-color: #336699;
+	background-color: #75A48B;
 }
 
-#submenu.chapter {
+#submenu.quiz {
 	background-color: #75A48B;
+}
+
+#submenu.contact {
+	background-color: #CC9933;
 }
 
 #subbar {
@@ -437,19 +441,19 @@ body{
 	padding: 1em;
 }
 
-#courses .chapter .plus {
+#courses .chapter .plus, #commands .plus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#courses .chapter .minus {
+#courses .chapter .minus, #commands .minus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#courses ol.expand {
+#courses ol.expand, #commands tr.expand {
 	display: none;
 }
 
@@ -526,12 +530,22 @@ input {
 }
 
 .error {
-	color: #ff3300;
+	color: #CC6633;
 }
 
 button {
 	margin: 0.5em 0.8em 0.5em 0;
 	padding: 0.3em 0.5em;
+}
+
+.btn {
+	color: #75A48B;
+}
+
+.btn:hover {
+	color: #ffffff;
+	background-color: #75A48B;
+	border: 2px solid #75A48B;
 }
 
 @media (min-width: 542px) { 

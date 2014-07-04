@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="../favicon.ico">
+    	<link rel="apple-touch-icon" href="../apple-touch-icon-precomposed.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Unix-Kommandos - Web-Engineering I,II+III</title>
+    	<!--[if lt IE 9]>
+      		<script src="./assets/js/html5shiv.js"></script>
+      		<script src="./assets/js/respond.min.js"></script>
+    	<![endif]-->
+  	</head>
+	<body>
+		<div id="header">
+    		<div id="supbar">
+				<div class="container">
+      				<div class="navbar-default">
+        				<div class="navbar-header">
+          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          						<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+          					</button>
+        				</div>
+					</div>
+				</div>
+			</div>
+			<div id="bar">
+				<div class="container">
+					<div id="company">
+						<div class="name">WEB ENGINEERING I,II+III:</div>
+						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
+					</div>
+					<div id="images" class="clearfix">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tür beim ber"><img src="../img/custom/apple.jpg" alt="äpfel im garten">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="main">
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li class="active">
+            				<a href="../index.html"><span class="glyphicon glyphicon-book"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../homework/index.html"><span class="glyphicon glyphicon-edit"></span><strong>Hausaufgaben</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="blog visible-md visible-lg"></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<h1>Unix Kommandos</h1> 
+					<section>
+     				
+<!-- Anfang Tabelle -->
+<table id="commands" class="sortable">
+	<colgroup>
+    	<col width="20%" />
+    	<col width="25%" />
+    	<col width="45%" />
+    	<col width="10%" />
+  	</colgroup>
+	<thead>
+    	<tr>
+      		<th>Name</th>
+      		<th>Kategorie</th>
+      		<th>Beschreibung</th>
+      		<th></th>
+    	</tr>
+  	</thead>
+	<tbody>
+
+<tr>
+	<td>cd</td>
+	<td>Dateisystem</td>
+	<td>Wechseln in ein Verzeichnis</td>
+	<td></td>
+</tr>
+<tr class="expand">
+	<td colspan="4">
+    	<p>coomand</p>     							
+	</td>
+</tr>
+
+<tr>
+<td>chgrp</td>
+<td>Dateisystem</td>
+<td>Gruppe einer Datei &auml;ndern</td>
+<td></td>
+</tr>
+
+<tr>
+<td>chmod</td>
+<td>Dateisystem</td>
+<td>Zugriffsrechte einer Datei &auml;ndern</td>
+<td></td>
+</tr>
+
+<tr>
+<td>chown</td>
+<td>Dateisystem</td>
+<td>Eigent&uuml;mer einer Datei &auml;ndern</td>
+<td></td>
+</tr>
+
+<tr>
+<td>cp</td>
+<td>Dateisystem</td>
+<td>Dateien kopieren</td>
+<td></td>
+</tr>
+
+<tr>
+<td>dd</td>
+<td>Dateisystem</td>
+<td>Kopieren und konvertieren von Dateien</td>
+</tr>
+
+<tr>
+<td>df</td>
+<td>Dateisystem</td>
+<td>Freien Speicherplatz ermitteln</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ln</td>
+<td>Dateisystem</td>
+<td>Einen Link auf eine Datei setzen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ls</td>
+<td>Dateisystem</td>
+<td>Dateien auflisten</td>
+<td></td>
+</tr>
+
+<tr>
+<td>mkdir</td>
+<td>Dateisystem</td>
+<td>Verzeichnisse erstellen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>mv</td>
+<td>Dateisystem</td>
+<td>Dateien umbenennen bzw. verschieben</td>
+<td></td>
+</tr>
+
+<tr>
+<td>pwd</td>
+<td>Dateisystem</td>
+<td>das aktuelle Arbeitsverzeichnis anzeigen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>rm</td>
+<td>Dateisystem</td>
+<td>Dateien bzw. Verzeichnisse l&ouml;schen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>touch</td>
+<td>Dateisystem</td>
+<td>den Zeitstempel einer Datei bearbeiten</td>
+<td></td>
+</tr>
+
+<tr>
+<td>which</td>
+<td>Dateisystem</td>
+<td>Vollst&auml;ndiger Pfad eines Kommandos</td>
+<td></td>
+</tr>
+
+<!--
+<tr>
+<td>make</td>
+<td>Programmierung</td>
+<td>Maintain, update, and regenerate groups of programs</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td>who</td>
+<td>Systemadministration</td>
+<td>Display who is on the system</td>
+</tr>
+
+<tr>
+<td>command</td>
+<td>Shell Programmierung</td>
+<td>Execute a simple command</td>
+<td></td>
+</tr>
+
+<tr>
+<td>echo</td>
+<td>Shell Programmierung</td>
+<td>Write arguments to standard output</td>
+</tr>
+
+<tr>
+<td>expr</td>
+<td>Shell Programmierung</td>
+<td>Evaluate arguments as an expression</td>
+</tr>
+
+<tr>
+<td>false</td>
+<td>Shell Programmierung</td>
+<td>Return false value</td>
+</tr>
+
+<tr>
+<td>getopts</td>
+<td>Shell Programmierung</td>
+<td>Parse utility options</td>
+<td></td>
+</tr>
+
+<tr>
+<td>logger</td>
+<td>Shell Programmierung</td>
+<td>Log messages</td>
+</tr>
+
+<tr>
+<td>printf</td>
+<td>Shell Programmierung</td>
+<td>Write formatted output</td>
+</tr>
+
+<tr>
+<td>read</td>
+<td>Shell Programmierung</td>
+<td>Read a line from standard input</td>
+<td></td>
+</tr>
+
+<tr>
+<td>sh</td>
+<td>Shell Programmierung</td>
+<td>Shell, the standard command language interpreter</td>
+</tr>
+
+<tr>
+<td>sleep</td>
+<td>Shell Programmierung</td>
+<td>Suspend execution for an interval</td>
+</tr>
+
+<tr>
+<td>tee</td>
+<td>Shell Programmierung</td>
+<td>Duplicate the standard output</td>
+</tr>
+
+<tr>
+<td>test</td>
+<td>Shell Programmierung</td>
+<td>Evaluate expression</td>
+</tr>
+
+<tr>
+<td>true</td>
+<td>Shell Programmierung</td>
+<td>Return true value</td>
+</tr>
+
+<tr>
+<td>xargs</td>
+<td>Shell Programmierung</td>
+<td>Construct argument lists and invoke utility</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td>at</td>
+<td>Prozessmanagement</td>
+<td>Execute commands at a later time</td>
+</tr>
+
+<tr>
+<td>batch</td>
+<td>Prozessmanagement</td>
+<td>Schedule commands to be executed in a batch queue</td>
+<td></td>
+</tr>
+
+<tr>
+<td>bg</td>
+<td>Prozessmanagement</td>
+<td>Run jobs in the background</td>
+<td></td>
+</tr>
+
+<tr>
+<td>fg</td>
+<td>Prozessmanagement</td>
+<td>Run jobs in the foreground</td>
+<td></td>
+</tr>
+
+<tr>
+<td>fuser</td>
+<td>Prozessmanagement</td>
+<td>List process IDs of all processes that have one or more files open</td>
+</tr>
+
+<tr>
+<td>jobs</td>
+<td>Prozessmanagement</td>
+<td>Display status of jobs in the current session</td>
+<td></td>
+</tr>
+
+<tr>
+<td>kill</td>
+<td>Prozessmanagement</td>
+<td>Terminate or signal processes</td>
+</tr>
+
+<tr>
+<td>nice</td>
+<td>Prozessmanagement</td>
+<td>Invoke a utility with an altered nice value</td>
+</tr>
+
+<tr>
+<td>nohup</td>
+<td>Prozessmanagement</td>
+<td>Invoke a utility immune to <a href="/wiki/SIGHUP" title="SIGHUP" class="mw-redirect">hangups</td>
+</tr>
+
+<tr>
+<td>ps</td>
+<td>Prozessmanagement</td>
+<td>Report process status</td>
+</tr>
+
+<tr>
+<td>renice</td>
+<td>Prozessmanagement</td>
+<td>Set nice values of running processes</td>
+<td>4BSD</td>
+</tr>
+
+<tr>
+<td>time</td>
+<td>Prozessmanagement</td>
+<td>Time a simple command</td>
+</tr>
+
+<tr>
+<td>uux</td>
+<td>Prozessmanagement</td>
+<td>Remote command execution</td>
+</tr>
+
+<tr>
+<td>wait</td>
+<td>Prozessmanagement</td>
+<td>Await process completion</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td>asa</td>
+<td>Textverarbeitung</td>
+<td>Interpret carriage-control characters</td>
+</tr>
+
+<tr>
+<td>awk</td>
+<td>Textverarbeitung</td>
+<td>Pattern scanning and processing language</td>
+</tr>
+
+<tr>
+<td><a href="/wiki/Comm" title="Comm">comm</td>
+<td>Textverarbeitung</td>
+<td>Select or reject lines common to two files</td>
+</tr>
+
+<tr>
+<td>csplit</td>
+<td>Textverarbeitung</td>
+<td>Split files based on context</td>
+</tr>
+
+<tr>
+<td>cut</td>
+<td>Textverarbeitung</td>
+<td>Cut out selected fields of each line of a file</td>
+</tr>
+
+<tr>
+<td>diff</td>
+<td>Textverarbeitung</td>
+<td>Compare two files; see also cmp</td>
+</tr>
+
+<tr>
+<td>ed</td>
+<td>Textverarbeitung</td>
+<td>The standard text editor</td>
+</tr>
+
+<tr>
+<td>ex</td>
+<td>Textverarbeitung</td>
+<td>Text editor</td>
+</tr>
+
+<tr>
+<td>expand</td>
+<td>Textverarbeitung</td>
+<td>Convert tabs to spaces</td>
+</tr>
+
+<tr>
+<td>fold</td>
+<td>Textverarbeitung</td>
+<td>Filter for folding lines</td>
+</tr>
+
+<tr>
+<td>head</td>
+<td>Textverarbeitung</td>
+<td>Copy the first part of files</td>
+</tr>
+
+<tr>
+<td>iconv</td>
+<td>Textverarbeitung</td>
+<td>Codeset conversion</td>
+</tr>
+
+<tr>
+<td>join</td>
+<td>Textverarbeitung</td>
+<td>Merges two sorted text files based on the presence of a common field</td>
+</tr>
+
+<tr>
+<td>lp</td>
+<td>Textverarbeitung</td>
+<td>Send files to a printer</td>
+</tr>
+
+<tr>
+<td>more</td>
+<td>Textverarbeitung</td>
+<td>Display files on a page-by-page basis</td>
+</tr>
+
+<tr>
+<td>nl</td>
+<td>Textverarbeitung</td>
+<td>Line numbering filter</td>
+</tr>
+
+<tr>
+<td>paste</td>
+<td>Textverarbeitung</td>
+<td>Merge corresponding or subsequent lines of files</td>
+<td>Version 32V AT&amp;T UNIX</td>
+</tr>
+
+<tr>
+<td>patch</td>
+<td>Textverarbeitung</td>
+<td>Apply changes to files</td>
+</tr>
+
+<tr>
+<td>pr</td>
+<td>Textverarbeitung</td>
+<td>Print files</td>
+</tr>
+
+<tr>
+<td>sed</td>
+<td>Textverarbeitung</td>
+<td>Stream editor</td>
+</tr>
+
+<tr>
+<td>sort</td>
+<td>Textverarbeitung</td>
+<td>Sort, merge, or sequence check text files</td>
+</tr>
+
+<tr>
+<td>tail</td>
+<td>Textverarbeitung</td>
+<td>Copy the last part of a file</td>
+</tr>
+
+<tr>
+<td>tr</td>
+<td>Textverarbeitung</td>
+<td>Translate characters</td>
+</tr>
+
+<tr>
+<td>tsort</td>
+<td>Textverarbeitung</td>
+<td>Topological sort</td>
+</tr>
+
+<tr>
+<td>unexpand</td>
+<td>Textverarbeitung</td>
+<td>Convert spaces to tabs</td>
+</tr>
+
+<tr>
+<td>uniq</td>
+<td>Textverarbeitung</td>
+<td>Report or filter out repeated lines in a file</td>
+<td>Version 3 AT&amp;T UNIX</td>
+</tr>
+
+<tr>
+<td>vi</td>
+<td>Textverarbeitung</td>
+<td>Screen-oriented (visual) display editor</td>
+</tr>
+
+<tr>
+<td>wc</td>
+<td>Textverarbeitung</td>
+<td>Line, word and byte or character count</td>
+</tr>
+
+<tr>
+<td>zcat</td>
+<td>Textverarbeitung</td>
+<td>Expand and concatenate data</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td>alias</td>
+<td>Misc</td>
+<td>Define or display aliases</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ar</td>
+<td>Misc</td>
+<td>Create and maintain library archives</td>
+</tr>
+
+<tr>
+<td>cal</td>
+<td>Misc</td>
+<td>Print a calendar</td>
+</tr>
+
+<tr>
+<td>crontab</td>
+<td>Misc</td>
+<td>Schedule periodic background work</td>
+</tr>
+
+<tr>
+<td>date</td>
+<td>Misc</td>
+<td>Display the date and time</td>
+</tr>
+
+<tr>
+<td>env</td>
+<td>Misc</td>
+<td>Set the environment for command invocation</td>
+</tr>
+
+<tr>
+<td>fc</td>
+<td>Misc</td>
+<td>Process the command history list</td>
+<td></td>
+</tr>
+
+<tr>
+<td>gencat</td>
+<td>Misc</td>
+<td>Generate a formatted message catalog</td>
+<td></td>
+</tr>
+
+<tr>
+<td>getconf</td>
+<td>Misc</td>
+<td>Get configuration values</td>
+<td></td>
+</tr>
+
+<tr>
+<td>grep</td>
+<td>Misc</td>
+<td>Search text for a pattern</td>
+</tr>
+
+<tr>
+<td><a href="/wiki/Hash_(Unix)" title="Hash (Unix)">hash</td>
+<td>Misc</td>
+<td>hash database access method</td>
+<td></td>
+</tr>
+
+<tr>
+<td><a href="/wiki/Id_(Unix)" title="Id (Unix)">id</td>
+<td>Misc</td>
+<td>Return user identity</td>
+</tr>
+
+<tr>
+<td>ipcrm</td>
+<td>Misc</td>
+<td>Remove a message queue, semaphore set, or shared memory segment identifier</td>
+</tr>
+
+<tr>
+<td>ipcs</td>
+<td>Misc</td>
+<td>Report interprocess communication facilities status</td>
+</tr>
+
+<tr>
+<td>locale</td>
+<td>Misc</td>
+<td>Get locale-specific information</td>
+<td></td>
+</tr>
+
+<tr>
+<td>logname</td>
+<td>Misc</td>
+<td>Return the user's login name</td>
+</tr>
+
+<tr>
+<td>mailx</td>
+<td>Misc</td>
+<td>Process messages</td>
+</tr>
+
+<tr>
+<td>man</td>
+<td>Misc</td>
+<td>Display system documentation</td>
+</tr>
+
+<tr>
+<td>mesg</td>
+<td>Misc</td>
+<td>Permit or deny messages</td>
+</tr>
+
+<tr>
+<td>newgrp</td>
+<td>Misc</td>
+<td>Change to a new group</td>
+</tr>
+
+<tr>
+<td>od</td>
+<td>Misc</td>
+<td>Dump files in various formats</td>
+</tr>
+
+<tr>
+<td>pax</td>
+<td>Misc</td>
+<td>Portable archive interchange</td>
+</tr>
+
+<tr>
+<td>split</td>
+<td>Misc</td>
+<td>Split files into pieces</td>
+</tr>
+
+<tr>
+<td>stty</td>
+<td>Misc</td>
+<td>Set the options for a terminal</td>
+</tr>
+
+<tr>
+<td>tabs</td>
+<td>Misc</td>
+<td>Set terminal tabs</td>
+</tr>
+
+<tr>
+<td>talk</td>
+<td>Misc</td>
+<td>Talk to another user</td>
+<td>4.2BSD</td>
+</tr>
+
+<tr>
+<td>tput</td>
+<td>Misc</td>
+<td>Change terminal characteristics</td>
+</tr>
+
+<tr>
+<td>tty</td>
+<td>Misc</td>
+<td>Return user's terminal name</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>Misc</td>
+<td>Displays how a name would be interpreted if used as a command</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ulimit</td>
+<td>Misc</td>
+<td>Set or report file size limit</td>
+<td></td>
+</tr>
+
+<tr>
+<td>umask</td>
+<td>Misc</td>
+<td>Get or set the file mode creation mask</td>
+</tr>
+
+<tr>
+<td>unalias</td>
+<td>Misc</td>
+<td>Remove alias definitions</td>
+<td></td>
+</tr>
+
+<tr>
+<td>uname</td>
+<td>Misc</td>
+<td>Return system name</td>
+</tr>
+
+<tr>
+<td>uncompress</td>
+<td>Misc</td>
+<td>Expand compressed data</td>
+</tr>
+
+<tr>
+<td>write</td>
+<td>Misc</td>
+<td>Write to another user's terminal</td>
+</tr>
+-->
+
+<!--
+<tr>
+<td>uucp</td>
+<td>Netzwerk</td>
+<td>System-to-system copy</td>
+</tr>
+
+<tr>
+<td>uudecode</td>
+<td>Netzwerk</td>
+<td>Decode a binary file</td>
+</tr>
+
+<tr>
+<td>uuencode</td>
+<td>Netzwerk</td>
+<td>Encode a binary file</td>
+</tr>
+
+<tr>
+<td>uustat</td>
+<td>Netzwerk</td>
+<td>uucp status inquiry and job control</td>
+</tr>
+-->
+
+</tbody>
+</table>
+<!-- Ende Tabelle -->
+					
+					</section>
+					<section>
+						<p>to be continued ...</p>
+					</section>
+
+				</div> 
+      		</div>
+      	</div>
+      
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            					<a href="../index.html">Blog</a>
+            				</td>
+            				<td>
+            					<a href="../chapter.html">Kapitel</a>
+            				</td>
+            				<td>
+            					<a href="../tags.html">Themen</a>
+            				</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
+          		</div>
+          	</div>
+    	</div>
+    	
+   		 <!-- scripts-->
+    	<script src="../assets/js/jquery.js"></script>
+    	<script type="text/javascript" language="javascript" src="../js/vendor/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#elements').dataTable({
+					"bInfo": null
+					"iDisplayLength": 77,
+				});
+			});
+			/*
+					"oLanguage": {
+						"sInfoEmpty": "Leere Tabelle",
+						"sLengthMenu": "Zeige _MENU_ Elemente",
+						"sSearch": "Suche:",
+			 			"sZeroRecords": "Nichts gefunden!"
+			 		},
+			 		"oPaginate": {
+						"sFirst": "Anfang",
+						"sLast": "Ende",
+						"sNext": "Vor",
+						"sPrevious": "Zurück"
+					}
+			*/		
+		</script>
+		<script src="../dist/js/bootstrap.min.js"></script>
+	
+ 	 </body>
+</html>

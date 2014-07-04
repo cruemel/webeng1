@@ -428,7 +428,6 @@ var Quiz = {
 					});
 
 					frage.innerHTML = t.fragen[i].frage;
-					// t.element.insertBefore(frage, t.fragen[i].original);
 
 					// Antworten zusammenstellen und vermischt ausgeben
 					antworten = q.domCreate({
@@ -479,11 +478,17 @@ var Quiz = {
 
 
 		// Laufende Nummer ermitteln -> Quiz-Name wird "quiz" + laufende Nummer
-		i = 0;
+		i = 1;
 		q.each(q.alleQuizze, function() {
 			i++;
 		});
-		quiz.name = "quiz" + i;
+		if (i < 10) {
+			j = "0" + i;
+		}
+		else {
+			j = i;
+		}
+		quiz.name = "q" + j;
 
 		// Gibt es Quiz-Daten?
 		fragen = q.domSelect("p", div);
@@ -617,7 +622,7 @@ var Quiz = {
 		}
 
 		// Wenn mindestens ein Quiz initialisiert wurde, dann Seite "bestücken".
-		if (q.alleQuizze.quiz0) {
+		if (q.alleQuizze.q01) {
 			// CSS für Quizbereiche einbinden
 			q.domSelect("head")[0].appendChild(
 				q.domCreate({

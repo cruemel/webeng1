@@ -1,0 +1,21 @@
+
+Checklist for Identifying Web Apps
+
+Is it mostly self-contained, without redirecting me to a completely different experience to complete what I set out to do?
+
+Can I interact, engage and accomplish something by using the application?
+    
+Does it have a rich user interface that looks nice, and takes advantage of the full size of the window available to it?
+
+If you answered yes to most of these questions, then what you're looking at is most likely a web application.
+
+Does it use the same paradigms as native applications for buttons, dialogs and other components?
+    
+Does it work offline?
+    
+Is it using the capabilities of the device it’s running on, for example location data through the GPS and motion sensors?
+   
+Are traditional website navigation elements and links hidden from view?
+    
+Is the app designed around a primarily client-side architecture model?
+

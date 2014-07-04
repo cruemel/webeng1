@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./favicon.ico">
+    	<link rel="apple-touch-icon" href="./apple-touch-icon-precomposed.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Quiz - Web-Engineering I,II+III</title>
+    	<!--[if lt IE 9]>
+      		<script src="../assets/js/html5shiv.js"></script>
+      		<script src="../assets/js/respond.min.js"></script>
+    	<![endif]-->
+    	<script type="text/javascript" src="../js/custom/quiz/quiz.js"></script>
+  	</head>
+	<body>
+		<div id="header">
+    		<div id="supbar">
+				<div class="container">
+      				<div class="navbar-default">
+        				<div class="navbar-header">
+          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          						<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+            					<span class="icon-bar"></span>
+          					</button>
+        				</div>
+					</div>
+				</div>
+			</div>
+			<div id="bar">
+				<div class="container">
+					<div id="company">
+						<div class="name">WEB ENGINEERING I,II+III:</div>
+						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
+					</div>
+					<div id="images" class="clearfix">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tür beim ber"><img src="../img/custom/apple.jpg" alt="äpfel im garten">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="main"> 
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="../index.html"><span class="glyphicon glyphicon-book"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="../quiz/quiz_01.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="quiz visible-md visible-lg"></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<div id="select" class="clearfix">
+          				<ul>
+          					<li class="q01 current"><a href="#">I: Grundlagen</a></li>
+          					<!-- <li class="q02"><a href="#">II: Mobile Apps</a></li> -->
+          					<!-- <li class="q03"><a href="#">III: Qualit&auml;tssicherung</a></li> -->
+          				</ul>
+          			</div>
+          			<div id="parts">
+          				<div class="multiplechoice-quiz">
+							<p>Was ist ein Torrent? (ein Peer-to-Peer-Netzwerk) (ein Filesharing-Netzwerk) (ein Sturzbach) (!eine Währung)</p>
+							<p>Wie heißt das erste Netz im "Netz der Netze"? (!Ethernet) (ARPANET) (!CYCLADES) (!Internet)</p>
+							<p>Wie alt ist das Internet in Jahren? - Stand 2014 (!25) (!35) (45) (!55)</p>
+							<p>Wann erlitt die westliche Welt den Sputnik-Schock? (!1954) (1957) (!1965) (!1969)</p>
+							<p>Mit was verglich die deutsche Kanzlerin 2013 das Internet? (!etwas neuem) (!einem fremden Land) (!Eiland) (Neuland)</p>
+							<p>Wie viele Knoten sind theoretisch maximal möglich im Internet mit IPv4? (4294967296) (!536870912) (!8589934592) (!17179869184)</p>
+							<p>Welche Unix/Linux-Befehle helfen, das Internet zu erkunden? (traceroute) (nslookup) (!who) (ping)</p>
+							<p>Wie viele Bytes werden an den Webserver geschickt, wenn wir diesen anpingen? (!8) (!24) (!32) (64)</p>
+							<p>In welchem Jahr wurde die erste E-Mail verschickt? (!1957) (!1968) (1971) (!1974)</p>
+							<p>An wen wurde die erste E-Mail verschickt? (!Robert Cailliau) (!Michael Rotert) (Ray Tomlinson) (!Vinton G. Cerf)</p>
+							<p>Wann wurde das ARPAnet abgeschaltet? (!1972) (!1983) (1990) (!nie)</p>
+							<p>Wie heißt das Protokoll, das 1974 von Vinton Cerf entwickelt wurde und welches das Internet ermöglichte? (TCP/IP) (!HTTP) (!UDP) (!SMTP)</p>
+							<p>Welche Organisation vergibt die knapp gewordenen IPv4-Adressen? (!ISO) (!NIC) (ICANN) (!W3C)</p>
+							<p>Was hat Sir Tim Berners-Lee erfunden? (!Hypertext) (HTTP) (HTML) (Webserver und Webbrowser)</p>
+							<p>Wie nennt man die Art und Weise eines TCP-Verbindungsaufbaus? (!Einweg-Handschlag) (!Zwei-Wege-Handschlag) (Drei-Wege-Handschlag) (!Vier-Wege-Handschlag)</p>
+							<p>Was ist der Unterschied zwischen den Kommandozeilen-Tools curl und wget? (!wget ist Downloader UND Uploader) (curl ist Downloader UND Uploader) (!curl ist Downloader, wget ist Uploader) (!curl ist Uploader, wget ist Downloader)</p> 
+							<p>Wofür steht der Name REST in dem Tool RESTClient? (!Mach mal eine Pause!) (Representational State Transfer) (!Random Environmental Server Tool) (!Restless-Legs-Syndrom)</p>
+							<p>Wofür steht PHP? (PHP: Hypertext Preprocessor) (!Perl Hypertext Processor) (!Pure Hypertext Pages) (!Piers Have Pain)</p>
+							<p>Als was gibt sich der Webserver von arsnova.eu aus? (Apache) (!GWS) (!IIS) (!nginx)</p>
+							<p>Welche Request-Methode(n) muss ein HTTP-Server mindestens erlauben, um ein moderner Webserver zu sein? (GET) (POST) (!PUT) (!HEAD)</p>
+							<p>Wie lang darf eine URL-Adresse gemäß RFC 2616 maximal sein? (beliebig) (!64KB) (!4KB) (!255Byte)</p>
+							<p>Was ist kennzeichnend für das Web 2.0? (Interaktion) (Kollaboration) (Partizipation) (Mashups)</p>
+							<p>Welche der folgenden HTML-Elemente sind semantisch? (!b) (!i) (em) (strong)</p>
+							<p>Wozu braucht man heute noch einen Textbrowser? (Für den Zugriff via SSH) (Um zu analysieren, wie eine Suchmaschine die Webseite sieht) (Um Usertracking zu vermeiden) (Um Websites per Skript zu durchsuchen)</p>
+							<p>Welche Internet-Organisation hat die Internet Media Types spezifiziert? (!ISO) (IANA) (!IETF) (!W3C)</p>
+							<p>Wie heißt der aktuelle HTML-Standard nach W3C? (!HTML 3.2) (HTML 4.01) (!XHTML 1.1) (!HTML 5)</p>
+							<p>Wie heißt der aktuelle CSS-Standard nach W3C? (!1.2) (!2.0) (2.1) (!3.0)</p>
+							<p>Was versteht man unter "polyglottes" Markup? (!Mehrsprachiges HTML, das der Internationalisierung dient) (HTML, das auch der Spezifikation von XHTML genügt) (!HTML, in das Geoinformationen eingebetet sind) (!HTML und XML gemischt)</p>
+							<p>Wann stellt ein Browser auf den Quirks-Modus um? (!Bei der Umstellung auf die Sommerzeit) (Wenn der DOCTYPE in der Webseite fehlt) (!Wenn die Webseite polyglott ist) (!Wenn jemand einen veralteten Browser benutzt)</p>
+							<p>Die "Verordnung zur Schaffung barrierefreier Informationstechnik nach dem Behindertengleichstellungsgesetz" (BITV 2.0) gilt für die Internetauftritte welcher Einrichtungen? (!Behörden einer Kommunalverwaltung) (!Behörden einer Landesverwaltung) (Behörden der Bundesverwaltung) (!Körperschaften des öffentlichen Rechts)</p>
+							<p>Welche Prioritätsstufen werden nach WCAG 2.0 unterschieden? (A) (AA) (AAA) (!AAAA)</p>
+							<p>Was ist kennzeichnend für "Mobile first"? (eine Bottom-up-Strategie im GUI-Entwurf) (!eine Top-down-Strategie im GUI-Entwurf)  ("Progressive Enhancement" der Funktionalität) (!"Graceful Degradation" der Funktionalität)</p>
+							<p>Wie setzt man Responsive Web Design - RWD - technisch um? (!mit MIME Media Types) (mit CSS3 Media Queries) (!mit Browser-Weichen) (mit fluiden Grid-Systemen)</p> 
+							<p>Was sind Usability Tweaks? (Kleine Code-Änderungen mit großem Usability-Effekt) (Vergleichbar mit dem Frisieren eines Motors) (Zeitnahes Beheben von Usability Bugs) (Tuning der Usability statt aufwändiges Redesign)</p>
+							<p>Was gilt als KPI - Key Performance Indicator - einer Webseite? (Abbruchrate im Bestellprozess) (Anzahl Seitenaufrufe) (Anteil wiederkehrender Besucher/innen) (Ladezeit der Seite)</p>
+							<p>Wie lassen sich SQL-Einschleusungen in Formularen verhindern? (Maskierung der Metazeichen in allen Eingaben) (Eingaben beinhalten nur die Parameter für "Prepared Statements") (!SQL-Code in den Eingaben filtern) (!Mit Hilfe der PHP-Funktion strip_tags)</p>
+							<!-- Klausur -->
+							<p>Wie viele Bytes an Daten werden als Paket an den Webserver geschickt, wenn wir diesen unter einem GNU/Linux-System anpingen, ohne den Parameter für die Paketgröße zu setzen und ohne Berücksichtigung des ICMP-Headers? (!16 Bytes) (!24 Bytes) (!48 Bytes) (56 Bytes)</p>
+							<p>Wie lang darf eine URL-Adresse gemäß RFC 2616 maximal sein? (!4 KB) (!16 KB) (!32 KB) (beliebig)</p>
+							<p>Ein mit UTF-8 kodiertes Unicode-Zeichen kann welche Länge haben? (1 Byte) (2 Bytes) (!3 Bytes) (4 Byte)</p>
+						</div>	
+						<div class="multiplechoice-quiz hidden">
+						</div>
+					</div>
+      			</div> 
+      		</div>
+      	</div>
+      
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            					<a href="../index.html">Blog</a>
+            				</td>
+            				<td>
+            					<a href="../chapter.html">Kapitel</a>
+            				</td>
+            				<td class="active">
+            					<a href="../tags.html">Themen</a>
+            				</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
+          		</div>
+          	</div>
+    	</div>
+    	
+   		 <!-- scripts-->
+    	<script type="text/javascript" src="../assets/js/jquery.js"></script>
+    	<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+	
+ 	 </body>
+</html>

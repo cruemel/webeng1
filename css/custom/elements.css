@@ -14,7 +14,7 @@ body{
 	font-family: Helvetica, sans-serif;
   	font-size: 1em;
   	line-height: 1.5em;
-  	background-color: #fffcf5;
+  	background-color: #f2eee3;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
 }
 
 h1 {
-	color: #B24D2E;
+	color: #CC6633;
 	font-family: Maxima, sans-serif;
 	font-size: 1.4em;
 }
@@ -81,7 +81,7 @@ h1 {
 
 th {
 	color: #ffffff;
-	background-color: #526023;
+	background-color: #CC9933;
 	padding: 0.3em 0.5em 0.1em 0.5em;
 	text-align: left;
 	vertical-align: bottom;
@@ -104,7 +104,7 @@ td {
 
 td.tag {
 	color: #000000;
-	background-color: #ADBD6C;
+	background-color: #75A48B;
 	text-align: right;
 }
 

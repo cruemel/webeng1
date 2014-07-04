@@ -20,7 +20,7 @@
 				<div class="container">
       				<div class="navbar-default">
         				<div class="navbar-header">
-          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<button type="button" name="menu-toogle" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           						<span class="icon-bar"></span>
             					<span class="icon-bar"></span>
             					<span class="icon-bar"></span>
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		
-		<div id="main"> 
+		<div id="main">
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
           			<ul>
@@ -52,11 +52,11 @@
             			<li>
             				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
             			</li>
-            			<li>
-            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			<li class="active">
+            				<a href="../homework/index.html"><span class="glyphicon glyphicon-edit"></span><strong>Hausaufgaben</strong></a>
             			</li>
             			<li>
-            				<a href="./quiz.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
             			</li>
             			<li>
             				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
@@ -65,12 +65,13 @@
           		</div>
           		<div id="submenu" class="homework visible-md visible-lg"></div>
           		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<h1>Barrierefreies Suchformular</h1>
           			<section>
 <form action="http://de.wikipedia.org/wiki/Spezial:Suche" accept-charset="utf-8" id="wiki_search">
 	<fieldset>
 		<legend>Artikel- oder Volltextsuche auf Wikipedia</legend>
 		<label for="Suchbegriff">Ihre Suche:</label>
-		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie einen Suchbegriff an." autofocus required aria-required="true"><br>
+		<input type="search" id="Suchbegriff" name="search" size="30" maxlength="100" autocomplete="off" dir="ltr" placeholder="Suchbegriff" title="Bitte geben Sie einen Suchbegriff an." required aria-required="true"><br>
 		<button type="submit" id="Artikelsuche" class="btn btn-md btn-primary" name="go">Artikelsuche</button>
       	<button type="submit" id="Volltextsuche" class="btn btn-md btn-primary" name="fulltext">Volltextsuche</button>
     </fieldset>
@@ -98,12 +99,12 @@
           			</table>
           		</div>
           		<div id="remark">
-          			<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2Fhomework%2Fform.html" target="_blank">
+          			<a href="http://validator.w3.org/check?uri=referer" target="_blank">
     <img style="border:0;width:32px;height:32px"
         src="../img/custom/html5.png"
         alt="Html 5" />
 </a>        			
-        			<a href="http://wave.webaim.org/report#/http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2Fhomework%2Fform.html" title="check with wave - the web accesibility evaluation tool" target="_blank">
+        			<a href="http://wave.webaim.org/report#/http%3A%2F%2Fcmoehlenhof.cloudcontrolled.com%2Fhomework%2Fform.html" title="check with wave - the web accesibility evaluation tool">
   <img height="32" width="88" src="../img/vendor/wcag2AAA.gif" alt="Level Triple-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0"></a><br>
   					made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
 				</div>	

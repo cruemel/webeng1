@@ -20,7 +20,7 @@
 				<div class="container">
       				<div class="navbar-default">
         				<div class="navbar-header">
-          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<button type="button" name="menu-toogle" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           						<span class="icon-bar"></span>
             					<span class="icon-bar"></span>
             					<span class="icon-bar"></span>
@@ -53,10 +53,10 @@
             				<a href="./chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
             			</li>
             			<li>
-            				<a href="./tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            				<a href="./homework/index.html"><span class="glyphicon glyphicon-edit"></span><strong>Hausaufgaben</strong></a>
             			</li>
             			<li>
-            				<a href="./quiz.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
+            				<a href="./tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
             			</li>
             			<li>
             				<a href="./contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
@@ -207,7 +207,7 @@
 									<li>Bootstrap 3 = &quot;Mobile first&quot; &amp; &quot;Responsive Design&quot;</li>
 									<li>Usability-Test</li>
 									<li>Usability-Fragebogen am Beispiel von ARSnova</li>
-									<li><a href="./img/tagclouds/cloud_08.png">Tag Cloud zum Kapitel 8</a></li>
+									<li><a href="./sources/tagclouds/cloud_01_08.png">Tag Cloud zum Kapitel 8</a></li>
         						</ol>
         					</section>
         					<section id="p01_c09" class="chapter">
@@ -222,7 +222,7 @@
 									<li>WPO: Web Performance Optimization (Steve Souders)</li>
 									<li>YSlow-Analyse f&uuml;r die Website-Optimierung</li>
 									<li>PageSpeed-Analyse f&uuml;r die Website-Optimierung</li>
-									<li><a href="./img/tagclouds/cloud_09.png">Tag Cloud zum Kapitel 9</a></li>
+									<li><a href="./sources/tagclouds/cloud_01_09.png">Tag Cloud zum Kapitel 9</a></li>
         						</ol>
         					</section>
         					<section id="p01_c10" class="chapter">
@@ -235,11 +235,11 @@
 									<li>SQL-Injection</li>
 									<li>XSRF: Cross Site Request Forgery</li>
 									<li>How not to store passwords</li>
-									<li><a href="./img/tagclouds/cloud_10.png">Tag Cloud zum Kapitel 10</a></li>
+									<li><a href="./sources/tagclouds/cloud_01_10.png">Tag Cloud zum Kapitel 10</a></li>
         						</ol>
         					</section>
         					<section>
-        						<p id="p01_c11"><em>sowie die Kapitel 11 (<a href="https://de.wikipedia.org/wiki/Benutzer:Rabe_de/B%C3%BCcher/Reader_zum_MOOC_%22Web-Engineering%22" target="_blank">Kursreader</a>) &amp; Kapitel 12 (Kompetenzziele - siehe: <a href="./tags.html">Themen</a>)</em></p>
+        						<p id="p01_c11"><em>sowie die Kapitel 11 (<a href="./sources/reader/reader_webeng_01_de.epub" target="_blank">Kursreader</a>) &amp; Kapitel 12 (Kompetenzziele - siehe: <a href="./tags.html">Themen</a>)</em></p>
         					</section>
         				</div>
         				<div id="p02">
@@ -250,7 +250,7 @@
         						<ol class="expand">
         							<li>Willkommen bei der Webentwicklung</li>
         							<li>Lernziele und wichtige Kurstermine</li>
-        							<li><a href="https://de.wikipedia.org/wiki/Benutzer:Rabe_de/B%C3%BCcher/Reader_zum_MOOC_%22Webengineering_II%22" target="_blank">Wikibuch f&uuml;r den Kurs Web Engineering II</a></li>
+        							<li><a href="./sources/reader/reader_webeng_02_de.epub" target="_blank">Wikibuch f&uuml;r den Kurs Web Engineering II</a></li>
 									<li>Unser Beispiel: die WebApp ARSnova</li>
 									<li>Die MOOC Umfrage</li>
         						</ol>
@@ -386,7 +386,7 @@
         						<h2>Kapitel 2</h2>
         						<span>Starter Kit: Virtuelle Entwicklingsumgebungen mit Vagant und Puppet</span>
         						<em class="plus clearfix"></em>
-        						<ol class="expand current">
+        						<ol class="expand">
         							<li>Lernziele und &Uuml;berblick</li>
         							<li>Crash Kurs und Cheat Sheets</li>
         							<li>Der Anwendungsfall ARSnova</li>
@@ -396,6 +396,35 @@
 									<li>ARSnova automatisiert installieren: $ vagrant up</li>
 									<li>Hausaufgabe 0: Virtuelle Entwicklingsumgebungen</li>
 									<li>ARSnova Umfrage: Lernfortschritte</li>
+								</ol>
+        					</section>
+        					<section id="p03_c03" class="chapter">
+        						<h2>Kapitel 3</h2>
+        						<span>Automatisierte Performance-Tests mit Apache JMeter</span>
+        						<em class="plus clearfix"></em>
+        						<ol class="expand">
+        							<li>Lernziele</li>
+        							<li>Schritt f&uuml;r Schritt durch dieses Kapitel</li>
+        							<li>Warum ApacheBench nicht die Antwort ist</li>
+        							<li>Lekt&uuml;re zu Apache JMeter</li>
+        							<li>Performance-Test von ARSnova in einer Vagrant Maschine</li>
+									<li>Die Server Ressourcen kennen</li>
+									<li>Hausaufgabe 1: Lokaler Performance-Test von ARSnova</li>
+									<li>ARSnova Umfrage: Lernfortschritte</li>
+								</ol>
+        					</section>
+        					<section id="p03_c04" class="chapter">
+        						<h2>Kapitel 4</h2>
+        						<span>Automatisierte Browser-Tests mit Selenium</span>
+        						<em class="plus clearfix"></em>
+        						<ol class="expand current">
+        							<li>Lernziele und Kapitel&uuml;bersicht</li>
+        							<li>Browsertests mit Selenium aufnehmen</li>
+        							<li>Finden und bestimmen von Html-Elementen</li>
+        							<li>Selenium mit dem WebDriver Sampler f&uuml;r JMeter verwenden</li>
+        							<li>Ein System zur kontinuierlichen Integration unter der Verwendung von Selenium Builder, GitHub, Travis CI und Sauce Labs erstellen</li>
+									<li>Kritisches Lesen: Testautomation</li>
+									<li>Hausaufgabe #2: Automatisierte Browser-Tests</li>
 								</ol>
         					</section>
         				</div>
