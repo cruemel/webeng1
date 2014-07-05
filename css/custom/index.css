@@ -540,6 +540,7 @@ button {
 
 .btn {
 	color: #75A48B;
+	font-weight: bold;
 }
 
 .btn:hover {

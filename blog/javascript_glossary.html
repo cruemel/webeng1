@@ -76,7 +76,7 @@
 <p class="definition">Einzelne Elemente eines Arraysliterals bestimmt man &uuml;ber ihre Indexzahl. Ein Arrayindex startet bei 0 und z&auml;hlt jeweils um eins hoch. Das erste Element hat also die Indexzahl 0, das zweite die Indexzahl 1, das dritte 2 usw.</p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript">arrayindex]</code></pre>
+<pre><code class="javascript">[arrayindex]</code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
@@ -210,20 +210,20 @@ ausdruck3 || ausdruck4 <span class="comment">// gibt &quot;true&quot; zur&uuml;c
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span> ( <span class="literal">true</span> &amp;&amp; <span class="literal">false</span> )alert(<span class="string">"Nicht ausgef&uuml;hrt!"</span>);
+<pre><code class="javascript"><span class="keyword">if</span> ( <span class="literal">true</span> &amp;&amp; <span class="literal">false</span> ) alert(<span class="string">"Nicht ausgef&uuml;hrt!"</span>);
 <span class="comment">// da der zweite Ausdruck falsch ist</span>
 
-<span class="keyword">if</span>( <span class="literal">false</span> || <span class="literal">true</span> )alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
+<span class="keyword">if</span>( <span class="literal">false</span> || <span class="literal">true</span> ) alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
 <span class="comment">// da jeder der Ausdr&uuml;cke wahr ist</span>
 
-<span class="keyword">if</span>( !<span class="literal">false</span> )alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
+<span class="keyword">if</span>( !<span class="literal">false</span> ) alert(<span class="string">"Ausgef&uuml;hrt!"</span>);
 <span class="comment">// da &quot;!false&quot; zu &quot;true&quot; wird</span>
 
 !!<span class="literal">true</span> <span class="comment">// bleibt wahr</span></code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span>(!<span class="literal">false</span> &amp;&amp; ( <span class="literal">false</span> || (<span class="literal">false</span> &amp;&amp; <span class="literal">true</span>) ))alert(<span class="string">"Rate mal ..."</span>);
+<pre><code class="javascript"><span class="keyword">if</span>(!<span class="literal">false</span> &amp;&amp; ( <span class="literal">false</span> || (<span class="literal">false</span> &amp;&amp; <span class="literal">true</span>) )) alert(<span class="string">"Rate mal ..."</span>);
 
 <span class="comment">/* 
 wird nicht ausgef&uuml;hrt da ... 
@@ -273,17 +273,20 @@ x &gt; y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x gr&o
 
 <div class="subsection" id="booleans_note">
 <h3 class="title">Notiz:</h3>
-<p class="definition">Eine wichtige Anmerkung hierbei ist, dass nur die Boolsche Werte (true 
-and false) die Feststellung beinhalten, ob ein Ausdruck wahr oder falsch ist, es aber noch andere Wege gibt aus denen sich der Wahrheitsgehalt einer Aussage ableiten l&auml;sst.</p>
+<p class="definition">Eine wichtige Anmerkung hierbei ist, dass nur Boolsche Werte die Feststellung beinhalten, ob ein Ausdruck wahr oder falsch ist. Es gibt aber auch noch andere Wege, aus denen sich der Wahrheitsgehalt einer Aussage ableiten l&auml;sst.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span>(<span class="number">1</span>)console.log(<span class="string">"True!"</span>); <span class="comment">// Wahr, da jede Zahl ausser Null als wahr betrachtet wird</span>
+<pre><code class="javascript"><span class="keyword">if</span>(<span class="number">1</span>) console.log(<span class="string">"True!"</span>); 
+<span class="comment">// Wahr, da jede Zahl ausser Null als wahr betrachtet wird</span>
 
-<span class="keyword">if</span>(<span class="number">0</span>)console.log(<span class="string">"Ich bezweifle, das dies ausgef&uuml;hrt wird."</span>); <span class="comment">// nicht ausgef&uuml;hrt, da 0 als falsch betrachtet wird</span>
+<span class="keyword">if</span>(<span class="number">0</span>) console.log(<span class="string">"Ich bezweifle, das dies ausgef&uuml;hrt wird."</span>); 
+<span class="comment">// nicht ausgef&uuml;hrt, da 0 als falsch betrachtet wird</span>
 
-<span class="keyword">if</span>(<span class="string">"Hallo"</span>)alert(<span class="string">"D.h., jeder String, der nicht leer ist, ist ebenfalls wahr."</span>); <span class="comment">// wird ausgef&uuml;hrt</span>
+<span class="keyword">if</span>(<span class="string">"Hallo"</span>) alert(<span class="string">"D.h., jeder String, der nicht leer ist, ist ebenfalls wahr."</span>); 
+<span class="comment">// wird ausgef&uuml;hrt</span>
 
-<span class="keyword">if</span>(<span class="string">""</span>)alert(<span class="string">"Folglich ist ein leerer String falsch"</span>); <span class="comment">// nicht ausgef&uuml;hrt</span></code></pre>
+<span class="keyword">if</span>(<span class="string">""</span>) alert(<span class="string">"Folglich ist ein leerer String falsch"</span>); 
+<span class="comment">// nicht ausgef&uuml;hrt</span></code></pre>
 </div>
 <div class="read-more">
 <h4>Weiterlesen</h4>
