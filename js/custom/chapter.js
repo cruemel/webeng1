@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var courses = $("#courses div");
+	var courses = $("#parts div");
 	var tabs = $('#select li');
 	var button = $('.chapter em');
 	

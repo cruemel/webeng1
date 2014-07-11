@@ -97,7 +97,7 @@
 </section>
 
 <section>
-<h2>202 Akzeptiert</h2>
+<h2>202 Accepted</h2>
 <p>Die Anfrage wurde zur Verabeitung akzeptiert, aber die Verarbeitung wurde nicht abgeschlossen. Auf die Anfrage kann oder kann nicht bei Gelegenheit reagiert werden, da sie verboten sein kann, wenn sie tats&auml;chlich verarbeitet werden wird. Es gibt keine M&ouml;glichkeit, einen neuen Statuscode zu versenden f&uuml;r eine zeitversetzte Anfrage wie diese.</p>
 <p>Die 202-Antwort ist bewu&szlig;t unverbindlich gehalten. Ihr Sinn ist es, dem Server das Akzeptieren einer Anfrage f&uuml;r einen anderen Zweck (vielleicht eine Stapelverarbeitung, die nur einmal t&auml;glich l&auml;uft) zu erlauben, ohne die Erfordnernis, die Anfragerverbindung zum Server aufrecht zu halten bis der Proze&szlig; abgeschlossen ist. Die Entit&auml;t, welche mit dieser Antwort verschickt wird SOLLTE einen Hinweis auf den momentanen Anfragestatus beinhalten, sowie entweder einen Zeiger auf einen Statusanzeiger oder eine Sch&auml;tzung, wann der Benutzer mit einer Antwort rechnen kann.</p>
 </section>
@@ -110,12 +110,12 @@ Die Verwendung dieses Response-Codes ist nicht notwendig und findet nur Verwendu
 </section>
 
 <section>
-<h2>204 no content</h2>
+<h2>204 No Content</h2>
 <p>Die Anfrage kam beim Server an, der jedoch keine Daten zur&uuml;cksendet.
 Wozu das gut ist, wei&szlig; ich auch nicht. Vielleicht hab ich nicht alles verstanden.</p>
 </section>
 
-<section><h2>205 Inhalt l&ouml;schen.</h2>
+<section><h2>205 Reset Content</h2>
 <p>Der Server hat die Anfrage erf&uuml;llt.
 Der User Agent sollte die Dokumenten Ansicht l&ouml;schen.
 Die Antwort beabsichtigt haupts&auml;chlich, das der Benutzer
@@ -126,29 +126,29 @@ beginnen.</p>
 </section>
 
 <section>
-<h2>206 teilweiser Inhalt</h2>
+<h2>206 Partial Content</h2>
 <p>Der Server hat eine Anfrage nach nur einem Teil der Resource erledigt. Die Anfrage muss ein Bereichsfeld enthalten und kann Bedingungen enthalten (Wenn-Bereichsfeld). Es werden weiterhin erforderliche Bereichsfelder aufgefuehrt und Bedingungen genannt, die nicht auftreten sollten oder duerfen.</p>
 </section>
 
 <section>
-<h2>300 Mehrere M&ouml;glichkeiten</h2>
+<h2>300 Multiple Choices</h2>
 <p>Die angeforderte Ressource entspricht einem aus einem Satz von Darstellungen, jede mit Ihrer eigenen spezifischen Ort, und System bezogene Auswahl Informationen werden bereitgestellt so das der Benutzer (oder Benutzer-agebt) ausw&auml;hlen kann woher er die Information beziehen will und deriviert die Anfrage an den entsprechenden Ort....</p>
 </section>
 
 <section>
-<h2>301 Dauerhaft geaenderte Adresse</h2>
+<h2>301 Moved Permanently</h2>
 <p>Der angefragten Resource wurde dauerhaft eine neue Adresse zugewiesen und jeder weitere Verweis auf diese Resource sollte als R&uuml;ckgabewerte eine? der neuen Adressen beinhalten. Clients der M&ouml;glichkeit, Links zu editieren, sollten wenn m&ouml;glich, diese &Auml;nderung selbstt&auml;tig durchf&uuml;hren. Die Antwort (des Servers) kann zwischengespeichert werden, solange nicht anders angegeben.</p>
 <p>Die neue Adresse sollte in dem Adressefeld der Antwort stehen. Sofern es keine Anfrage von Typ HEAD war, sollte die Antwort eine kurze Notiz mit der neuen Adresse beinhalten.</p>
 <p>Sollte dieser Status-Code die Antwort auf eine andere Anfrage, als die vom Typ GET oder HEAD, sein, so muss die Software die Anfrage nicht automatisch auf die neue Adresse umleiten, ausser es besteht fuer den Benutzer die Moeglichkeit, diese Option zu bestaetigen, da sich inzwischen die Bedingungen geaendert haben koennen, unter denen er die Anfrage gestellt hat.</p>
 </section>
 
 <section>
-<h2>302 Gefunden</h2>
+<h2>302 Found</h2>
 <p>Die angefragte Resource befindet sich zeitweise an einer anderen Adresse.
-Da sich das Umleitungsziel noch aendern kann, sollte der Client die urspr&uuml;nglich angefragte Adresse f&uuml;r zuk&uuml;nfige Anfragen beibehalten. Die Antwort des Servers sollte nur zwischengespeichert werden, sofern durch Speicher- oder Verfallstempel im Kopf der Nachricht angezeigt.</p>
-<p>Das temporaere Ziel sollte im Adressfeld der Antwort angegeben sein. Sofern dies keine Anfrage vom Typ HEAD ist, sollte die ganze Antwort auch eine kurze Notiz mit einem Link auf die neue Adresse enthalten.</p>
-<p>Sollte der Status-Code 302, die Antwort auf eine andere Anfrage, als die vom Typ GET oder HEAD sein, so muss die Software die Anfrage nicht automatisch auf die neue Adresse umleiten, ausser es besteht fuer den Benutzer die Moeglichkeit, diese Option zu bestaetigen, da diese die Bedingungen aendern koennte, unter denen die Anfrage gestellt wurde.</p>
-<p>Notiz: RFC 1945 und RFC 2068 spezifizieren, dass es dem Client nicht erlaubt ist, die Anfragemethode bei einer Umleitung zu aendern. Trotzdem behandeln die meisten existierenden Broswer eine Statusmedldung 302, so wie eine Antwort mit der Nummer 303 und f&uuml;hren eine GET-Anfrage mit dem neuen Ziel im Adressfeld der Statusmeldung aus. Die Statusmeldung 303 und 307 wurden hinzugefuegt, um den Servern die Moeglichkeit zu geben ummissverstaendlich klar zu machen, welche Reaktion sie von den Clients erwarten.</p>
+Da sich das Umleitungsziel noch &auml;ndern kann, sollte der Client die urspr&uuml;nglich angefragte Adresse f&uuml;r zuk&uuml;nfige Anfragen beibehalten. Die Antwort des Servers sollte nur zwischengespeichert werden, sofern durch Speicher- oder Verfallstempel im Kopf der Nachricht angezeigt.</p>
+<p>Das tempor&auml;re Ziel sollte im Adressfeld der Antwort angegeben sein. Sofern dies keine Anfrage vom Typ HEAD ist, sollte die ganze Antwort auch eine kurze Notiz mit einem Link auf die neue Adresse enthalten.</p>
+<p>Sollte der Status-Code 302, die Antwort auf eine andere Anfrage, als die vom Typ GET oder HEAD sein, so muss die Software die Anfrage nicht automatisch auf die neue Adresse umleiten, ausser es besteht f&uuml;r den Benutzer die M&ouml;glichkeit, diese Option zu best&auml;tigen, da diese die Bedingungen &auml;ndern k&ouml;nnte, unter denen die Anfrage gestellt wurde.</p>
+<p>Notiz: RFC 1945 und RFC 2068 spezifizieren, dass es dem Client nicht erlaubt ist, die Anfragemethode bei einer Umleitung zu &auml;ndern. Trotzdem behandeln die meisten existierenden Broswer eine Statusmedldung 302, so wie eine Antwort mit der Nummer 303 und f&uuml;hren eine GET-Anfrage mit dem neuen Ziel im Adressfeld der Statusmeldung aus. Die Statusmeldung 303 und 307 wurden hinzugef&uuml;gt, um den Servern die M&ouml;glichkeit zu geben ummissverst&auml;ndlich klar zu machen, welche Reaktion sie von den Clients erwarten.</p>
 </section>
 
 <section>
@@ -164,18 +164,18 @@ Der Status-Code 305 darf nur vom urspr&uuml;nglichen Server erzeugt werden.</p>
 </section>
 
 <section>
-<h2>306 Unused - der ist auch sch&ouml;n ;-)</h2>
+<h2>306 Unused</h2>
 <p>Der Statuscode 306 wurde in einer vorherigen Spezifikationsversion benutzt und wird nicht l&auml;nger benutzt. Der Code ist reserviert (vermutlich f&uuml;r zuk&uuml;nftige Verwendungen).</p>
 </section>
 
 <section>
-<h2>401</h2> 
+<h2>401 Unauthorized</h2> 
 <p>Nachdem der Webserver festgestellt hat, dass f&uuml;r den Get-Request eine Authentifizierung ben&ouml;tigt teilt er diese dem Client mit dem Code 401 mit. Zus&auml;tzlich wird der Header WWW-Authenticate gesendet um die Daten zur Authentifizierung vom Client zusammeln.</p>
 <p>Hatte der Client mit seinem Get-Request schon die Authentifizierung mitgeliefert, weist der Code 401 auf einen Fehler bei der Authentifizierung hin. Wenn der User vesucht sich zweimal zu Authentifizieren und jedesmal einen 401 erh&auml;lt, soll ihm seine eingabe zur&uuml;ckgegeben werden um sie auf Fehler zu &uuml;berpr&uuml;fen.</p>
 </section>
 
 <section>
-<h2>403 - Forbidden</h2>
+<h2>403 Forbidden</h2>
 <p>Der Server m&ouml;chte die angeforderten Daten nicht herausgeben. Das passiert zum Beispiel wenn der Zugriff auf die Ressource von dem IP-Adress-Bereich, aus dem die Anfrage kommt, in der Serverkonfiguration verboten wurde, die Ressource ganz und gar gesperrt wurde oder man versucht, ein Verzeichnislisting zu bekommen, dies jedoch in der Serverkonfiguration abgeschaltet wurde. Weder die Eingabe eines Passwortes noch das Wiederholen der Anfrage wird dabei etwas bewirken und sollte daher nicht wiederholt werden. Wenn der Server zur Tarnung &uuml;berhaupt keine Informationen in der &Ouml;ffentlichkeit preis geben soll, kann statt dessen auch der Status Code 404 (NOT FOUND) als Antwort in den Server-Einstellung konfiguriert werden.</p>
 </section>
 

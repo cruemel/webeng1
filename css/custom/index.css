@@ -429,35 +429,35 @@ body{
     border: 2px solid #75A48B;
 }
 
-#courses .chapter span {
+#parts .chapter span {
 	margin: 0.5em 0;
 	padding: 0;
 }
 
-#courses .chapter em {
+#parts .chapter em {
 	float: right;
 	position: relative;
 	margin: 0;
 	padding: 1em;
 }
 
-#courses .chapter .plus, #commands .plus {
+#parts .chapter .plus, #commands .plus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#courses .chapter .minus, #commands .minus {
+#parts .chapter .minus, #commands .minus {
 	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png); 
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
-#courses ol.expand, #commands tr.expand {
+#parts ol.expand, #commands tr.expand {
 	display: none;
 }
 
-#courses ol.expand.current {
+#parts ol.expand.current {
 	display: block;
 }
 
