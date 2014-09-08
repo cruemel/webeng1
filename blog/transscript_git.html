@@ -18,13 +18,11 @@
 		<div id="header">
     		<div id="supbar">
 				<div class="container">
-      				<div class="navbar-default">
+      			<div class="navbar-default">
         				<div class="navbar-header">
-          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          						<span class="icon-bar"></span>
-            					<span class="icon-bar"></span>
-            					<span class="icon-bar"></span>
-          					</button>
+          				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<img src="../img/vendor/glyphicons/glyphicons_158_show_lines.png" alt="menu">
+          				</button>
         				</div>
 					</div>
 				</div>
@@ -36,12 +34,12 @@
 						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
 					</div>
 					<div id="images" class="clearfix">
-						<img src="../img/custom/people.jpg" alt="tag der offnen tür beim ber"><img src="../img/custom/apple.jpg" alt="äpfel im garten">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tuer beim ber"><img src="../img/custom/apple.jpg" alt="aepfel im garten">
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="main">
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
@@ -53,10 +51,10 @@
             				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
             			</li>
             			<li>
-            				<a href="../homework/index.html"><span class="glyphicon glyphicon-edit"></span><strong>Hausaufgaben</strong></a>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
             			</li>
             			<li>
-            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            				<a href="../quiz/beginners.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
             			</li>
             			<li>
             				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
@@ -70,116 +68,118 @@
 <section>
 	<h2>Konfiguration</h2>
     <ul>
-		<li>git config --global user.name "Vorname Nachname"</li>
-		<li>git config --global user.email "name@domain.org"</li>
+		<li>git config --global user.name "[VORNAME] [NACHNAME]"</li>
+		<li>git config --global user.email "[NAME]@[DOMAIN].[ORG]"</li>
 		<li>git config --global color.ui auto</li>
+		<li>git config --global core.editor "[EDITOR]"</li>
+		<li>git config --list</li>
 	</ul>
 </section>
 
-<section>  
+<section>
 	<h2>Lokales Repository</h2>
 	<dl>
     	<dt>Ein vorhandenes Verzeichnis f&uuml;r Git initialisieren</dt>
 		<dd>git init</dd>
-		
+
 		<dt>Lokales Repository kopieren</dt>
 		<dd>git clone [PATH]</dd>
 	</dl>
 </section>
 
-<section>  
+<section>
 	<h2>Entferntes Repository</h2>
 	<dl>
 		<dt>Ein neues Verzeichnis anlegen, es initialisieren und alle Daten kopieren</dt>
 		(download a project and its entire version history)
-		<dd>git clone ([USER]@)[URL] (DIR)</dd>
-		
+		<dd>git clone ([USER]@)[URL] ([DIR])</dd>
+
 		<dt>Lokales Repository mit einem entfernten verbinden</dt>
-		<dd>git remote add origin [SERVER]/[USER]/[URL]</dd>	
+		<dd>git remote add origin [SERVER]/[USER]/[URL]</dd>
 	</dl>
 </section>
 
-<section>  
+<section>
 	<h2>Status</h2>
 	<dl>
 		<dt>Zustand des lokalen Repository</dt>
 		<dd>git status</dd>
-		
+
 		<dt>Zustand des entfernten Repository</dt>
 		<dd>git remote show origin</dd>
-		
+
 		<dt>Zwei Zweige vergleichen</dt>
 		<dd>git diff [BRANCH_1] [BRANCH_2]</dd>
-	</dl>	
+	</dl>
 </section>
 
-<section>  
+<section>
 	<h2>Dateien hinzuf&uuml;gen (oder l&ouml;schen)</h2>
-	<dl>		
+	<dl>
 		<dt>Datei zur &Uuml;berwachung hinzuf&uuml;gen</dt>
 		<dd>git add [DATEI]</dd>
-    
+
 		<dt>Mehrere Dateien hinzuf&uuml;gen</dt>
 		<dd>git add *</dd>
-		
+
 		<dt>Datei l&ouml;schen</dt>
 		<dd>git rm [DATEI]</dd>
 	</dl>
 </section>
 
-<section>  
+<section>
 	<h2>Änderungen und Aktualisierungen</h2>
 	<dl>
 		<dt>Best&auml;tigung (und Kommentierung) der &Auml;nderungen</dt>
 		<dd>git commit -m "[NACHRICHT]"</dd>
-		
+
 		<dt>Änderungen an das entfernte Repository senden</dt>
-		<dd>git push origin master</dd>	
+		<dd>git push origin master</dd>
 
 		<dt>Ein lokales Repository aktualisieren</dt>
 		(download bookmark history and incorporate changes)
 		<dd>git pull</dd>
-	</dl>	
+	</dl>
 </section>
 <!--
 
-<section>  
+<section>
 	<h2>&Auml;nderungen</h2>
 	<dl>
 		<dt>Datei(en) vergleichen</dt>
 		<dd>git diff (HEAD) [DATEI]</dd>
-		
+
 		<dt>&Auml;nderungen herunterladen</dt>
 		<dd>git fetch [DATEI]</dd>
-		
+
 		<dt>&Auml;nderungen an einer Datei zur&uuml;cknehmen</dt>
 		<dd>git checkout -- [DATEI]</dd>
-		
+
 		<dt>Herausnehmen einer Datei aus dem Repository</dt>
-		<dd>git reset HEAD [DATEI]</dd>	
+		<dd>git reset HEAD [DATEI]</dd>
 	</dl>
 </section>
 
 -->
 
-<section>  
+<section>
 	<h2>Zweige</h2>
 	<dl>
 		<dt>Einen neuen Zweig anlegen</dt>
 		<dd>git checkout -b [BRANCH]</dd>
-	
+
 		<dt>Wechseln zum Master-Zweig</dt>
 		<dd>git checkout master</dd>
-	
+
 		<dt>Einen Zweig l&ouml;schen</dt>
 		<dd>git branch -d [BRANCH]</dd>
-		
+
 		<dt>Einen Zweig an das entfernte Repository senden</dt>
 		<dd>git push origin [BRANCH]</dd>
 	</dl>
 </section>
 
-<section>  
+<section>
 	<h2>Zusammenf&uuml;gen</h2>
 	<dl>
 		<dt>&Auml;nderungen zusammenf&uuml;hren</dt>
@@ -187,7 +187,7 @@
 	</dl>
 </section>
 
-<section>    
+<section>
 	<h2>Publizieren</h2>
 	<ol>
 		<li>git status - was hat sich ge&auml;ndert?</li>
@@ -206,7 +206,7 @@
 				</div>
 			</div>
 		</div>
-        
+
         <div id="footer">
         	<div class="container">
     			<div id="subbar">
@@ -226,13 +226,13 @@
           		</div>
           		<div id="remark">
           			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
-				</div>	
+				</div>
           	</div>
     	</div>
-    	
+
     	 <!-- scripts-->
     	<script src="../assets/js/jquery.js"></script>
     	<script src="../dist/js/bootstrap.min.js"></script>
-    	
+
 	</body>
 </html>

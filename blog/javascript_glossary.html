@@ -13,19 +13,17 @@
       		<script src="./assets/js/html5shiv.js"></script>
       		<script src="./assets/js/respond.min.js"></script>
     	<!endif]-->
-    
+
   	</head>
 	<body>
 		<div id="header">
     		<div id="supbar">
 				<div class="container">
-      				<div class="navbar-default">
+      			<div class="navbar-default">
         				<div class="navbar-header">
-          					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          						<span class="icon-bar"></span>
-            					<span class="icon-bar"></span>
-            					<span class="icon-bar"></span>
-          					</button>
+          				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<img src="../img/vendor/glyphicons/glyphicons_158_show_lines.png" alt="menu">
+          				</button>
         				</div>
 					</div>
 				</div>
@@ -42,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="main">
 			<div class="container">
 				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
@@ -54,10 +52,10 @@
             				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
             			</li>
             			<li>
-            				<a href="../homework/index.html"><span class="glyphicon glyphicon-edit"></span><strong>Hausaufgaben</strong></a>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
             			</li>
             			<li>
-            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            				<a href="../quiz/beginners.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
             			</li>
             			<li>
             				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
@@ -143,8 +141,8 @@ console.log(myArray);
 [zeug<span class="number">0</span>] = <span class="number">34</span>;
 [zeug<span class="number">4</span>] = <span class="number">20</span>;
 
-console.log(zeug); 
-  
+console.log(zeug);
+
 <span class="comment">// 34, undefined, undefined, undefined, 20</span>
 </code></pre>
 </div>
@@ -170,7 +168,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ar
 <div class="example">
 <h4>Beispiel</h4>
 <pre>
-<code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray = 
+<code class="javascript"><span class="keyword">var</span> mehrdimensionalesArray =
 	[
         	[ [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>], [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ],
         	[ [<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>], [ <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>] ],
@@ -178,7 +176,7 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Ar
         	[ [<span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>,<span class="number">19</span>,<span class="number">20</span>], [ <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] ]
 	];
 
-console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="number">1</span>][<span class="number">5</span>] ); 
+console.log( mehrdimensionalesArray[<span class="number">1</span>][<span class="number">1</span>][<span class="number">5</span>] );
 
 <span class="comment">// 6 - zweite Zeile, letztes Element, letzter Wert: 5. Element des 2. Arrays des zweiten Arrays von mehrdimensionalesArray.</span></code></pre>
 </div>
@@ -225,8 +223,8 @@ ausdruck3 || ausdruck4 <span class="comment">// gibt &quot;true&quot; zur&uuml;c
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">if</span>(!<span class="literal">false</span> &amp;&amp; ( <span class="literal">false</span> || (<span class="literal">false</span> &amp;&amp; <span class="literal">true</span>) )) alert(<span class="string">"Rate mal ..."</span>);
 
-<span class="comment">/* 
-wird nicht ausgef&uuml;hrt da ... 
+<span class="comment">/*
+wird nicht ausgef&uuml;hrt da ...
 !false &amp;&amp; ( false || (false &amp;&amp; true) ) - wird zu
 !false &amp;&amp; ( false || false) - und das widerum zu
 true &amp;&amp; false - wird, was letztlich falsch ist
@@ -238,8 +236,8 @@ true &amp;&amp; false - wird, was letztlich falsch ist
 <h4>Beispiel</h4>
 <pre><code class="javascript"><span class="keyword">if</span>(<span class="literal">true</span> &amp;&amp; !!<span class="literal">false</span> || <span class="literal">true</span>)alert(<span class="string">"Rate nochmal ?"</span>);
 
-<span class="comment">/* 
-wird ausgef&uuml;hrt da ... 
+<span class="comment">/*
+wird ausgef&uuml;hrt da ...
 true &amp;&amp; !!false || true - wird zu
 true &amp;&amp; false || true - (keine Klammern, also wird ! ausgewertet),
 false || true - (es wird &amp;&amp; ausgewertet) was letztlich wahr wird.
@@ -276,16 +274,16 @@ x &gt; y <span class="comment">// gibt &quot;true&quot; zur&uuml;ck, wenn x gr&o
 <p class="definition">Eine wichtige Anmerkung hierbei ist, dass nur Boolsche Werte die Feststellung beinhalten, ob ein Ausdruck wahr oder falsch ist. Es gibt aber auch noch andere Wege, aus denen sich der Wahrheitsgehalt einer Aussage ableiten l&auml;sst.</p>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="keyword">if</span>(<span class="number">1</span>) console.log(<span class="string">"True!"</span>); 
+<pre><code class="javascript"><span class="keyword">if</span>(<span class="number">1</span>) console.log(<span class="string">"True!"</span>);
 <span class="comment">// Wahr, da jede Zahl ausser Null als wahr betrachtet wird</span>
 
-<span class="keyword">if</span>(<span class="number">0</span>) console.log(<span class="string">"Ich bezweifle, das dies ausgef&uuml;hrt wird."</span>); 
+<span class="keyword">if</span>(<span class="number">0</span>) console.log(<span class="string">"Ich bezweifle, das dies ausgef&uuml;hrt wird."</span>);
 <span class="comment">// nicht ausgef&uuml;hrt, da 0 als falsch betrachtet wird</span>
 
-<span class="keyword">if</span>(<span class="string">"Hallo"</span>) alert(<span class="string">"D.h., jeder String, der nicht leer ist, ist ebenfalls wahr."</span>); 
+<span class="keyword">if</span>(<span class="string">"Hallo"</span>) alert(<span class="string">"D.h., jeder String, der nicht leer ist, ist ebenfalls wahr."</span>);
 <span class="comment">// wird ausgef&uuml;hrt</span>
 
-<span class="keyword">if</span>(<span class="string">""</span>) alert(<span class="string">"Folglich ist ein leerer String falsch"</span>); 
+<span class="keyword">if</span>(<span class="string">""</span>) alert(<span class="string">"Folglich ist ein leerer String falsch"</span>);
 <span class="comment">// nicht ausgef&uuml;hrt</span></code></pre>
 </div>
 <div class="read-more">
@@ -320,7 +318,7 @@ wert === wert
 </div>
 
 </section>
- 
+
 <section id="datum">
 <h2>Datum</h2>
 
@@ -336,8 +334,8 @@ bestimmtesDatum = new Date(jahr, monat, tag , stunde, minuten, sekunden]);</code
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript">var heute = new Date(); 
-var carl.geburtstag = new Date(1996, 2, 5, 3, 30, 0); 
+<pre><code class="javascript">var heute = new Date();
+var carl.geburtstag = new Date(1996, 2, 5, 3, 30, 0);
 
 <span class="comment">// 5.3.1996 - dabei ist zu beachten, dass die Z&auml;hlung des Monates bei 0 beginnt.</span></code></pre>
 </div>
@@ -369,7 +367,7 @@ if(punkte &gt; 50){
     console.log("Du hast " + "gewonnen!");  // oder einfach "Du hast gewonnen!"
 }
 else{
-    console.log("Du hast " + "verloren!"); 
+    console.log("Du hast " + "verloren!");
 }</span></code></pre>
 </div>
 <div class="syntax">
@@ -392,7 +390,7 @@ if(punkte &gt; 50){
     }
 }
 else{
-    console.log("Deine Note ist: verbesserungsw&uuml;rdig"); 
+    console.log("Deine Note ist: verbesserungsw&uuml;rdig");
 }
 </span>
 <span class="comment">// Deine Note ist: ausgezeichnet</span>
@@ -414,10 +412,10 @@ if(grad &gt;= 90){
     console.log("Deine Note ist: ausgezeichnet");
 }
 else if (grad &gt; 50){
-    console.log("Deine Note ist: durchschnittlich"); 
+    console.log("Deine Note ist: durchschnittlich");
 }
 else{
-    console.log("Deine Note ist: verbesserungsw&uuml;rdig"); 
+    console.log("Deine Note ist: verbesserungsw&uuml;rdig");
 }
 
 // Deine Note ist: durchschnittlich
@@ -608,16 +606,16 @@ Alles zwischen /* und */ ist ein Kommentar.
 </p>
 <div class="syntax">
 <h4>Syntax</h4>
-<pre><code class="javascript"><span class="comment">/* 
+<pre><code class="javascript"><span class="comment">/*
 Dies ist ein mehrzeiliger
-   
+
 Kommentar!
 */</span>
 </code></pre>
 </div>
 <div class="example">
 <h4>Beispiel</h4>
-<pre><code class="javascript"><span class="comment">/* 
+<pre><code class="javascript"><span class="comment">/*
 alert("Hallo, ich werde nicht ausgef&uuml;hrt.");
 console.log("Hallo, ich werde ebenfalls nicht ausgef&uuml;hrt.");
 */</span></code></pre>
@@ -1456,12 +1454,12 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/St
 </div>
 
 </section>
-				
+
 					<!-- ende content -->
 				</div>
 			</div>
 		</div>
-	
+
 		<div id="footer">
         	<div class="container">
     			<div id="subbar">
@@ -1481,13 +1479,13 @@ https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/St
           		</div>
           		<div id="remark">
           			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
-				</div>	
+				</div>
           	</div>
     	</div>
-    	
+
     	 <!-- scripts-->
     	<script src="../assets/js/jquery.js"></script>
     	<script src="../dist/js/bootstrap.min.js"></script>
-    	
+
 	</body>
 </html>

@@ -9,7 +9,7 @@ html {
 	font-size: 100%;
 }
 
-body{ 
+body{
 	font-family: Helvetica, sans-serif;
   	font-size: 1em;
   	line-height: 1.5em;
@@ -82,7 +82,7 @@ a {
 }
 
 h1 {
-	color: #666666;	
+	color: #666666;
 }
 
 h2, h2 a {
@@ -90,11 +90,11 @@ h2, h2 a {
 }
 
 h3 {
-	color: #333333;	
+	color: #333333;
 }
 
 h4 {
-	color: #666666;	
+	color: #666666;
 }
 
 #bar {
@@ -130,7 +130,7 @@ h4 {
 
 .navbar-default .navbar-toggle {
     border-color: #333333;
-} 
+}
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #333333;
@@ -180,7 +180,7 @@ html {
  	height: 100%;
 }
 
-body{	
+body{
 	width: 100%;
  	height: 100%;
 	padding: 16px 0;
@@ -197,14 +197,14 @@ body{
 }
 
 #bar {
-	width: 100%; 
-	height: auto; 
+	width: 100%;
+	height: auto;
 	margin: 8px 0;
-	padding: 0;  
+	padding: 0;
 }
 
 #main {
-	position: relative;	
+	position: relative;
 }
 
 .container {
@@ -219,9 +219,17 @@ body{
  	padding: 0;
 }
 
+.navbar-header button small {
+	display: none;
+}
+
+.navbar-header button span {
+	width: 36px;
+}
+
 #company {
-	float: right; 
-	margin: 0 0 0 0.2em; 
+	float: right;
+	margin: 0 0 0 0.2em;
 	padding: 1em;
 }
 
@@ -230,8 +238,8 @@ body{
 }
 
 #images {
-	 float: left; 
-	 margin: 0 0.2em 0 0; 
+	 float: left;
+	 margin: 0 0.2em 0 0;
 	 padding: 0;
 }
 
@@ -246,12 +254,12 @@ body{
 #menu {
   	margin: 0;
   	padding: 0;
-}	
+}
 
 #menu ul {
 	list-style: none;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
 }
 
 #menu ul li {
@@ -260,7 +268,7 @@ body{
 }
 
 #menu ul li span {
-	display: none;	
+	display: none;
 }
 
 #menu ul li strong {
@@ -285,12 +293,12 @@ body{
 }
 
 #content dl {
-	margin: 0; 
+	margin: 0;
 	padding: 1em 0;
 }
 
 #content dd {
-	margin: 0 0 0.5em 0; 
+	margin: 0 0 0.5em 0;
 	padding: 0;
 }
 
@@ -328,12 +336,12 @@ body{
 }
 
 #content section ol {
-	margin: 0; 
+	margin: 0;
 	padding: 0.3em 1.8em;
 }
 
 #content section ul {
-	margin: 0; 
+	margin: 0;
 	padding: 0.3em 1.5em;
 	text-indent: 0.5em;
 }
@@ -403,7 +411,7 @@ body{
 #select ul li {
 	float: left;
     margin: 0 0.5em;
-    padding: 0;  
+    padding: 0;
 }
 
 #select ul li a {
@@ -442,13 +450,13 @@ body{
 }
 
 #parts .chapter .plus, #commands .plus {
-	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png); 
+	background-image: url(../../img/vendor/glyphicons/glyphicons_367_expand.png);
 	background-repeat: no-repeat;
 	background-position: top;
 }
 
 #parts .chapter .minus, #commands .minus {
-	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png); 
+	background-image: url(../../img/vendor/glyphicons/glyphicons_369_collapse_top.png);
 	background-repeat: no-repeat;
 	background-position: top;
 }
@@ -466,10 +474,10 @@ body{
 
 #subbar table {
 	display: table;
-	width: 100%; 
+	width: 100%;
 	height: auto;
 	margin: 0.5em 0;
-	padding: 0; 
+	padding: 0;
 }
 
 #subbar td {
@@ -477,7 +485,7 @@ body{
 	width: auto;
 	height: auto;
 	margin: 0;
-	padding: 0.4em 0.3em; 
+	padding: 0.4em 0.3em;
 	text-align: center;
 	font-weight: bold;
 	letter-spacing: 0.3em;
@@ -549,7 +557,7 @@ button {
 	border: 2px solid #75A48B;
 }
 
-@media (min-width: 542px) { 
+@media (min-width: 542px) {
 
 	#images img:first-child {
 		display: inline;
@@ -563,15 +571,15 @@ button {
 @media (min-width: 768px) {
 
 	#bar {
-		margin: 0;  
+		margin: 0;
 	}
- 
+
 	#images img:nth-child(2) {
 		display: inline;
 		margin: 0;
 		padding: 0;
 		border-right: 2px solid #ffffff;
-	} 
+	}
 
 	#menu {
   		margin: 0.5em 0;
@@ -583,29 +591,29 @@ button {
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	#menu ul li strong {
 		text-transform: uppercase;
 		letter-spacing: 0.2em;
 		padding: 0.2em 0.8em;
 	}
-	
+
 	#menu ul li.active a {
-		border-bottom: 0.2em solid #666666;	
+		border-bottom: 0.2em solid #666666;
 	}
-	
+
 	#menu ul li a:hover {
-		text-decoration: none;	
+		text-decoration: none;
 	}
-	
+
 	#footer {
 		color: #d0d0d0;
 	}
-	
+
 	#subbar {
 		display: none;
 	}
-		
+
 }
 
 @media (min-width: 992px) {
@@ -620,13 +628,13 @@ button {
 		margin: 0;
 		padding: 0;
 		border-right: 2px solid #ffffff;
-	} 
+	}
 
 	#images {
 		margin: 0 10px 0 122px;
 		padding: 0;
 	}
-  
+
   	#menu {
   		position: fixed;
   		top: 140px;
@@ -637,12 +645,12 @@ button {
   		border: 0;
   		background-color: #F7F6EE;
 	}
-	
+
 	#menu ul {
 		text-align: center;
 		font-size: 0.8em;
 	}
-	
+
 	#menu ul li {
 		width: 124px;
 		height: 64px;
@@ -650,60 +658,60 @@ button {
 		padding: 0;
 		clear: both;
 	}
-	
+
 	#menu ul li span {
 		display: block;
 		width: 36px;
 		height: 38px;
 		margin: 0 42px;
-		padding: 6px;	
-		border-radius: 4px;	
+		padding: 6px;
+		border-radius: 4px;
 	}
-	
+
 	#menu ul li span.glyphicon {
 		font-size: 24px;
 		color: #666666;
 	}
-	
+
 	#menu ul li strong {
 		display: none;
 		letter-spacing: 0.1em;
 		margin: 0;
-		padding: 0;	
+		padding: 0;
 	}
-	
+
 	#menu ul li.active strong {
 		display: block;
-		color: #333333;	
+		color: #333333;
 	}
-	
+
 	#menu ul li.active span.glyphicon {
-		color: #333333;	
+		color: #333333;
 	}
-	
+
 	#menu ul li a:link {
 		color: #cccccc;
 	}
-	
+
 	#menu ul li a:hover span {
-		background-color: rgba(65, 65, 65, 0.1);	
+		background-color: rgba(65, 65, 65, 0.1);
 	}
-	
+
 	#submenu {
 		display: block;
 		margin: 0 18px 0 124px;
 		padding: 6px;
 	}
-	
+
 	#content {
 		margin: 0 0 0 124px;
 	}
-	
+
 	#remark {
 		margin: 8px 18px 8px 124px;
 		padding: 0;
 	}
-	
+
 }
 
 

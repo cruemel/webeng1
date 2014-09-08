@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./favicon.ico">
+    	<link rel="apple-touch-icon" href="./apple-touch-icon-precomposed.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Quiz - Web-Engineering I,II+III</title>
+    	<!--[if lt IE 9]>
+      		<script src="../assets/js/html5shiv.js"></script>
+      		<script src="../assets/js/respond.min.js"></script>
+    	<![endif]-->
+    	<script type="text/javascript" src="../js/custom/quiz/quiz.js"></script>
+  	</head>
+	<body>
+		<div id="header">
+    		<div id="supbar">
+				<div class="container">
+      			<div class="navbar-default">
+        				<div class="navbar-header">
+          				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<img src="./img/vendor/glyphicons/glyphicons_158_show_lines.png" alt="menu">
+          				</button>
+        				</div>
+					</div>
+				</div>
+			</div>
+			<div id="bar">
+				<div class="container">
+					<div id="company">
+						<div class="name">WEB ENGINEERING I,II+III:</div>
+						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
+					</div>
+					<div id="images" class="clearfix">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tuer beim ber"><img src="../img/custom/apple.jpg" alt="aepfel im garten">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="../index.html"><span class="glyphicon glyphicon-book"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="../quiz/quiz_01.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="quiz visible-md visible-lg"></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<div id="select" class="clearfix">
+          				<ul>
+          					<li class="q01"><a href="../quiz/beginners.html">I: Grundlagen</a></li>
+          					<li class="q02 current"><a href=".-/quiz/intermediate.html">II: Mobile Apps</a></li>
+          					<!-- <li class="q03"><a href="#">III: Qualit&auml;tssicherung</a></li> -->
+          				</ul>
+          			</div>
+          			<div id="parts">
+          				<div class="multiplechoice-quiz">
+							<p>Wofür wird Vagrant verwendet?
+							Erstellen & Konfigurieren von Virtuellen Maschinen
+							<p>Wofür wird Puppet verwendet?
+    						- Konfigurierung von Systemen
+    						- Automatische Installation von Software & Dependencies</p>
+							<p>Was ist CI?
+							CI steht für Continuous Integration und beschreibt den Mechanismus der Automatisierung von Integrationprozessen</p>
+							<p>Welche Vorteile hat CI?
+							die Qualität des Endprodukts wird verbessert.
+ein Build kann jederzeit ausgeliefert werden.
+der Build Prozess wird dokumentiert.
+die Wahrscheinlichkeit von Problemen bei Projektende oder einem Meilenstein wird geringer</p>
+							<p>Welche Aufgaben hat ein Scrum Master?
+
+
+    Er sorgt dafür, dass die Scrum-Regeln von allen Beteiligten eingehalten werden.
+
+    Er moderiert die Scrum-Meetings und kümmert sich um die Behebung von Problemen im Entwicklerteam.
+
+    Er kümmert sich darum, dass die Scrum-Artefakte (Backlogs, Burndown Chart usw.) stets aktuell gehalten werden.
+
+</p>
+							<p>Was ist ein Burnout Chart?
+							Eines der Artefakte im Scrum Prozess.
+Er visualisiert die voraussichtlich noch zu leistende Arbeit, bis das gesetzte Ziel erreicht wird.
+Mittels einer, auf mehreren Schätzwerten basierenden Trendlinie kann das voraussichtliche zeitliche Ende vorhergesagt werden</p>
+							<p>Für einen effektiven Einsatz von "Continuous Integration" hat Martin Fowler einige Grundsätze aufgestellt.
+							Maintain a Single Source Repository.
+- Automate the Build
+- Make Your Build Self-Testing
+- Everyone Commits To the Mainline Every Day
+- Every Commit Should Build the Mainline on an Integration Machine
+- Keep the Build Fast
+- Test in a Clone of the Production Environment
+- Make it Easy for Anyone to Get the Latest Executable
+- Everyone can see what's happening
+- Automate Deploymen</p>
+							<p>Erläutern Sie den Unterschied zwischen den Befehlen $vagrant destroy, $vagrant halt und $vagrant suspend.
+							$vagrant destroy: Dieser Befehl löscht die aktuelle VM und alle während der Laufzeit angelegten Ressourcen.
+$vagrant halt: Mit diesem Befehl wird die aktuelle VM heruntergefahren.
+$vagrant suspend: Speichert den aktuellen Zustand der VM und versetzt diese beim nächsten Start wieder in den selbigen</p>
+							<p>Welche Aufgabe erfüllen Assertions in JMeter?
+							Um die ausgeführten Tests auch inhaltlich überprüfen zu können, werden Assertions eingesetzt.
+
+Diese können beispielsweise mit Hilfe von regulären Ausdrücken die gelieferten Ergebnisse überprüfen oder die Antwortzeit mit einem festgelegten Schwellwert vergleichen</p>
+						<p>Welche Bedeutung haben die folgenden Zeilen in einem Vagrant File?
+
+config.vm.box = "webdev"
+config.vm.box_url = "http://files.vagrantup.com/precise32.box
+							config.vm.box gibt den Namen der zu verwendenden Box an.
+
+Sollte die entsprechende Box noch nicht auf dem Rechner verfügbar sein, so gibt config.vm.box_url den Download Link an, an der die entsprechende Box hinterlegt ist und lädt diese automatisch herunter.</p>
+						<p>Welche drei Phasen sind in einer idealen Test Pyramide enthalten und in welcher Reihenfolge sind diese angeordnet ?
+						    GUI Tests
+    Integration Tests
+    Unit Tests
+    </p>
+    <p> Wie können Element in Selenium lokalisiert werden?
+    ID
+Links
+Tag Name
+CSS
+XPath
+Text
+						</div>
+					</div>
+      			</div>
+      		</div>
+      	</div>
+
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            					<a href="../index.html">Blog</a>
+            				</td>
+            				<td>
+            					<a href="../chapter.html">Kapitel</a>
+            				</td>
+            				<td class="active">
+            					<a href="../tags.html">Themen</a>
+            				</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
+          		</div>
+          	</div>
+    	</div>
+
+   		 <!-- scripts-->
+    	<script type="text/javascript" src="../assets/js/jquery.js"></script>
+    	<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+
+ 	 </body>
+</html>

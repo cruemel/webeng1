@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=0.9">
+    	<link rel="shortcut icon" href="./favicon.ico">
+    	<link rel="apple-touch-icon" href="./apple-touch-icon-precomposed.png">
+		<link href="../dist/css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/custom/index.css" rel="stylesheet">
+    	<title>Quiz - Web-Engineering I,II+III</title>
+    	<!--[if lt IE 9]>
+      		<script src="../assets/js/html5shiv.js"></script>
+      		<script src="../assets/js/respond.min.js"></script>
+    	<![endif]-->
+    	<script type="text/javascript" src="../js/custom/quiz/quiz.js"></script>
+  	</head>
+	<body>
+		<div id="header">
+    		<div id="supbar">
+				<div class="container">
+      			<div class="navbar-default">
+        				<div class="navbar-header">
+          				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          					<img src="./img/vendor/glyphicons/glyphicons_158_show_lines.png" alt="menu">
+          				</button>
+        				</div>
+					</div>
+				</div>
+			</div>
+			<div id="bar">
+				<div class="container">
+					<div id="company">
+						<div class="name">WEB ENGINEERING I,II+III:</div>
+						<div class="subtitle">Webblog zu den MOOCs der THM, Gie&szlig;en</div>
+					</div>
+					<div id="images" class="clearfix">
+						<img src="../img/custom/people.jpg" alt="tag der offnen tuer beim ber"><img src="../img/custom/apple.jpg" alt="aepfel im garten">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="container">
+				<div id="menu" class="collapse navbar-collapse col-md-4 col-lg-4">
+          			<ul>
+            			<li>
+            				<a href="../index.html"><span class="glyphicon glyphicon-book"></span><strong>Blog</strong></a>
+            			</li>
+            			<li>
+            				<a href="../chapter.html"><span class="glyphicon glyphicon-time"></span><strong>Kapitel</strong></a>
+            			</li>
+            			<li>
+            				<a href="../tags.html"><span class="glyphicon glyphicon-tags"></span><strong>Themen</strong></a>
+            			</li>
+            			<li class="active">
+            				<a href="../quiz/quiz_01.html"><span class="glyphicon glyphicon-question-sign"></span><strong>Quiz</strong></a>
+            			</li>
+            			<li>
+            				<a href="../contact.html"><span class="glyphicon glyphicon-envelope"></span><strong>Kontakt</strong></a>
+            			</li>
+          			</ul>
+          		</div>
+          		<div id="submenu" class="quiz visible-md visible-lg"></div>
+          		<div id="content" class="col-xs-12 col-md-10 col-lg-10">
+          			<div id="select" class="clearfix">
+          				<ul>
+          					<li class="q01"><a href="../quiz/beginners.html">I: Grundlagen</a></li>
+          					<li class="q02 current"><a href=".-/quiz/intermediate.html">II: Mobile Apps</a></li>
+          					<!-- <li class="q03"><a href="#">III: Qualit&auml;tssicherung</a></li> -->
+          				</ul>
+          			</div>
+          			<div id="parts">
+          				<div class="multiplechoice-quiz">
+							<p>Why not just use good old FTP to get our app on the web server? (We will overwrite sources with every transfer) (We cannot separate different versions of sources within the same directory) (We can't collaborate on the same sources: no merging or reversing of code) (!Git is much easier to use than FTP)</p>
+							<p>How can we make a web app look and behave like a native app on an iOS mobile device? (Adding it to the home screen) (Providing a startup image) (!meta name="apple-mobile-web-app-capable" content="no") (meta name="apple-mobile-web-app-capable" content="yes")</p>
+							<p>MBP, what is it good for? (!Front-end design) (Single-page application) (!HTML5 polyfill) (Production-ready deployment)</p>
+							<p>What is "Apache Ant"? (Short for "Another Neat Tool") (!CSS framework) (!JS library) (Build tool)</p>
+							<p>Removing all unnecessary characters from source code without changing its functionality is called what? (minification) (!mumification) (!striping) (!zipping)</p>
+							<p>Replacing multiple distinct CSS files with a single CSS file, containing the contents of all of them, is called what? (concatenatiom) (!536870912) (!8589934592) (!17179869184)</p>
+							<p>What's the difference between a web app and a web site according to the HTML5 book?
+ (A web app is tightly focused on a task) (!A web site is tightly focused on UX) (A web app is a single-page application) (A web site is a collection of pages)</p>
+						</div>
+					</div>
+      			</div>
+      		</div>
+      	</div>
+
+    	<div id="footer">
+    		<div class="container">
+    			<div id="subbar">
+    				<table>
+            			<tr>
+            				<td>
+            					<a href="../index.html">Blog</a>
+            				</td>
+            				<td>
+            					<a href="../chapter.html">Kapitel</a>
+            				</td>
+            				<td class="active">
+            					<a href="../tags.html">Themen</a>
+            				</td>
+          				</tr>
+          			</table>
+          		</div>
+          		<div id="remark">
+          			made with <a href="http://www.getbootstrap.com/" target="_blank">bootstrap</a> by <a href="../contact.html">cmoehlenhof</a>.
+          		</div>
+          	</div>
+    	</div>
+
+   		 <!-- scripts-->
+    	<script type="text/javascript" src="../assets/js/jquery.js"></script>
+    	<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+
+ 	 </body>
+</html>
